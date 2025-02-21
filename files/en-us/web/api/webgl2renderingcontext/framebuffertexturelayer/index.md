@@ -1,11 +1,12 @@
 ---
-title: WebGL2RenderingContext.framebufferTextureLayer()
+title: "WebGL2RenderingContext: framebufferTextureLayer() method"
+short-title: framebufferTextureLayer()
 slug: Web/API/WebGL2RenderingContext/framebufferTextureLayer
 page-type: web-api-instance-method
 browser-compat: api.WebGL2RenderingContext.framebufferTextureLayer
 ---
 
-{{APIRef("WebGL")}}
+{{APIRef("WebGL")}}{{AvailableInWorkers}}
 
 The **`WebGL2RenderingContext.framebufferTextureLayer()`**
 method of the [WebGL 2 API](/en-US/docs/Web/API/WebGL_API) attaches a single
@@ -58,8 +59,7 @@ None ({{jsxref("undefined")}}).
 ## Examples
 
 ```js
-gl.framebufferTextureLayer(gl.FRAMEBUFFER, gl.COLOR_ATTACHMENT0,
-                           texture, 0, 8);
+gl.framebufferTextureLayer(gl.FRAMEBUFFER, gl.COLOR_ATTACHMENT0, texture, 0, 8);
 ```
 
 ## Specifications

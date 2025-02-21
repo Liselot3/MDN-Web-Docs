@@ -1,5 +1,6 @@
 ---
 title: "Document: beforescriptexecute event"
+short-title: beforescriptexecute
 slug: Web/API/Document/beforescriptexecute_event
 page-type: web-api-event
 status:
@@ -37,7 +38,11 @@ document.addEventListener("beforescriptexecute", starting, true);
 document.onbeforescriptexecute = starting;
 ```
 
-[View Live Example](https://media.prod.mdn.mozit.cloud/samples/html/currentScript.html)
+[View Live Example](https://mdn.dev/archives/media/samples/html/currentScript.html)
+
+## Specifications
+
+Not part of any specification.
 
 ## Browser compatibility
 
@@ -45,5 +50,5 @@ document.onbeforescriptexecute = starting;
 
 ## See also
 
-- {{domxref("Document.afterscriptexecute_event")}}
+- {{domxref("Document.afterscriptexecute_event", "afterscriptexecute")}} event of `Document`
 - {{domxref("Document.currentScript")}}

@@ -1,5 +1,6 @@
 ---
-title: Range.cloneRange()
+title: "Range: cloneRange() method"
+short-title: cloneRange()
 slug: Web/API/Range/cloneRange
 page-type: web-api-instance-method
 browser-compat: api.Range.cloneRange
@@ -31,9 +32,9 @@ A {{domxref("Range")}} object.
 ## Examples
 
 ```js
-range = document.createRange();
+const range = document.createRange();
 range.selectNode(document.getElementsByTagName("div").item(0));
-clone = range.cloneRange();
+const clone = range.cloneRange();
 ```
 
 ## Specifications

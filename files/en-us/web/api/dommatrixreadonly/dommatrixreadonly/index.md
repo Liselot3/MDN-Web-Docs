@@ -1,11 +1,12 @@
 ---
-title: DOMMatrixReadOnly()
+title: "DOMMatrixReadOnly: DOMMatrixReadOnly() constructor"
+short-title: DOMMatrixReadOnly()
 slug: Web/API/DOMMatrixReadOnly/DOMMatrixReadOnly
 page-type: web-api-constructor
 browser-compat: api.DOMMatrixReadOnly.DOMMatrixReadOnly
 ---
 
-{{APIRef("Geometry Interfaces")}}
+{{APIRef("Geometry Interfaces")}}{{AvailableInWorkers}}
 
 The **`DOMMatrixReadOnly`** constructor creates a new
 {{domxref("DOMMatrixReadOnly")}} object which represents 4x4 matrices, suitable for 2D

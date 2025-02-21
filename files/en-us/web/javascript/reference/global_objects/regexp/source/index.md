@@ -7,9 +7,23 @@ browser-compat: javascript.builtins.RegExp.source
 
 {{JSRef}}
 
-The **`source`** accessor property is a string containing the source text of the regex object, without the two forward slashes on both sides or any flags.
+The **`source`** accessor property of {{jsxref("RegExp")}} instances returns a string containing the source text of this regular expression, without the two forward slashes on both sides or any flags.
 
-{{EmbedInteractiveExample("pages/js/regexp-prototype-source.html")}}
+{{InteractiveExample("JavaScript Demo: RegExp.prototype.source")}}
+
+```js interactive-example
+const regex1 = /fooBar/gi;
+
+console.log(regex1.source);
+// Expected output: "fooBar"
+
+console.log(new RegExp().source);
+// Expected output: "(?:)"
+
+console.log(new RegExp("\n").source === "\\n");
+// Expected output: true (starting with ES5)
+// Due to escaping
+```
 
 ## Description
 

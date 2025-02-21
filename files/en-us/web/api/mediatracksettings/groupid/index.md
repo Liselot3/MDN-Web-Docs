@@ -1,8 +1,9 @@
 ---
-title: MediaTrackSettings.groupId
+title: "MediaTrackSettings: groupId property"
+short-title: groupId
 slug: Web/API/MediaTrackSettings/groupId
 page-type: web-api-instance-property
-browser-compat: api.MediaTrackSettings.groupId
+browser-compat: api.MediaStreamTrack.applyConstraints.groupId_constraint
 ---
 
 {{APIRef("Media Capture and Streams")}}

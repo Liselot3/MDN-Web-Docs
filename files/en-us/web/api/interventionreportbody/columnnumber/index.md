@@ -1,5 +1,6 @@
 ---
-title: InterventionReportBody.columnNumber
+title: "InterventionReportBody: columnNumber property"
+short-title: columnNumber
 slug: Web/API/InterventionReportBody/columnNumber
 page-type: web-api-instance-property
 status:
@@ -7,11 +8,12 @@ status:
 browser-compat: api.InterventionReportBody.columnNumber
 ---
 
-{{APIRef("Reporting API")}}{{SeeCompatTable}}
+{{APIRef("Reporting API")}}{{AvailableInWorkers}}{{SeeCompatTable}}
 
 The **`columnNumber`** read-only property of the {{domxref("InterventionReportBody")}} interface returns the line in the source file in which the intervention occurred.
 
-> **Note:** This property is most useful alongside {{domxref("InterventionReportBody.sourceFile")}} and {{domxref("InterventionReportBody.lineNumber")}} as it enables the location of the column in that file and line where the feature is used.
+> [!NOTE]
+> This property is most useful alongside {{domxref("InterventionReportBody.sourceFile")}} and {{domxref("InterventionReportBody.lineNumber")}} as it enables the location of the column in that file and line where the feature is used.
 
 ## Value
 
@@ -23,9 +25,9 @@ In this example we create a new {{domxref("ReportingObserver")}} to observe inte
 
 ```js
 const options = {
-  types: ['intervention'],
-  buffered: true
-}
+  types: ["intervention"],
+  buffered: true,
+};
 
 const observer = new ReportingObserver((reports, observer) => {
   const firstReport = reports[0];

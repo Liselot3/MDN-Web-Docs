@@ -1,5 +1,6 @@
 ---
-title: Document.xmlVersion
+title: "Document: xmlVersion property"
+short-title: xmlVersion
 slug: Web/API/Document/xmlVersion
 page-type: web-api-instance-property
 status:
@@ -21,7 +22,7 @@ if (document.createElement("foo").tagName === "FOO") {
 
 ## Specifications
 
-This feature is not part of any specification anymore. It is no more on track to become a standard.
+{{Specifications}}
 
 ## Browser compatibility
 

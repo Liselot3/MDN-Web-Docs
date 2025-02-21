@@ -1,5 +1,6 @@
 ---
-title: CharacterData.appendData()
+title: "CharacterData: appendData() method"
+short-title: appendData()
 slug: Web/API/CharacterData/appendData
 page-type: web-api-instance-method
 browser-compat: api.CharacterData.appendData
@@ -33,9 +34,9 @@ None.
 
 ```js
 const span = document.querySelector("span");
-const textnode = span.nextSibling;
+const textNode = span.nextSibling;
 
-textnode.appendData(" - appended text.");
+textNode.appendData(" - appended text.");
 ```
 
 {{EmbedLiveSample("Example", "100%", 50)}}

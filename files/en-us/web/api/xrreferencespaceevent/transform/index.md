@@ -1,11 +1,12 @@
 ---
-title: XRReferenceSpaceEvent.transform
+title: "XRReferenceSpaceEvent: transform property"
+short-title: transform
 slug: Web/API/XRReferenceSpaceEvent/transform
 page-type: web-api-instance-property
 browser-compat: api.XRReferenceSpaceEvent.transform
 ---
 
-{{APIRef("WebXR Device API")}}
+{{APIRef("WebXR Device API")}}{{SecureContext_Header}}
 
 The read-only {{domxref("XRReferenceSpaceEvent")}} property
 **`transform`** indicates the position and orientation of the

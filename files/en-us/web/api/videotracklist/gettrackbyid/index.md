@@ -1,5 +1,6 @@
 ---
-title: VideoTrackList.getTrackById()
+title: "VideoTrackList: getTrackById() method"
+short-title: getTrackById()
 slug: Web/API/VideoTrackList/getTrackById
 page-type: web-api-instance-method
 browser-compat: api.VideoTrackList.getTrackById
@@ -9,8 +10,7 @@ browser-compat: api.VideoTrackList.getTrackById
 
 The **{{domxref("VideoTrackList")}}** method
 **`getTrackById()`** returns the first
-{{domxref("VideoTrack")}} object from the track list whose {{domxref("VideoTrack.id",
-    "id")}} matches the specified string.
+{{domxref("VideoTrack")}} object from the track list whose {{domxref("VideoTrack.id", "id")}} matches the specified string.
 
 This lets you find a specified track if
 you know its ID string.

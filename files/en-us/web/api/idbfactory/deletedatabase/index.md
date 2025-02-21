@@ -1,11 +1,12 @@
 ---
-title: IDBFactory.deleteDatabase()
+title: "IDBFactory: deleteDatabase() method"
+short-title: deleteDatabase()
 slug: Web/API/IDBFactory/deleteDatabase
 page-type: web-api-instance-method
 browser-compat: api.IDBFactory.deleteDatabase
 ---
 
-{{APIRef("IndexedDB")}}
+{{APIRef("IndexedDB")}} {{AvailableInWorkers}}
 
 The **`deleteDatabase()`** method of the
 {{DOMxRef("IDBFactory")}} interface requests the deletion of a database. The method
@@ -20,8 +21,6 @@ method.
 
 When `deleteDatabase()` is called, any other open connections to this
 particular database will get a [versionchange](/en-US/docs/Web/API/IDBDatabase/versionchange_event) event.
-
-{{AvailableInWorkers}}
 
 ## Syntax
 
@@ -41,7 +40,7 @@ deleteDatabase(name, options)
     database that doesn't exist does not throw an exception, in contrast to
     {{DOMxRef("IDBDatabase.deleteObjectStore()")}}, which does throw an exception if the
     named object store does not exist.
-- `options` {{optional_inline}} {{NonStandardBadge}}
+- `options` {{optional_inline}} {{Non-standard_Inline}}
   - : In Gecko, since [version 26](/en-US/docs/Mozilla/Firefox/Releases/26), you can include
     a non-standard optional storage parameter that specifies whether you want to delete a
     `permanent` (the default value) IndexedDB, or an indexedDB in

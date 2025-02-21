@@ -1,5 +1,6 @@
 ---
 title: "AudioTrackList: addtrack event"
+short-title: addtrack
 slug: Web/API/AudioTrackList/addtrack_event
 page-type: web-api-event
 browser-compat: api.AudioTrackList.addtrack_event
@@ -36,7 +37,7 @@ _`TrackEvent` is based on {{domxref("Event")}}, so properties of `Event` are als
 
 ### Trigger
 
-The {{domxref("AudioTrackList/addtrack_event", "addtrack")}} event is called whenever a new track is added to the media
+The `addtrack` event is called whenever a new track is added to the media
 element whose audio tracks are represented by the `AudioTrackList` object.
 This happens when tracks are added to the element when the media is first attached to
 the element; one `addtrack` event will occur for each audio track in the

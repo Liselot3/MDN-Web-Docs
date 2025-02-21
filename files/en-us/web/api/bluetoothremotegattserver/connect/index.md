@@ -1,5 +1,6 @@
 ---
-title: BluetoothRemoteGATTServer.connect()
+title: "BluetoothRemoteGATTServer: connect() method"
+short-title: connect()
 slug: Web/API/BluetoothRemoteGATTServer/connect
 page-type: web-api-instance-method
 status:
@@ -7,7 +8,7 @@ status:
 browser-compat: api.BluetoothRemoteGATTServer.connect
 ---
 
-{{APIRef("Bluetooth API")}}{{SeeCompatTable}}
+{{APIRef("Bluetooth API")}}{{SeeCompatTable}}{{SecureContext_Header}}
 
 The
 **`BluetoothRemoteGATTServer.connect()`** method causes the
@@ -34,5 +35,3 @@ A {{jsxref("Promise")}} that resolves to a {{domxref("BluetoothRemoteGATTServer"
 ## Browser compatibility
 
 {{Compat}}
-
-{{APIRef("Web Bluetooth")}}

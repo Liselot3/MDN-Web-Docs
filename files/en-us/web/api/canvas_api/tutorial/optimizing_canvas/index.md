@@ -80,7 +80,7 @@ If you have a static background image, you can draw it onto a plain {{HTMLElemen
 
 ### Scaling canvas using CSS transforms
 
-[CSS transforms](/en-US/docs/Web/CSS/CSS_Transforms/Using_CSS_transforms) are faster since they use the GPU. The best case is to not scale the canvas, or have a smaller canvas and scale up rather than a bigger canvas and scale down.
+[CSS transforms](/en-US/docs/Web/CSS/CSS_transforms/Using_CSS_transforms) are faster since they use the GPU. The best case is to not scale the canvas, or have a smaller canvas and scale up rather than a bigger canvas and scale down.
 
 ```js
 const scaleX = window.innerWidth / canvas.width;
@@ -130,7 +130,7 @@ canvas.style.height = `${rect.height}px`;
 - Avoid the {{domxref("CanvasRenderingContext2D.shadowBlur", "shadowBlur")}} property whenever possible.
 - Avoid [text rendering](/en-US/docs/Web/API/Canvas_API/Tutorial/Drawing_text) whenever possible.
 - Try different ways to clear the canvas ({{domxref("CanvasRenderingContext2D.clearRect", "clearRect()")}} vs. {{domxref("CanvasRenderingContext2D.fillRect", "fillRect()")}} vs. resizing the canvas).
-- With animations, use {{domxref("window.requestAnimationFrame()")}} instead of {{domxref("setInterval()")}} .
+- With animations, use {{domxref("Window.requestAnimationFrame()")}} instead of {{domxref("Window.setInterval", "setInterval()")}}.
 - Be careful with heavy physics libraries.
 
 ## See also

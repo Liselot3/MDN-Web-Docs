@@ -7,11 +7,21 @@ browser-compat: javascript.builtins.Array.entries
 
 {{JSRef}}
 
-The **`entries()`** method returns a new **Array
-Iterator** object that contains the key/value pairs for each index in the
-array.
+The **`entries()`** method of {{jsxref("Array")}} instances returns a new _[array iterator](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Iterator)_ object that contains the key/value pairs for each index in the array.
 
-{{EmbedInteractiveExample("pages/js/array-entries.html")}}
+{{InteractiveExample("JavaScript Demo: Array.entries()")}}
+
+```js interactive-example
+const array1 = ["a", "b", "c"];
+
+const iterator1 = array1.entries();
+
+console.log(iterator1.next().value);
+// Expected output: Array [0, "a"]
+
+console.log(iterator1.next().value);
+// Expected output: Array [1, "b"]
+```
 
 ## Syntax
 
@@ -19,9 +29,13 @@ array.
 entries()
 ```
 
+### Parameters
+
+None.
+
 ### Return value
 
-A new {{jsxref("Array")}} iterator object.
+A new [iterable iterator object](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Iterator).
 
 ## Description
 
@@ -74,7 +88,7 @@ for (const element of [, "a"].entries()) {
 
 ### Calling entries() on non-array objects
 
-The `entries()` method reads the `length` property of `this` and then accesses each integer index.
+The `entries()` method reads the `length` property of `this` and then accesses each property whose key is a nonnegative integer less than `length`.
 
 ```js
 const arrayLike = {
@@ -82,6 +96,7 @@ const arrayLike = {
   0: "a",
   1: "b",
   2: "c",
+  3: "d", // ignored by entries() since length is 3
 };
 for (const entry of Array.prototype.entries.call(arrayLike)) {
   console.log(entry);
@@ -102,10 +117,10 @@ for (const entry of Array.prototype.entries.call(arrayLike)) {
 ## See also
 
 - [Polyfill of `Array.prototype.entries` in `core-js`](https://github.com/zloirock/core-js#ecmascript-array)
+- [Indexed collections](/en-US/docs/Web/JavaScript/Guide/Indexed_collections) guide
+- {{jsxref("Array")}}
 - {{jsxref("Array.prototype.keys()")}}
 - {{jsxref("Array.prototype.values()")}}
-- {{jsxref("Array.prototype.forEach()")}}
-- {{jsxref("Array.prototype.every()")}}
-- {{jsxref("Array.prototype.some()")}}
-- [for...of](/en-US/docs/Web/JavaScript/Reference/Statements/for...of)
+- [`Array.prototype[Symbol.iterator]()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/Symbol.iterator)
+- {{jsxref("TypedArray.prototype.entries()")}}
 - [Iteration protocols](/en-US/docs/Web/JavaScript/Reference/Iteration_protocols)

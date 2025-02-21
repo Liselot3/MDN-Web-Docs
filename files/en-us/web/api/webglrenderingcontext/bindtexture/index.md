@@ -1,11 +1,12 @@
 ---
-title: WebGLRenderingContext.bindTexture()
+title: "WebGLRenderingContext: bindTexture() method"
+short-title: bindTexture()
 slug: Web/API/WebGLRenderingContext/bindTexture
 page-type: web-api-instance-method
 browser-compat: api.WebGLRenderingContext.bindTexture
 ---
 
-{{APIRef("WebGL")}}
+{{APIRef("WebGL")}}{{AvailableInWorkers}}
 
 The **`WebGLRenderingContext.bindTexture()`** method of the [WebGL API](/en-US/docs/Web/API/WebGL_API) binds a given
 {{domxref("WebGLTexture")}} to a target (binding point).
@@ -48,8 +49,8 @@ A `gl.INVALID_ENUM` error is thrown if `target` is not
 ### Binding a texture
 
 ```js
-const canvas = document.getElementById('canvas');
-const gl = canvas.getContext('webgl');
+const canvas = document.getElementById("canvas");
+const gl = canvas.getContext("webgl");
 const texture = gl.createTexture();
 
 gl.bindTexture(gl.TEXTURE_2D, texture);

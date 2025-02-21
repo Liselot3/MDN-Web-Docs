@@ -7,7 +7,7 @@ status:
 browser-compat: api.InterventionReportBody
 ---
 
-{{APIRef("Reporting API")}}{{SeeCompatTable}}
+{{APIRef("Reporting API")}}{{AvailableInWorkers}}{{SeeCompatTable}}
 
 The `InterventionReportBody` interface of the [Reporting API](/en-US/docs/Web/API/Reporting_API) represents the body of an intervention report.
 
@@ -49,9 +49,9 @@ In this example we create a new {{domxref("ReportingObserver")}} to observe inte
 
 ```js
 const options = {
-  types: ['intervention'],
-  buffered: true
-}
+  types: ["intervention"],
+  buffered: true,
+};
 
 const observer = new ReportingObserver((reports, observer) => {
   const firstReport = reports[0];
@@ -75,4 +75,4 @@ const observer = new ReportingObserver((reports, observer) => {
 ## See also
 
 - [Reporting API](/en-US/docs/Web/API/Reporting_API)
-- [The Reporting API](https://web.dev/reporting-api/)
+- [The Reporting API](https://developer.chrome.com/docs/capabilities/web-apis/reporting-api)

@@ -7,15 +7,29 @@ browser-compat: javascript.builtins.Symbol.valueOf
 
 {{JSRef}}
 
-The **`valueOf()`** method returns the primitive value of a Symbol object.
+The **`valueOf()`** method of {{jsxref("Symbol")}} values returns this symbol value.
 
-{{EmbedInteractiveExample("pages/js/symbol-prototype-valueof.html")}}
+{{InteractiveExample("JavaScript Demo: Symbol.prototype.valueOf()")}}
+
+```js interactive-example
+const symbol1 = Symbol("foo");
+
+console.log(typeof Object(symbol1));
+// Expected output: "object"
+
+console.log(typeof Object(symbol1).valueOf());
+// Expected output: "symbol"
+```
 
 ## Syntax
 
 ```js-nolint
 valueOf()
 ```
+
+### Parameters
+
+None.
 
 ### Return value
 

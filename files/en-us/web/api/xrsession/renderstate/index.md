@@ -1,5 +1,6 @@
 ---
-title: XRSession.renderState
+title: "XRSession: renderState property"
+short-title: renderState
 slug: Web/API/XRSession/renderState
 page-type: web-api-instance-property
 status:
@@ -7,7 +8,7 @@ status:
 browser-compat: api.XRSession.renderState
 ---
 
-{{APIRef("WebXR Device API")}}{{SeeCompatTable}}
+{{APIRef("WebXR Device API")}}{{SeeCompatTable}}{{SecureContext_Header}}
 
 The
 _read-only_ **`renderState`** property of an

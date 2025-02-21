@@ -13,6 +13,8 @@ The **track** refers to the background of the scrollbar, which is generally fixe
 
 The **thumb** refers to the moving part of the scrollbar, which usually floats on top of the track.
 
+When `scrollbar-color` value is set on the document's root element, the values are applied to the viewport scrollbars.
+
 ## Syntax
 
 ```css
@@ -56,9 +58,9 @@ scrollbar-color: unset;
       </tbody>
     </table>
 
-    > **Note:** User Agents must apply any `scrollbar-color` value set on the root element to the viewport.
+> **Note:** [`@media (forced-colors: active)`](/en-US/docs/Web/CSS/@media/forced-colors) sets `scrollbar-color` to `auto`.
 
-## Accessibility concerns
+## Accessibility
 
 When using `scrollbar-color` property with specific color values, authors should ensure the specified colors have enough contrast between them. For keyword values, UAs should ensure the colors they use have enough contrast. See [Techniques for WCAG 2.0: G183: Using a contrast ratio of 3:1](https://www.w3.org/TR/WCAG20-TECHS/G183.html).
 
@@ -81,7 +83,7 @@ When using `scrollbar-color` property with specific color values, authors should
   width: 300px;
   height: 100px;
   overflow-y: scroll;
-  scrollbar-color: rebeccapurple green;
+  scrollbar-color: #007 #bada55;
 }
 ```
 
@@ -111,5 +113,8 @@ When using `scrollbar-color` property with specific color values, authors should
 
 ## See also
 
-- [`scrollbar-width`](/en-US/docs/Web/CSS/scrollbar-width)
-- [`overflow`](/en-US/docs/Web/CSS/overflow)
+- [CSS overflow](/en-US/docs/Web/CSS/CSS_overflow) module
+- [CSS scrollbars styling](/en-US/docs/Web/CSS/CSS_scrollbars_styling) module
+- {{CSSxRef("overflow")}}
+- {{CSSxRef("scrollbar-gutter")}}
+- {{CSSxRef("scrollbar-width")}}

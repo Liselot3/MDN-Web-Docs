@@ -1,5 +1,6 @@
 ---
-title: AudioTrackList.getTrackById()
+title: "AudioTrackList: getTrackById() method"
+short-title: getTrackById()
 slug: Web/API/AudioTrackList/getTrackById
 page-type: web-api-instance-method
 browser-compat: api.AudioTrackList.getTrackById
@@ -7,11 +8,8 @@ browser-compat: api.AudioTrackList.getTrackById
 
 {{APIRef("HTML DOM")}}
 
-The **{{domxref("AudioTrackList")}}** method
-**`getTrackById()`** returns the first
-{{domxref("AudioTrack")}} object from the track list whose {{domxref("AudioTrack.id",
-    "id")}} matches the specified string. This lets you find a specified track if
-you know its ID string.
+The **{{domxref("AudioTrackList")}}** method **`getTrackById()`** returns the first {{domxref("AudioTrack")}} object from the track list whose {{domxref("AudioTrack.id", "id")}} matches the specified string.
+This lets you find a specified track if you know its ID string.
 
 ## Syntax
 
@@ -54,8 +52,7 @@ function disableCharacter(videoElem, characterName) {
 This short function gets the {{domxref("AudioTrackList")}} containing the video's audio
 tracks using {{domxref("HTMLMediaElement.audioTracks")}}, then calls
 `getTrackById()` on it, specifying the character's name. The resulting
-track's audio is then disabled by setting its {{domxref("AudioTrack.enabled",
-  "enabled")}} flag to `false`.
+track's audio is then disabled by setting its {{domxref("AudioTrack.enabled", "enabled")}} flag to `false`.
 
 ## Specifications
 

@@ -1,5 +1,6 @@
 ---
-title: CharacterData.substringData()
+title: "CharacterData: substringData() method"
+short-title: substringData()
 slug: Web/API/CharacterData/substringData
 page-type: web-api-instance-method
 browser-compat: api.CharacterData.substringData
@@ -15,7 +16,7 @@ and extending for a given number of characters afterwards.
 ## Syntax
 
 ```js-nolint
-  domString = characterData.substringData(offset, count)
+substringData(offset, count)
 ```
 
 ### Parameters
@@ -30,7 +31,7 @@ and extending for a given number of characters afterwards.
 
 A string with the substring.
 
-## Exceptions
+### Exceptions
 
 - `IndexSizeError` {{domxref("DOMException")}}
   - : Thrown if `offset` + `count` is larger than the length of the contained data.

@@ -1,11 +1,12 @@
 ---
-title: PushSubscription.unsubscribe()
+title: "PushSubscription: unsubscribe() method"
+short-title: unsubscribe()
 slug: Web/API/PushSubscription/unsubscribe
 page-type: web-api-instance-method
 browser-compat: api.PushSubscription.unsubscribe
 ---
 
-{{APIRef("Push API")}}
+{{APIRef("Push API")}}{{SecureContext_Header}}{{AvailableInWorkers}}
 
 The `unsubscribe()` method of the {{domxref("PushSubscription")}} interface
 returns a {{jsxref("Promise")}} that resolves to a boolean value when the
@@ -31,12 +32,15 @@ subscription is successfully unsubscribed.
 ```js
 navigator.serviceWorker.ready.then((reg) => {
   reg.pushManager.getSubscription().then((subscription) => {
-    subscription.unsubscribe().then((successful) => {
-      // You've successfully unsubscribed
-    }).catch((e) => {
-      // Unsubscribing failed
-    })
-  })
+    subscription
+      .unsubscribe()
+      .then((successful) => {
+        // You've successfully unsubscribed
+      })
+      .catch((e) => {
+        // Unsubscribing failed
+      });
+  });
 });
 ```
 

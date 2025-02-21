@@ -2,12 +2,10 @@
 title: round()
 slug: Web/CSS/round
 page-type: css-function
-status:
-  - experimental
 browser-compat: css.types.round
 ---
 
-{{CSSRef}}{{SeeCompatTable}}
+{{CSSRef}}
 
 The **`round()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/CSS_Functions) returns a rounded number based on a selected rounding strategy.
 
@@ -22,7 +20,7 @@ width: round(down, var(--height), var(--interval));
 margin: round(to-zero, -105px, 10px);
 ```
 
-### Parameter
+### Parameters
 
 The `round(<rounding-strategy>, valueToRound, roundingInterval)` function specifies an optional rounding strategy, a value (or mathematical expression) to be rounded and a rounding interval (or mathematical expression).
 The `valueToRound` is rounded according to the rounding strategy, to the nearest integer multiple of `roundingInterval`.
@@ -68,7 +66,7 @@ The value of `valueToRound`, rounded to the nearest lower or higher integer mult
 - The argument calculations can resolve to {{CSSxREF("&lt;number&gt;")}}, {{CSSxREF("&lt;dimension&gt;")}}, or {{CSSxREF("&lt;percentage&gt;")}}, but must have the same type, or else the function is invalid; the result will have the same type as the arguments.
 - If `valueToRound` is exactly equal to an integer multiple of `roundingInterval`, `round()` resolves to `valueToRound` exactly (preserving whether `valueToRound` is `0⁻` or `0⁺`, if relevant). Otherwise, there are two integer multiples of `roundingInterval` that are potentially "closest" to `valueToRound`, lower `roundingInterval` which is closer to `−∞` and upper `roundingInterval` which is closer to `+∞`.
 
-### Formal syntax
+## Formal syntax
 
 {{CSSSyntax}}
 
@@ -85,7 +83,7 @@ The height of the boxes is therefore either rounded up to 125 px or down to 100 
 #### HTML
 
 The HTML defines 5 `div` elements that will be rendered as boxes by the CSS.
-The elements contain text indicating the rounding strategy, initial value, and expected final height of the box (in brackets).
+The elements contain text indicating the rounding strategy, initial value, and expected final height of the box (in parentheses).
 
 ```html
 <div class="box box-1">height: 100px</div>
@@ -115,7 +113,6 @@ div.box {
   width: 100px;
   height: 100px;
   background: lightblue;
-  padding: 5px;
   --rounding-interval: 25px;
 }
 ```

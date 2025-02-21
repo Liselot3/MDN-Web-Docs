@@ -7,12 +7,21 @@ browser-compat: javascript.builtins.Array.toLocaleString
 
 {{JSRef}}
 
-The **`toLocaleString()`** method returns a string representing
-the elements of the array. The elements are converted to Strings using their
-`toLocaleString` methods and these Strings are separated by a locale-specific
-String (such as a comma ",").
+The **`toLocaleString()`** method of {{jsxref("Array")}} instances returns a string representing
+the elements of the array. The elements are converted to strings using their
+`toLocaleString` methods and these strings are separated by a locale-specific
+string (such as a comma ",").
 
-{{EmbedInteractiveExample("pages/js/array-tolocalestring.html","shorter")}}
+{{InteractiveExample("JavaScript Demo: Array.toLocaleString()", "shorter")}}
+
+```js interactive-example
+const array1 = [1, "a", new Date("21 Dec 1997 14:12:00 UTC")];
+const localeString = array1.toLocaleString("en", { timeZone: "UTC" });
+
+console.log(localeString);
+// Expected output: "1,a,12/21/1997, 2:12:00 PM",
+// This assumes "en" locale and UTC timezone - your results may vary
+```
 
 ## Syntax
 
@@ -25,9 +34,9 @@ toLocaleString(locales, options)
 ### Parameters
 
 - `locales` {{optional_inline}}
-  - : A string with a BCP 47 language tag, or an array of such strings. For the general form and interpretation of the `locales` argument, see [Locale identification and negotiation](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl#locale_identification_and_negotiation).
+  - : A string with a BCP 47 language tag, or an array of such strings. For the general form and interpretation of the `locales` argument, see [the parameter description on the `Intl` main page](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl#locales_argument).
 - `options` {{optional_inline}}
-  - : An object with configuration properties. For numbers, see {{jsxref("Number.prototype.toLocaleString()")}}; for dates, see {{jsxref("Date.prototype.toLocaleString()")}}.
+  - : An object with configuration properties. What you can pass here depends on what elements are being converted. For example, for numbers, see {{jsxref("Number.prototype.toLocaleString()")}}.
 
 ### Return value
 
@@ -47,15 +56,7 @@ The `toLocaleString()` method is [generic](/en-US/docs/Web/JavaScript/Reference/
 
 ### Using locales and options
 
-The elements of the array are converted to strings using their
-`toLocaleString` methods.
-
-- `Object`: {{jsxref("Object.prototype.toLocaleString()")}}
-- `Number`: {{jsxref("Number.prototype.toLocaleString()")}}
-- `Date`: {{jsxref("Date.prototype.toLocaleString()")}}
-
-Always display the currency for the strings and numbers in the `prices`
-array:
+The elements of the array are converted to strings using their `toLocaleString` methods. For example, this snippet implicitly calls the {{jsxref("Number.prototype.toLocaleString()")}} method to display the currency for the strings and numbers in the `prices` array:
 
 ```js
 const prices = ["￥7", 500, 8123, 12];
@@ -63,8 +64,6 @@ prices.toLocaleString("ja-JP", { style: "currency", currency: "JPY" });
 
 // "￥7,￥500,￥8,123,￥12"
 ```
-
-For more examples, see also the [`Intl.NumberFormat`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat) and [`Intl.DateTimeFormat`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat) pages.
 
 ### Using toLocaleString() on sparse arrays
 
@@ -76,7 +75,7 @@ console.log([1, , 3].toLocaleString()); // '1,,3'
 
 ### Calling toLocaleString() on non-array objects
 
-The `toLocaleString()` method reads the `length` property of `this` and then accesses each integer index.
+The `toLocaleString()` method reads the `length` property of `this` and then accesses each property whose key is a nonnegative integer less than `length`.
 
 ```js
 const arrayLike = {
@@ -84,6 +83,7 @@ const arrayLike = {
   0: 1,
   1: 2,
   2: 3,
+  3: 4, // ignored by toLocaleString() since length is 3
 };
 console.log(Array.prototype.toLocaleString.call(arrayLike));
 // 1,2,3
@@ -99,8 +99,12 @@ console.log(Array.prototype.toLocaleString.call(arrayLike));
 
 ## See also
 
+- [Indexed collections](/en-US/docs/Web/JavaScript/Guide/Indexed_collections) guide
+- {{jsxref("Array")}}
 - {{jsxref("Array.prototype.toString()")}}
+- {{jsxref("TypedArray.prototype.toLocaleString()")}}
 - {{jsxref("Intl")}}
+- {{jsxref("Intl.ListFormat")}}
 - {{jsxref("Object.prototype.toLocaleString()")}}
 - {{jsxref("Number.prototype.toLocaleString()")}}
-- {{jsxref("Date.prototype.toLocaleString()")}}
+- {{jsxref("Temporal/PlainDate/toLocaleString", "Temporal.PlainDate.prototype.toLocaleString()")}}

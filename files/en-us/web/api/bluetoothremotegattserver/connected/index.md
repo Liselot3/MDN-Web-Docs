@@ -1,5 +1,6 @@
 ---
-title: BluetoothRemoteGATTServer.connected
+title: "BluetoothRemoteGATTServer: connected property"
+short-title: connected
 slug: Web/API/BluetoothRemoteGATTServer/connected
 page-type: web-api-instance-property
 status:
@@ -7,7 +8,7 @@ status:
 browser-compat: api.BluetoothRemoteGATTServer.connected
 ---
 
-{{APIRef("Bluetooth API")}}{{SeeCompatTable}}
+{{APIRef("Bluetooth API")}}{{SeeCompatTable}}{{SecureContext_Header}}
 
 The **`BluetoothRemoteGATTServer.connected`** read-only
 property returns a boolean value that returns true while this script execution
@@ -25,5 +26,3 @@ A `boolean`.
 ## Browser compatibility
 
 {{Compat}}
-
-{{APIRef("Web Bluetooth")}}

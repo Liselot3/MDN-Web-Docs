@@ -1,5 +1,6 @@
 ---
-title: FileSystemEntry.fullPath
+title: "FileSystemEntry: fullPath property"
+short-title: fullPath
 slug: Web/API/FileSystemEntry/fullPath
 page-type: web-api-instance-property
 browser-compat: api.FileSystemEntry.fullPath
@@ -29,9 +30,14 @@ its full path.
 function gotFileSystem(fs) {
   let path = "";
 
-  fs.root.getFile("data.json", { create: true, exclusive: true }, (entry) => {
-    path = fullPath;
-  }, handleError(error));
+  fs.root.getFile(
+    "data.json",
+    { create: true, exclusive: true },
+    (entry) => {
+      path = fullPath;
+    },
+    handleError(error),
+  );
 
   return path;
 }
@@ -52,5 +58,4 @@ for scenarios in which you don't know it.
 ## See also
 
 - [File and Directory Entries API](/en-US/docs/Web/API/File_and_Directory_Entries_API)
-- [Introduction to the File and Directory Entries API](/en-US/docs/Web/API/File_and_Directory_Entries_API/Introduction)
 - {{domxref("FileSystemEntry")}}

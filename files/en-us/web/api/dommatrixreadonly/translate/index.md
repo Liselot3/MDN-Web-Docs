@@ -1,11 +1,12 @@
 ---
-title: DOMMatrixReadOnly.translate()
+title: "DOMMatrixReadOnly: translate() method"
+short-title: translate()
 slug: Web/API/DOMMatrixReadOnly/translate
 page-type: web-api-instance-method
 browser-compat: api.DOMMatrixReadOnly.translate
 ---
 
-{{APIRef("Geometry Interfaces")}}
+{{APIRef("Geometry Interfaces")}}{{AvailableInWorkers}}
 
 The `translate()` method of the {{domxref("DOMMatrixReadOnly")}} interface
 creates a new matrix being the result of the original matrix with a translation applied.
@@ -13,8 +14,8 @@ creates a new matrix being the result of the original matrix with a translation 
 ## Syntax
 
 ```js-nolint
-DOMMatrix.translate(translateX, translateY)
-DOMMatrix.translate(translateX, translateY, translateZ)
+translate(translateX, translateY)
+translate(translateX, translateY, translateZ)
 ```
 
 ### Parameters
@@ -61,9 +62,7 @@ document
   .setAttribute("transform", matrix.toString());
 ```
 
-{{ EmbedLiveSample('Examples', '250', '250',
-  'screen_shot_2019-02-19_at_11.20.40.png',
-  'Web/API/DOMMatrixReadOnly/translate') }}
+{{EmbedLiveSample('Examples', '250', '250')}}
 
 ## Specifications
 

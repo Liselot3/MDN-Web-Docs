@@ -1,5 +1,6 @@
 ---
-title: CanvasRenderingContext2D.closePath()
+title: "CanvasRenderingContext2D: closePath() method"
+short-title: closePath()
 slug: Web/API/CanvasRenderingContext2D/closePath
 page-type: web-api-instance-method
 browser-compat: api.CanvasRenderingContext2D.closePath
@@ -70,7 +71,8 @@ ctx.stroke();
 
 This example draws a smiley face consisting of three disconnected sub-paths.
 
-> **Note:** Although `closePath()` is called after all the arcs have been
+> [!NOTE]
+> Although `closePath()` is called after all the arcs have been
 > created, only the last arc (sub-path) gets closed.
 
 #### HTML

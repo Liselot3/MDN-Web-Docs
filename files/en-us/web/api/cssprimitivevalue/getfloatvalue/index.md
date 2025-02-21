@@ -1,5 +1,6 @@
 ---
-title: CSSPrimitiveValue.getFloatValue()
+title: "CSSPrimitiveValue: getFloatValue() method"
+short-title: getFloatValue()
 slug: Web/API/CSSPrimitiveValue/getFloatValue
 page-type: web-api-instance-method
 status:
@@ -14,7 +15,8 @@ The **`getFloatValue()`** method of the
 unit. If this CSS value doesn't contain a float value or can't be converted into the
 specified unit, a {{domxref("DOMException")}} is raised.
 
-> **Note:** This method was part of an attempt to create a typed CSS Object Model. This attempt has been abandoned, and most browsers do
+> [!NOTE]
+> This method was part of an attempt to create a typed CSS Object Model. This attempt has been abandoned, and most browsers do
 > not implement it.
 >
 > To achieve your purpose, you can use:

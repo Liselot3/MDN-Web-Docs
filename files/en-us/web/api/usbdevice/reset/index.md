@@ -1,5 +1,6 @@
 ---
-title: USBDevice.reset()
+title: "USBDevice: reset() method"
+short-title: reset()
 slug: Web/API/USBDevice/reset
 page-type: web-api-instance-method
 status:
@@ -7,7 +8,7 @@ status:
 browser-compat: api.USBDevice.reset
 ---
 
-{{APIRef("WebUSB API")}}{{SeeCompatTable}}
+{{APIRef("WebUSB API")}}{{SeeCompatTable}}{{SecureContext_Header}}{{AvailableInWorkers}}
 
 The **`reset()`** method of the {{domxref("USBDevice")}}
 interface returns a {{jsxref("promise")}} that resolves when the device is reset and all

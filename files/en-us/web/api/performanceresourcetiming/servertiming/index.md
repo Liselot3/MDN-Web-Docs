@@ -1,11 +1,12 @@
 ---
-title: PerformanceResourceTiming.serverTiming
+title: "PerformanceResourceTiming: serverTiming property"
+short-title: serverTiming
 slug: Web/API/PerformanceResourceTiming/serverTiming
 page-type: web-api-instance-property
 browser-compat: api.PerformanceResourceTiming.serverTiming
 ---
 
-{{APIRef("Performance API")}} {{securecontext_header}}
+{{APIRef("Performance API")}}{{AvailableInWorkers}}{{securecontext_header}}
 
 The **`serverTiming`** read-only property returns an array of {{domxref("PerformanceServerTiming")}} entries containing server timing metrics.
 
@@ -39,7 +40,7 @@ const observer = new PerformanceObserver((list) => {
 });
 
 ["navigation", "resource"].forEach((type) =>
-  observer.observe({ type, buffered: true })
+  observer.observe({ type, buffered: true }),
 );
 ```
 
@@ -48,7 +49,7 @@ Example using {{domxref("Performance.getEntriesByType()")}}, which only shows `r
 ```js
 for (const entryType of ["navigation", "resource"]) {
   for (const { name: url, serverTiming } of performance.getEntriesByType(
-    entryType
+    entryType,
   )) {
     if (serverTiming) {
       for (const { name, duration } of serverTiming) {

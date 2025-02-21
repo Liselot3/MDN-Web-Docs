@@ -1,5 +1,6 @@
 ---
-title: PasswordCredential.password
+title: "PasswordCredential: password property"
+short-title: password
 slug: Web/API/PasswordCredential/password
 page-type: web-api-instance-property
 status:
@@ -7,7 +8,7 @@ status:
 browser-compat: api.PasswordCredential.password
 ---
 
-{{SeeCompatTable}}{{APIRef("Credential Management API")}}
+{{SeeCompatTable}}{{APIRef("Credential Management API")}}{{SecureContext_Header}}
 
 The **`password`** read-only property
 of the {{domxref("PasswordCredential")}} interface returns a string

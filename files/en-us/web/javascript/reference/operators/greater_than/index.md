@@ -10,7 +10,22 @@ browser-compat: javascript.operators.greater_than
 The **greater than (`>`)** operator returns `true` if the left
 operand is greater than the right operand, and `false` otherwise.
 
-{{EmbedInteractiveExample("pages/js/expressions-greater-than.html")}}
+{{InteractiveExample("JavaScript Demo: Expressions - Greater than operator")}}
+
+```js interactive-example
+console.log(5 > 3);
+// Expected output: true
+
+console.log(3 > 3);
+// Expected output: false
+
+// Compare bigint to number
+console.log(3n > 5);
+// Expected output: false
+
+console.log("ab" > "aa");
+// Expected output: true
+```
 
 ## Syntax
 
@@ -20,7 +35,7 @@ x > y
 
 ## Description
 
-The operands are compared using the same algorithm as the [Less than](/en-US/docs/Web/JavaScript/Reference/Operators/Less_than) operator, except the two operands are swapped.
+The operands are compared using the same algorithm as the [Less than](/en-US/docs/Web/JavaScript/Reference/Operators/Less_than) operator, except the two operands are swapped. `x > y` is generally equivalent to `y < x`, except that `x > y` coerces `x` to a primitive before `y`, while `y < x` coerces `y` to a primitive before `x`. Because coercion may have side effects, the order of the operands may matter.
 
 ## Examples
 
@@ -90,6 +105,6 @@ NaN > 3; // false
 
 ## See also
 
-- [Greater than or equal operator](/en-US/docs/Web/JavaScript/Reference/Operators/Greater_than_or_equal)
-- [Less than operator](/en-US/docs/Web/JavaScript/Reference/Operators/Less_than)
-- [Less than or equal operator](/en-US/docs/Web/JavaScript/Reference/Operators/Less_than_or_equal)
+- [Greater than or equal (`>=`)](/en-US/docs/Web/JavaScript/Reference/Operators/Greater_than_or_equal)
+- [Less than (`<`)](/en-US/docs/Web/JavaScript/Reference/Operators/Less_than)
+- [Less than or equal (`<=`)](/en-US/docs/Web/JavaScript/Reference/Operators/Less_than_or_equal)

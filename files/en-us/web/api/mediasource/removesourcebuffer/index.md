@@ -1,11 +1,12 @@
 ---
-title: MediaSource.removeSourceBuffer()
+title: "MediaSource: removeSourceBuffer() method"
+short-title: removeSourceBuffer()
 slug: Web/API/MediaSource/removeSourceBuffer
 page-type: web-api-instance-method
 browser-compat: api.MediaSource.removeSourceBuffer
 ---
 
-{{APIRef("Media Source Extensions")}}
+{{APIRef("Media Source Extensions")}}{{AvailableInWorkers("window_and_dedicated")}}
 
 The **`removeSourceBuffer()`** method of the {{domxref("MediaSource")}} interface removes the given {{domxref("SourceBuffer")}} from the {{domxref("SourceBufferList")}} associated with this `MediaSource` object.
 

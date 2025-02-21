@@ -1,5 +1,6 @@
 ---
-title: XRTransientInputHitTestSource.cancel()
+title: "XRTransientInputHitTestSource: cancel() method"
+short-title: cancel()
 slug: Web/API/XRTransientInputHitTestSource/cancel
 page-type: web-api-instance-method
 status:
@@ -7,7 +8,7 @@ status:
 browser-compat: api.XRTransientInputHitTestSource.cancel
 ---
 
-{{APIRef("WebXR Device API")}}{{SeeCompatTable}}
+{{APIRef("WebXR Device API")}}{{SeeCompatTable}}{{SecureContext_Header}}
 
 The **`cancel()`** method of the {{domxref("XRTransientInputHitTestSource")}} interface unsubscribes a transient input hit test.
 

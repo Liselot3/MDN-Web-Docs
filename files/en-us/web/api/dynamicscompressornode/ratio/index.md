@@ -1,5 +1,6 @@
 ---
-title: DynamicsCompressorNode.ratio
+title: "DynamicsCompressorNode: ratio property"
+short-title: ratio
 slug: Web/API/DynamicsCompressorNode/ratio
 page-type: web-api-instance-property
 browser-compat: api.DynamicsCompressorNode.ratio
@@ -17,7 +18,8 @@ The `ratio` property's default value is `12` and it can be set between `1` and `
 
 An {{domxref("AudioParam")}}.
 
-> **Note:** Though the {{domxref("AudioParam")}} returned is read-only, the value it represents is not.
+> [!NOTE]
+> Though the {{domxref("AudioParam")}} returned is read-only, the value it represents is not.
 
 ## Examples
 
@@ -27,7 +29,7 @@ const compressor = audioCtx.createDynamicsCompressor();
 compressor.ratio.value = 12;
 ```
 
-See [`BaseAudioContext.createDynamicsCompressor()`](/en-US/docs/Web/API/BaseAudioContext/createDynamicsCompressor#example) for more complete example code.
+See [`BaseAudioContext.createDynamicsCompressor()`](/en-US/docs/Web/API/BaseAudioContext/createDynamicsCompressor#examples) for more complete example code.
 
 ## Specifications
 

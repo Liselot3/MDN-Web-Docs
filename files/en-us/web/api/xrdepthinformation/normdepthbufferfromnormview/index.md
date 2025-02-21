@@ -1,5 +1,6 @@
 ---
-title: XRDepthInformation.normDepthBufferFromNormView
+title: "XRDepthInformation: normDepthBufferFromNormView property"
+short-title: normDepthBufferFromNormView
 slug: Web/API/XRDepthInformation/normDepthBufferFromNormView
 page-type: web-api-instance-property
 status:
@@ -7,7 +8,7 @@ status:
 browser-compat: api.XRDepthInformation.normDepthBufferFromNormView
 ---
 
-{{APIRef("WebXR Device API")}}{{SeeCompatTable}}
+{{APIRef("WebXR Device API")}}{{SeeCompatTable}}{{SecureContext_Header}}
 
 The _read-only_ **`normDepthBufferFromNormView`** property of the {{DOMxRef("XRDepthInformation")}} interface contains the 3D geometric transform that needs to be applied when indexing into the depth buffer.
 
@@ -20,8 +21,10 @@ An {{domxref("XRRigidTransform")}} that needs to be applied when indexing into t
 Use {{domxref("XRFrame.getDepthInformation()")}} (CPU) or {{domxref("XRWebGLBinding.getDepthInformation()")}} (WebGL) to obtain depth information. The returned objects will contain the `normDepthBufferFromNormView` of the depth buffer, which you can use for further calculations.
 
 ```js
-const normDepthFromNormViewMatrix = depthData.normDepthBufferFromNormView.matrix;
-const normViewFromNormDepth = depthData.normDepthBufferFromNormView.inverse.matrix;
+const normDepthFromNormViewMatrix =
+  depthData.normDepthBufferFromNormView.matrix;
+const normViewFromNormDepth =
+  depthData.normDepthBufferFromNormView.inverse.matrix;
 ```
 
 ## Specifications

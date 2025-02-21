@@ -7,13 +7,31 @@ browser-compat: javascript.builtins.Intl.ListFormat.ListFormat
 
 {{JSRef}}
 
-The **`Intl.ListFormat()`** constructor creates
-{{jsxref("Intl/ListFormat", "Intl.ListFormat")}} objects that enable language-sensitive list
-formatting.
+The **`Intl.ListFormat()`** constructor creates {{jsxref("Intl.ListFormat")}} objects.
 
-{{EmbedInteractiveExample("pages/js/intl-listformat.html", "taller")}}
+{{InteractiveExample("JavaScript Demo: Intl.ListFormat", "taller")}}
 
-<!-- The source for this interactive example is stored in a GitHub repository. If you'd like to contribute to the interactive examples project, please clone https://github.com/mdn/interactive-examples and send us a pull request. -->
+```js interactive-example
+const vehicles = ["Motorcycle", "Bus", "Car"];
+
+const formatter = new Intl.ListFormat("en", {
+  style: "long",
+  type: "conjunction",
+});
+console.log(formatter.format(vehicles));
+// Expected output: "Motorcycle, Bus, and Car"
+
+const formatter2 = new Intl.ListFormat("de", {
+  style: "short",
+  type: "disjunction",
+});
+console.log(formatter2.format(vehicles));
+// Expected output: "Motorcycle, Bus oder Car"
+
+const formatter3 = new Intl.ListFormat("en", { style: "narrow", type: "unit" });
+console.log(formatter3.format(vehicles));
+// Expected output: "Motorcycle Bus Car"
+```
 
 ## Syntax
 
@@ -28,32 +46,32 @@ new Intl.ListFormat(locales, options)
 ### Parameters
 
 - `locales` {{optional_inline}}
-  - : A string with a BCP 47 language tag, or an array of such strings. For the general form and interpretation of the `locales` argument, see [Locale identification and negotiation](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl#locale_identification_and_negotiation).
+  - : A string with a BCP 47 language tag or an {{jsxref("Intl.Locale")}} instance, or an array of such locale identifiers. The runtime's default locale is used when `undefined` is passed or when none of the specified locale identifiers is supported. For the general form and interpretation of the `locales` argument, see [the parameter description on the `Intl` main page](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl#locales_argument).
 - `options` {{optional_inline}}
-
-  - : An object with some or all of the following properties:
-
+  - : An object containing the following properties, in the order they are retrieved (all of them are optional):
     - `localeMatcher`
-
-      - : The locale-matching algorithm to use. Possible values:
-
-        - `"best fit"` (default)
-        - `"lookup"`
-
-        For information about this option, see the
-        {{jsxref("Global_Objects/Intl", "Intl", "#locale_identification_and_negotiation", 1)}}
-        page.
-
+      - : The locale matching algorithm to use. Possible values are `"lookup"` and `"best fit"`; the default is `"best fit"`. For information about this option, see [Locale identification and negotiation](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl#locale_identification_and_negotiation).
     - `type`
-      - : Indicates the type of grouping. Possible values:
-        - `"conjunction"`, for "and"-based grouping of the list items: "A, B, and C" (default)
-        - `"disjunction"`, for "or"-based grouping of the list items: "A, B, or C"
-        - `"unit"`, for grouping the list items as a unit (neither "and"-based nor "or"-based): "A, B, C"
+      - : Indicates the type of grouping. Possible values are:
+        - `"conjunction"` (default)
+          - : For "and"-based grouping of the list items: "A, B, and C"
+        - `"disjunction"`
+          - : For "or"-based grouping of the list items: "A, B, or C"
+        - `"unit"`
+          - : For grouping the list items as a unit (neither "and"-based nor "or"-based): "A, B, C"
     - `style`
-      - : Indicates the grouping style (for example, whether list separators and conjunctions are included). Possible values:
-        - `"long"`: "A, B, and C" (default)
-        - `"short"`: "A, B, C"
-        - `"narrow"`: "A B C"
+      - : The grouping style (for example, whether list separators and conjunctions are included). Possible values are:
+        - `"long"` (default)
+          - : E.g. "A, B, and C"
+        - `"short"`
+          - : E.g. "A, B, C"
+        - `"narrow"`
+          - : E.g. "A B C"
+
+### Exceptions
+
+- {{jsxref("RangeError")}}
+  - : Thrown if `locales` or `options` contain invalid values.
 
 ## Examples
 
@@ -166,4 +184,4 @@ console.log(
 ## See also
 
 - {{jsxref("Intl.ListFormat")}}
-- {{jsxref("Global_Objects/Intl", "Intl")}}
+- {{jsxref("Intl")}}

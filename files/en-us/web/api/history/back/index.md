@@ -1,5 +1,6 @@
 ---
-title: History.back()
+title: "History: back() method"
+short-title: back()
 slug: Web/API/History/back
 page-type: web-api-instance-method
 browser-compat: api.History.back
@@ -7,7 +8,7 @@ browser-compat: api.History.back
 
 {{APIRef("History API")}}
 
-The **`History.back()`** method causes
+The **`back()`** method of the {{domxref("History")}} interface causes
 the browser to move back one page in the session history.
 
 It has the same
@@ -31,6 +32,11 @@ None.
 
 None ({{jsxref("undefined")}}).
 
+### Exceptions
+
+- `SecurityError` {{domxref("DOMException")}}
+  - : Thrown if the associated document is not fully active. Browsers also throttle navigations and may throw this error, generate a warning, or ignore the call if it's called too frequently.
+
 ## Examples
 
 The following short example causes a button on the page to navigate back one entry in
@@ -45,7 +51,7 @@ the session history.
 ### JavaScript
 
 ```js
-document.getElementById('go-back').addEventListener('click', () => {
+document.getElementById("go-back").addEventListener("click", () => {
   history.back();
 });
 ```

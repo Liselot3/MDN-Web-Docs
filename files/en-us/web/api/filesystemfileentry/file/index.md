@@ -1,5 +1,6 @@
 ---
-title: FileSystemFileEntry.file()
+title: "FileSystemFileEntry: file() method"
+short-title: file()
 slug: Web/API/FileSystemFileEntry/file
 page-type: web-api-instance-method
 browser-compat: api.FileSystemFileEntry.file
@@ -51,7 +52,7 @@ function readFile(entry, successCallback, errorCallback) {
 
     reader.onerror = () => {
       errorCallback(reader.error);
-    }
+    };
 
     reader.readAsText(file);
   }, errorCallback);
@@ -76,4 +77,3 @@ called; similarly, its {{domxref("FileReader/error_event", "error")}} handler is
 ## See also
 
 - [File and Directory Entries API](/en-US/docs/Web/API/File_and_Directory_Entries_API)
-- [Introduction to the File and Directory Entries API](/en-US/docs/Web/API/File_and_Directory_Entries_API/Introduction)

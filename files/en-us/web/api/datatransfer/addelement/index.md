@@ -1,5 +1,6 @@
 ---
-title: DataTransfer.addElement()
+title: "DataTransfer: addElement() method"
+short-title: addElement()
 slug: Web/API/DataTransfer/addElement
 page-type: web-api-instance-method
 status:
@@ -15,7 +16,8 @@ to the given element. This element will be the element to which {{domxref("HTMLE
 {{domxref("HTMLElement/dragend_event", "dragend")}} events are fired, and not the default target (the node that was
 dragged).
 
-> **Note:** This method is Firefox-specific.
+> [!NOTE]
+> This method is Firefox-specific.
 
 ## Syntax
 

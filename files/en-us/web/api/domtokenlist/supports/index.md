@@ -1,5 +1,6 @@
 ---
-title: DOMTokenList.supports()
+title: "DOMTokenList: supports() method"
+short-title: supports()
 slug: Web/API/DOMTokenList/supports
 page-type: web-api-instance-method
 browser-compat: api.DOMTokenList.supports
@@ -22,7 +23,7 @@ supports(token)
 - `token`
   - : A string containing the token to query for.
 
-### Returns
+### Return value
 
 A boolean value indicating whether the token was found.
 

@@ -1,5 +1,6 @@
 ---
-title: XRFrame.trackedAnchors
+title: "XRFrame: trackedAnchors property"
+short-title: trackedAnchors
 slug: Web/API/XRFrame/trackedAnchors
 page-type: web-api-instance-property
 status:
@@ -7,7 +8,7 @@ status:
 browser-compat: api.XRFrame.trackedAnchors
 ---
 
-{{APIRef("WebXR Device API")}}{{SeeCompatTable}}
+{{APIRef("WebXR Device API")}}{{SeeCompatTable}}{{SecureContext_Header}}
 
 The read-only **`trackedAnchor`** property of the {{domxref("XRFrame")}} interface returns an {{domxref("XRAnchorSet")}} object containing all anchors still tracked in the frame.
 

@@ -7,7 +7,7 @@ browser-compat: css.at-rules.font-palette-values.override-colors
 
 {{CSSRef}}
 
-The **`override-colors`** CSS [descriptor](</en-US/docs/Glossary/Descriptor_(CSS)>) is used to override colors in the chosen [base-palette](/en-US/docs/Web/CSS/@font-palette-values/base-palette) for a color font.
+The **`override-colors`** CSS [descriptor](/en-US/docs/Glossary/CSS_Descriptor) is used to override colors in the chosen [base-palette](/en-US/docs/Web/CSS/@font-palette-values/base-palette) for a color font.
 
 ## Syntax
 
@@ -21,17 +21,23 @@ override-colors: 0 red;
 /* using hex-color */
 override-colors: 0 #f00;
 
-/* using rbg */
-override-colors: 0 rgb(255, 0, 0);
+/* using rgb */
+override-colors: 0 rgb(255 0 0);
 
 /* overriding multiple colors */
-override-colors: 0 #f00, 1 #0f0, 2 #00f;
+override-colors:
+  0 #f00,
+  1 #0f0,
+  2 #00f;
 
 /* overriding multiple colors with readability */
-override-colors: 0 #f00, 1 #0f0, 2 #00f;
+override-colors:
+  0 #f00,
+  1 #0f0,
+  2 #00f;
 ```
 
-The `override-colors` [descriptor](</en-US/docs/Glossary/Descriptor_(CSS)>) takes a comma-separated list of the color index and new color value.
+The `override-colors` [descriptor](/en-US/docs/Glossary/CSS_Descriptor) takes a comma-separated list of the color index and new color value.
 
 The color index is zero-based and any [color value](/en-US/docs/Web/CSS/color_value) can be used.
 
@@ -54,7 +60,7 @@ For each key-value pair of index and color, the color with the index in the spec
 
 ### Changing colors of emojis
 
-This example shows how to override colors in the [Noto Color Emoji](https://fonts.google.com/noto/specimen/Noto+Color+Emoji/) color font to match your site's brand.
+This example shows how to override colors in the [Noto Color Emoji](https://fonts.google.com/noto/specimen/Noto+Color+Emoji) color font to match your site's brand.
 
 #### HTML
 
@@ -97,11 +103,11 @@ This example shows how to override colors in the [Noto Color Emoji](https://font
 @font-palette-values --red {
   font-family: "Noto Color Emoji";
   override-colors:
-    0 rgb(74, 11, 0),
-    1 rgb(149, 22, 1),
-    2 rgb(183, 27, 1),
-    3 rgb(193, 28, 1),
-    4 rgb(230, 34, 1);
+    0 rgb(74 11 0),
+    1 rgb(149 22 1),
+    2 rgb(183 27 1),
+    3 rgb(193 28 1),
+    4 rgb(230 34 1);
 }
 .red-hat {
   font-palette: --red;
@@ -170,3 +176,4 @@ This example shows the that in `base-palette` `3`, the color at index 0 is overr
 - {{cssxref("@font-palette-values/base-palette", "base-palette")}}
 - {{cssxref("@font-palette-values/font-family", "font-family")}}
 - {{cssxref("font-palette/", "font-palette")}}
+- {{domxref("CSSFontPaletteValuesRule.overrideColors")}}

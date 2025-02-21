@@ -1,5 +1,6 @@
 ---
-title: CSSKeyframesRule.findRule()
+title: "CSSKeyframesRule: findRule() method"
+short-title: findRule()
 slug: Web/API/CSSKeyframesRule/findRule
 page-type: web-api-instance-method
 browser-compat: api.CSSKeyframesRule.findRule
@@ -36,7 +37,7 @@ The CSS includes a keyframes at-rule. This will be the first {{domxref("CSSRule"
 `myRules[0]` returns a {{domxref("CSSKeyframesRule")}} object. Calling findRule("to") returns a {{domxref("CSSKeyframeRule")}} representing the second rule.
 
 ```css
-@keyframes slidein {
+@keyframes slide-in {
   from {
     transform: translateX(0%);
   }

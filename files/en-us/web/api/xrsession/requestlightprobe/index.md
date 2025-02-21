@@ -1,5 +1,6 @@
 ---
-title: XRSession.requestLightProbe()
+title: "XRSession: requestLightProbe() method"
+short-title: requestLightProbe()
 slug: Web/API/XRSession/requestLightProbe
 page-type: web-api-instance-method
 status:
@@ -7,7 +8,7 @@ status:
 browser-compat: api.XRSession.requestLightProbe
 ---
 
-{{APIRef("WebXR Device API")}}{{SeeCompatTable}}
+{{APIRef("WebXR Device API")}}{{SeeCompatTable}}{{SecureContext_Header}}
 
 The **`requestLightProbe()`** method of the
 {{domxref("XRSession")}} interface returns a {{jsxref("Promise")}} that resolves with an {{domxref("XRLightProbe")}} object that estimates lighting information at a given point in the user's environment.
@@ -48,7 +49,7 @@ The default format is `srgb8`, however, some rendering engines may use other (hi
 
 ```js
 const lightProbe = await xrSession.requestLightProbe({
-  reflectionFormat: xrSession.preferredReflectionFormat
+  reflectionFormat: xrSession.preferredReflectionFormat,
 });
 ```
 

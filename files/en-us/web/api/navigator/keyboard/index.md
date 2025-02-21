@@ -1,5 +1,6 @@
 ---
-title: Navigator.keyboard
+title: "Navigator: keyboard property"
+short-title: keyboard
 slug: Web/API/Navigator/keyboard
 page-type: web-api-instance-property
 status:
@@ -7,7 +8,7 @@ status:
 browser-compat: api.Navigator.keyboard
 ---
 
-{{SeeCompatTable}}{{APIRef("Keyboard API")}}
+{{SeeCompatTable}}{{APIRef("Keyboard API")}}{{SecureContext_Header}}
 
 The **`keyboard`** read-only property
 of the {{domxref("Navigator")}} interface returns a {{domxref('Keyboard')}} object

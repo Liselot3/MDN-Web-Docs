@@ -1,5 +1,6 @@
 ---
-title: Element.toggleAttribute()
+title: "Element: toggleAttribute() method"
+short-title: toggleAttribute()
 slug: Web/API/Element/toggleAttribute
 page-type: web-api-instance-method
 browser-compat: api.Element.toggleAttribute
@@ -67,8 +68,6 @@ button.addEventListener("click", () => {
 
 {{ EmbedLiveSample('Examples', '300', '50') }}
 
-{{DOMAttributeMethods}}
-
 ## Specifications
 
 {{Specifications}}
@@ -76,3 +75,10 @@ button.addEventListener("click", () => {
 ## Browser compatibility
 
 {{Compat}}
+
+## See also
+
+- {{domxref("Element.hasAttribute()")}}
+- {{domxref("Element.getAttribute()")}}
+- {{domxref("Element.removeAttribute()")}}
+- {{domxref("Element.setAttribute()")}}

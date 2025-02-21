@@ -7,12 +7,24 @@ browser-compat: javascript.builtins.String.padStart
 
 {{JSRef}}
 
-The **`padStart()`** method pads the
-current string with another string (multiple times, if needed) until the resulting
-string reaches the given length. The padding is applied from the start of the
-current string.
+The **`padStart()`** method of {{jsxref("String")}} values pads this string with another string (multiple times, if needed) until the resulting
+string reaches the given length. The padding is applied from the start of this string.
 
-{{EmbedInteractiveExample("pages/js/string-padstart.html")}}
+{{InteractiveExample("JavaScript Demo: String.padStart()")}}
+
+```js interactive-example
+const str1 = "5";
+
+console.log(str1.padStart(2, "0"));
+// Expected output: "05"
+
+const fullNumber = "2034399002125581";
+const last4Digits = fullNumber.slice(-4);
+const maskedNumber = last4Digits.padStart(fullNumber.length, "*");
+
+console.log(maskedNumber);
+// Expected output: "************5581"
+```
 
 ## Syntax
 

@@ -6,7 +6,7 @@ page-type: guide
 
 {{DefaultAPISidebar("WebGL")}}
 
-Matrices can be used to represent transformations of objects in space, and are used for performing many key types of computation when constructing images and visualizing data on the Web. This article explores how to create matrices and how to use them with [CSS transforms](/en-US/docs/Web/CSS/CSS_Transforms/Using_CSS_transforms) and the `matrix3d` transform type.
+Matrices can be used to represent transformations of objects in space, and are used for performing many key types of computation when constructing images and visualizing data on the Web. This article explores how to create matrices and how to use them with [CSS transforms](/en-US/docs/Web/CSS/CSS_transforms/Using_CSS_transforms) and the `matrix3d` transform type.
 
 While this article uses [CSS](/en-US/docs/Web/CSS) to simplify explanations, matrices are a core concept used by many different technologies including [WebGL](/en-US/docs/Web/API/WebGL_API), the [WebXR](/en-US/docs/Web/API/WebXR_Device_API) (VR and AR) API, and [GLSL shaders](/en-US/docs/Games/Techniques/3D_on_the_web/GLSL_Shaders). This article is also available as an [MDN content kit](https://github.com/gregtatum/mdn-matrix-math). The live examples use a collection of [utility functions](https://github.com/gregtatum/mdn-webgl) available under a global object named `MDN`.
 
@@ -26,8 +26,13 @@ What does multiplying by the identity matrix look like? The easiest example is t
 
 After adding the `w` component to the point, notice how neatly the matrix and the point line up:
 
-```js
-[1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1][(4, 3, 2, 1)]; // Point at [x, y, z, w]
+```js-nolint
+[1, 0, 0, 0,
+ 0, 1, 0, 0,
+ 0, 0, 1, 0,
+ 0, 0, 0, 1]
+
+[4, 3, 2, 1] // Point at [x, y, z, w]
 ```
 
 The `w` component has some additional uses that are out of scope for this article. Check out the [WebGL model view projection](/en-US/docs/Web/API/WebGL_API/WebGL_model_view_projection) article for a look into how it comes in handy.
@@ -78,6 +83,27 @@ function multiplyMatrixAndPoint(matrix, point) {
   return [resultX, resultY, resultZ, resultW];
 }
 ```
+
+> [!NOTE]
+> Our examples on this page use row vectors to represent points and right-multiplication to apply transformation matrices. That is, the above does `point * matrix` where `point` is a 4x1 row vector. If you want to use column vectors and left-multiplication, you need to adjust the multiplication function accordingly, and transpose each matrix introduced below.
+>
+> For example, the [`translationMatrix`](#translation_matrix) introduced below originally looks like:
+>
+> ```js-nolint
+> [1, 0, 0, 0,
+>  0, 1, 0, 0,
+>  0, 0, 1, 0,
+>  x, y, z, 1]
+> ```
+>
+> After transposition, it would look like:
+>
+> ```js-nolint
+> [1, 0, 0, x,
+>  0, 1, 0, y,
+>  0, 0, 1, z,
+>  0, 0, 0, 1]
+> ```
 
 Now using the function above we can multiply a point by the matrix. Using the identity matrix it should return a point identical to the original, since a point (or any other matrix) multiplied by the identity matrix is always equal to itself:
 
@@ -140,7 +166,8 @@ let identityMatrix = [1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1];
 let someMatrixResult = multiplyMatrices(identityMatrix, someMatrix);
 ```
 
-> **Warning:** These matrix functions are written for clarity of explanation, not for speed or memory management. These functions create a lot of new arrays, which can be particularly expensive for real-time operations due to garbage collection. In real production code it would be best to use optimized functions. [glMatrix](https://glmatrix.net) is an example of a library that has a focus on speed and performance. The focus in the glMatrix library is to have target arrays that are allocated before the update loop.
+> [!WARNING]
+> These matrix functions are written for clarity of explanation, not for speed or memory management. These functions create a lot of new arrays, which can be particularly expensive for real-time operations due to garbage collection. In real production code it would be best to use optimized functions. [glMatrix](https://glmatrix.net/) is an example of a library that has a focus on speed and performance. The focus in the glMatrix library is to have target arrays that are allocated before the update loop.
 
 ## Translation matrix
 

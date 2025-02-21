@@ -1,11 +1,12 @@
 ---
-title: WebGLRenderingContext.enable()
+title: "WebGLRenderingContext: enable() method"
+short-title: enable()
 slug: Web/API/WebGLRenderingContext/enable
 page-type: web-api-instance-method
 browser-compat: api.WebGLRenderingContext.enable
 ---
 
-{{APIRef("WebGL")}}
+{{APIRef("WebGL")}}{{AvailableInWorkers}}
 
 The **`WebGLRenderingContext.enable()`** method of the [WebGL API](/en-US/docs/Web/API/WebGL_API) enables specific WebGL capabilities
 for this context.

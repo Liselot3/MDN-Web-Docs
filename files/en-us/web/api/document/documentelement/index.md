@@ -1,5 +1,6 @@
 ---
-title: Document.documentElement
+title: "Document: documentElement property"
+short-title: documentElement
 slug: Web/API/Document/documentElement
 page-type: web-api-instance-property
 browser-compat: api.Document.documentElement
@@ -7,7 +8,7 @@ browser-compat: api.Document.documentElement
 
 {{ApiRef("DOM")}}
 
-**`Document.documentElement`** returns the
+The **`documentElement`** read-only property of the {{domxref("Document")}} interface returns the
 {{domxref("Element")}} that is the root element of the {{domxref("document")}} (for
 example, the {{HTMLElement("html")}} element for HTML documents).
 

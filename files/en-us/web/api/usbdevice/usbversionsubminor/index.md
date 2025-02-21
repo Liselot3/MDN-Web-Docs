@@ -1,5 +1,6 @@
 ---
-title: USBDevice.usbVersionSubminor
+title: "USBDevice: usbVersionSubminor property"
+short-title: usbVersionSubminor
 slug: Web/API/USBDevice/usbVersionSubminor
 page-type: web-api-instance-property
 status:
@@ -7,7 +8,7 @@ status:
 browser-compat: api.USBDevice.usbVersionSubminor
 ---
 
-{{SeeCompatTable}}{{APIRef("WebUSB API")}}
+{{APIRef("WebUSB API")}}{{SeeCompatTable}}{{SecureContext_Header}}{{AvailableInWorkers}}
 
 The **`usbVersionSubminor`** read only property of the
 {{domxref("USBDevice")}} interface is one of three properties that declare the USB

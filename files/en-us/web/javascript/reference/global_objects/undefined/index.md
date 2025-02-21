@@ -7,15 +7,29 @@ browser-compat: javascript.builtins.undefined
 
 {{jsSidebar("Objects")}}
 
-The global **`undefined`** property represents the primitive
-value `{{Glossary("Undefined", "undefined")}}`. It is one of JavaScript's
+The **`undefined`** global property represents the primitive
+value [`undefined`](/en-US/docs/Web/JavaScript/Data_structures#undefined_type). It is one of JavaScript's
 {{Glossary("Primitive", "primitive types")}}.
 
-{{EmbedInteractiveExample("pages/js/globalprops-undefined.html")}}
+{{InteractiveExample("JavaScript Demo: Standard built-in objects - undefined")}}
+
+```js interactive-example
+function test(t) {
+  if (t === undefined) {
+    return "Undefined value!";
+  }
+  return t;
+}
+
+let x;
+
+console.log(test(x));
+// Expected output: "Undefined value!"
+```
 
 ## Value
 
-The primitive value `{{Glossary("Undefined", "undefined")}}`.
+The primitive value [`undefined`](/en-US/docs/Web/JavaScript/Data_structures#undefined_type).
 
 {{js_property_attributes(0, 0, 0)}}
 
@@ -30,7 +44,8 @@ method or statement also returns `undefined` if the variable that is being
 evaluated does not have an assigned value. A function returns `undefined` if
 a value was not {{jsxref("Statements/return", "returned")}}.
 
-> **Note:** While you can use `undefined` as an {{Glossary("identifier")}} (variable name) in any scope other than the global scope (because `undefined` is not a [reserved word](/en-US/docs/Web/JavaScript/Reference/Lexical_grammar#reserved_words)), doing so is a very bad idea that will make your code difficult to maintain and debug.
+> [!NOTE]
+> While you can use `undefined` as an {{Glossary("identifier")}} (variable name) in any scope other than the global scope (because `undefined` is not a [reserved word](/en-US/docs/Web/JavaScript/Reference/Lexical_grammar#reserved_words)), doing so is a very bad idea that will make your code difficult to maintain and debug.
 >
 > ```js example-bad
 > // DON'T DO THIS
@@ -62,7 +77,8 @@ if (x === undefined) {
 }
 ```
 
-> **Note:** The _strict equality_ operator (as opposed to the
+> [!NOTE]
+> The _strict equality_ operator (as opposed to the
 > _standard equality_ operator) must be used here, because
 > `x == undefined` also checks whether `x` is `null`,
 > while strict equality doesn't. This is because `null` is not equivalent to
@@ -137,5 +153,5 @@ if (y === void 0) {
 
 ## See also
 
-- JavaScript's {{Glossary("Primitive", "primitive types")}}
+- [JavaScript data types and data structures](/en-US/docs/Web/JavaScript/Data_structures)
 - [`null`](/en-US/docs/Web/JavaScript/Reference/Operators/null)

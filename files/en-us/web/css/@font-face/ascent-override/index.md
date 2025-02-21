@@ -7,7 +7,7 @@ browser-compat: css.at-rules.font-face.ascent-override
 
 {{CSSRef}}
 
-The **`ascent-override`** CSS descriptor defines the ascent metric for the font. The ascent metric is the height above the baseline that CSS uses to lay out line boxes in an inline formatting context.
+The **`ascent-override`** CSS descriptor for the {{cssxref("@font-face")}} at-rule defines the ascent metric for the font. The ascent metric is the height above the baseline that CSS uses to lay out line boxes in an inline formatting context.
 
 ## Syntax
 
@@ -71,4 +71,4 @@ The `ascent-override` property can help when overriding the metrics of a fallbac
 - {{cssxref("@font-face/line-gap-override", "line-gap-override")}}
 - {{cssxref("@font-face/src", "src")}}
 - {{cssxref("@font-face/size-adjust", "size-adjust")}}
-- {{cssxref("@font-face/unicode-range", "unicode-range descriptor")}}
+- {{cssxref("@font-face/unicode-range", "unicode-range")}} descriptor

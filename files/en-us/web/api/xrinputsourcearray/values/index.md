@@ -1,5 +1,6 @@
 ---
-title: XRInputSourceArray.values()
+title: "XRInputSourceArray: values() method"
+short-title: values()
 slug: Web/API/XRInputSourceArray/values
 page-type: web-api-instance-method
 status:
@@ -61,8 +62,7 @@ once every input has been delivered to `checkInput()`.
 ## See also
 
 - [Inputs and input sources](/en-US/docs/Web/API/WebXR_Device_API/Inputs)
-- The {{domxref("XRInputSourceArray")}} method {{domxref("XRInputSourceArray.keys",
-    "keys()")}}
+- The {{domxref("XRInputSourceArray")}} method {{domxref("XRInputSourceArray.keys", "keys()")}}
 - The
   [`Array`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array) method `values()`
 - {{domxref("XRInputSource")}}

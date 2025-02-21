@@ -1,5 +1,6 @@
 ---
-title: SourceBuffer.textTracks
+title: "SourceBuffer: textTracks property"
+short-title: textTracks
 slug: Web/API/SourceBuffer/textTracks
 page-type: web-api-instance-property
 status:
@@ -7,7 +8,7 @@ status:
 browser-compat: api.SourceBuffer.textTracks
 ---
 
-{{APIRef("Media Source Extensions")}}{{SeeCompatTable}}
+{{APIRef("Media Source Extensions")}}{{AvailableInWorkers("window_and_dedicated")}}{{SeeCompatTable}}
 
 The **`textTracks`** read-only property of the
 {{domxref("SourceBuffer")}} interface returns a list of the text tracks currently

@@ -1,5 +1,6 @@
 ---
-title: XRCylinderLayer.aspectRatio
+title: "XRCylinderLayer: aspectRatio property"
+short-title: aspectRatio
 slug: Web/API/XRCylinderLayer/aspectRatio
 page-type: web-api-instance-property
 status:
@@ -19,17 +20,17 @@ A number representing the ratio of the visible cylinder section.
 
 ### Getting a layer's aspect ratio
 
-The {{domxref("XRWebGLBinding.createCylinderLayer()")}} method creates a cylinder layer and allows to specify an `aspectRatio`. The `XRCylinder.aspectRatio` property can be used after layer creation to get the aspect ratio used or to set it to a new one.
+The {{domxref("XRWebGLBinding.createCylinderLayer()")}} method creates a cylinder layer and allows to specify an `aspectRatio`. The `XRCylinder.aspectRatio` property can be used after layer creation to get the {{glossary("aspect ratio")}} used or to set it to a new one.
 
 ```js
 const cylinderLayer = xrGlBinding.createCylinderLayer({
   space: xrReferenceSpace,
   viewPixelWidth: 1200,
   viewPixelHeight: 600,
-  centralAngle : 60 * Math.PI / 180,
-  aspectRatio : 2,
-  radius : 2,
-  transform : new XRRigidTransform(/* … */),
+  centralAngle: (60 * Math.PI) / 180,
+  aspectRatio: 2,
+  radius: 2,
+  transform: new XRRigidTransform(/* … */),
 });
 
 cylinderLayer.aspectRatio; // 2

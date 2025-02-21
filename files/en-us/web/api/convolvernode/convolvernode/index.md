@@ -1,5 +1,6 @@
 ---
-title: ConvolverNode()
+title: "ConvolverNode: ConvolverNode() constructor"
+short-title: ConvolverNode()
 slug: Web/API/ConvolverNode/ConvolverNode
 page-type: web-api-constructor
 browser-compat: api.ConvolverNode.ConvolverNode
@@ -32,7 +33,7 @@ new ConvolverNode(context, options)
     - `disableNormalization`
       - : A boolean value controlling
         whether the impulse response from the buffer will be scaled by an equal-power
-        normalization, or not. The default is '`false`'.
+        normalization, or not. The default is `false`.
     - `channelCount`
       - : Represents an integer used to determine how many channels are used
         when [up-mixing and down-mixing](/en-US/docs/Web/API/Web_Audio_API/Basic_concepts_behind_Web_Audio_API#up-mixing_and_down-mixing) connections to any inputs to the node.

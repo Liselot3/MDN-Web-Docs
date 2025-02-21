@@ -7,11 +7,25 @@ browser-compat: javascript.builtins.Object.isPrototypeOf
 
 {{JSRef}}
 
-The **`isPrototypeOf()`** method checks if an object exists in another object's prototype chain.
+The **`isPrototypeOf()`** method of {{jsxref("Object")}} instances checks if this object exists in another object's prototype chain.
 
 > **Note:** `isPrototypeOf()` differs from the [`instanceof`](/en-US/docs/Web/JavaScript/Reference/Operators/instanceof) operator. In the expression `object instanceof AFunction`, `object`'s prototype chain is checked against `AFunction.prototype`, not against `AFunction` itself.
 
-{{EmbedInteractiveExample("pages/js/object-prototype-isprototypeof.html")}}
+{{InteractiveExample("JavaScript Demo: Object.prototype.isPrototypeOf()")}}
+
+```js interactive-example
+function Foo() {}
+function Bar() {}
+
+Bar.prototype = Object.create(Foo.prototype);
+
+const bar = new Bar();
+
+console.log(Foo.prototype.isPrototypeOf(bar));
+// Expected output: true
+console.log(Bar.prototype.isPrototypeOf(bar));
+// Expected output: true
+```
 
 ## Syntax
 
@@ -28,7 +42,7 @@ isPrototypeOf(object)
 
 A boolean indicating whether the calling object (`this`) lies in the prototype chain of `object`. Directly returns `false` when `object` is not an object (i.e. a primitive).
 
-### Errors thrown
+### Exceptions
 
 - {{jsxref("TypeError")}}
   - : Thrown if `this` is `null` or `undefined` (because it can't be [converted to an object](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object#object_coercion)).
@@ -76,7 +90,7 @@ if (Foo.prototype.isPrototypeOf(baz)) {
 }
 ```
 
-However, `Foo.prototype` existing in `baz`'s prototype chain doesn't imply `baz` was created using `Foo` as its constructor. For example, `baz` could be directly assigned with `Foo.prototype` as its prototype. In this case, if your code reads [private fields](/en-US/docs/Web/JavaScript/Reference/Classes/Private_class_fields) of `Foo` from `baz`, it would still fail:
+However, `Foo.prototype` existing in `baz`'s prototype chain doesn't imply `baz` was created using `Foo` as its constructor. For example, `baz` could be directly assigned with `Foo.prototype` as its prototype. In this case, if your code reads [private fields](/en-US/docs/Web/JavaScript/Reference/Classes/Private_properties) of `Foo` from `baz`, it would still fail:
 
 ```js
 class Foo {

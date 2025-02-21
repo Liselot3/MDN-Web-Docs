@@ -1,5 +1,6 @@
 ---
-title: Document.enableStyleSheetsForSet()
+title: "Document: enableStyleSheetsForSet() method"
+short-title: enableStyleSheetsForSet()
 slug: Web/API/Document/enableStyleSheetsForSet
 page-type: web-api-instance-method
 status:
@@ -49,6 +50,10 @@ None ({{jsxref("undefined")}}).
 document.enableStyleSheetsForSet("Some style sheet set name");
 ```
 
+## Specifications
+
+Not part of any specification.
+
 ## Browser compatibility
 
 {{Compat}}
@@ -60,5 +65,3 @@ document.enableStyleSheetsForSet("Some style sheet set name");
 - {{domxref("document.lastStyleSheetSet")}}
 - {{domxref("document.preferredStyleSheetSet")}}
 - {{domxref("document.selectedStyleSheetSet")}}
-- {{domxref("document.enableStyleSheetsForSet()")}}
-- [Correctly Using Titles With External Stylesheets](/en-US/docs/Archive/Web_Standards/Correctly_Using_Titles_With_External_Stylesheets)

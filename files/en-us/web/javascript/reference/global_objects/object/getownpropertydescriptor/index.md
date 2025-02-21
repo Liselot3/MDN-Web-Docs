@@ -13,7 +13,21 @@ one directly present on an object and not in the object's prototype chain). The 
 returned is mutable but mutating it has no effect on the original property's
 configuration.
 
-{{EmbedInteractiveExample("pages/js/object-getownpropertydescriptor.html")}}
+{{InteractiveExample("JavaScript Demo: Object.getOwnPropertyDescriptor()")}}
+
+```js interactive-example
+const object1 = {
+  property1: 42,
+};
+
+const descriptor1 = Object.getOwnPropertyDescriptor(object1, "property1");
+
+console.log(descriptor1.configurable);
+// Expected output: true
+
+console.log(descriptor1.value);
+// Expected output: 42
+```
 
 ## Syntax
 
@@ -64,7 +78,7 @@ A _property descriptor_ is a record with some of the following attributes:
 
 ## Examples
 
-### Using Object.getOwnPropertyDescriptor
+### Using Object.getOwnPropertyDescriptor()
 
 ```js
 let o, d;

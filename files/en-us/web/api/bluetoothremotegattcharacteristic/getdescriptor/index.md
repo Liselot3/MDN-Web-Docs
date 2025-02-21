@@ -1,5 +1,6 @@
 ---
-title: BluetoothRemoteGATTCharacteristic.getDescriptor()
+title: "BluetoothRemoteGATTCharacteristic: getDescriptor() method"
+short-title: getDescriptor()
 slug: Web/API/BluetoothRemoteGATTCharacteristic/getDescriptor
 page-type: web-api-instance-method
 status:
@@ -7,7 +8,7 @@ status:
 browser-compat: api.BluetoothRemoteGATTCharacteristic.getDescriptor
 ---
 
-{{APIRef("Bluetooth API")}}{{SeeCompatTable}}
+{{APIRef("Bluetooth API")}}{{SeeCompatTable}}{{SecureContext_Header}}
 
 The **`BluetoothRemoteGATTCharacteristic.getDescriptor()`** method
 returns a {{jsxref("Promise")}} that resolves to the
@@ -35,5 +36,3 @@ first {{domxref("BluetoothRemoteGATTDescriptor")}}.
 ## Browser compatibility
 
 {{Compat}}
-
-{{APIRef("Web Bluetooth")}}

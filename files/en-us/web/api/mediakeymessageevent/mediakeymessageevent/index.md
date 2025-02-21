@@ -1,11 +1,12 @@
 ---
-title: MediaKeyMessageEvent()
+title: "MediaKeyMessageEvent: MediaKeyMessageEvent() constructor"
+short-title: MediaKeyMessageEvent()
 slug: Web/API/MediaKeyMessageEvent/MediaKeyMessageEvent
 page-type: web-api-constructor
 browser-compat: api.MediaKeyMessageEvent.MediaKeyMessageEvent
 ---
 
-{{APIRef("EncryptedMediaExtensions")}}
+{{APIRef("Encrypted Media Extensions")}}{{SecureContext_Header}}
 
 The **`MediaKeyMessageEvent`** constructor creates a new {{domxref("MediaKeyMessageEvent")}} object.
 

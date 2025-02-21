@@ -1,5 +1,6 @@
 ---
-title: PannerNode.coneOuterAngle
+title: "PannerNode: coneOuterAngle property"
+short-title: coneOuterAngle
 slug: Web/API/PannerNode/coneOuterAngle
 page-type: web-api-instance-property
 browser-compat: api.PannerNode.coneOuterAngle
@@ -17,7 +18,7 @@ A double.
 
 ## Examples
 
-See [`PannerNode.orientationX`](/en-US/docs/Web/API/PannerNode/orientationX#example) for example code that demonstrates the effect on volume of changing the {{domxref("PannerNode")}} orientation parameters in combination with {{domxref("PannerNode.coneInnerAngle", "coneInnerAngle")}} and {{domxref("PannerNode.coneOuterAngle", "coneOuterAngle")}}.
+See [`PannerNode.orientationX`](/en-US/docs/Web/API/PannerNode/orientationX#example) for example code that demonstrates the effect on volume of changing the {{domxref("PannerNode")}} orientation parameters in combination with {{domxref("PannerNode.coneInnerAngle", "coneInnerAngle")}} and `coneOuterAngle`.
 
 ## Specifications
 

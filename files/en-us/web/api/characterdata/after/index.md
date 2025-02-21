@@ -1,5 +1,6 @@
 ---
-title: CharacterData.after()
+title: "CharacterData: after() method"
+short-title: after()
 slug: Web/API/CharacterData/after
 page-type: web-api-instance-method
 browser-compat: api.CharacterData.after
@@ -22,7 +23,7 @@ after(...nodes)
 ### Parameters
 
 - `nodes`
-  - : A set of {{domxref("Node")}} or strings to insert.
+  - : A set of {{domxref("Node")}} objects or strings to insert.
 
 ### Exceptions
 
@@ -49,7 +50,8 @@ h1TextNode.data;
 // "CharacterData.after()"
 ```
 
-> **Note:** If you rather want to append text to the current node,
+> [!NOTE]
+> If you rather want to append text to the current node,
 > the [`appendData()`](/en-US/docs/Web/API/CharacterData/appendData) method lets you append to the current node's data.
 
 ## Specifications
@@ -64,6 +66,8 @@ h1TextNode.data;
 
 - {{domxref("CharacterData.appendData()")}}
 - {{domxref("CharacterData.before()")}}
+- {{domxref("DocumentType.after()")}}
+- {{domxref("Element.after()")}}
 - {{domxref("Element.append()")}}
 - {{domxref("Node.appendChild()")}}
 - {{domxref("Element.insertAdjacentElement()")}}

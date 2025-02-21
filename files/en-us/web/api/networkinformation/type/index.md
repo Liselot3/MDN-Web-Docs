@@ -1,5 +1,6 @@
 ---
-title: NetworkInformation.type
+title: "NetworkInformation: type property"
+short-title: type
 slug: Web/API/NetworkInformation/type
 page-type: web-api-instance-property
 status:
@@ -7,12 +8,9 @@ status:
 browser-compat: api.NetworkInformation.type
 ---
 
-{{apiref("Network Information API")}}{{SeeCompatTable}}
+{{apiref("Network Information API")}}{{SeeCompatTable}} {{AvailableInWorkers}}
 
-The **`NetworkInformation.type`** read-only property returns
-the type of connection a device is using to communicate with the network.
-
-{{AvailableInWorkers}}
+The **`type`** read-only property of the {{domxref("NetworkInformation")}} interface returns the type of connection a device is using to communicate with the network.
 
 ## Value
 

@@ -1,11 +1,12 @@
 ---
-title: PerformanceResourceTiming.redirectEnd
+title: "PerformanceResourceTiming: redirectEnd property"
+short-title: redirectEnd
 slug: Web/API/PerformanceResourceTiming/redirectEnd
 page-type: web-api-instance-property
 browser-compat: api.PerformanceResourceTiming.redirectEnd
 ---
 
-{{APIRef("Performance API")}}
+{{APIRef("Performance API")}}{{AvailableInWorkers}}
 
 The **`redirectEnd`** read-only property returns a {{domxref("DOMHighResTimeStamp","timestamp")}} immediately after receiving the last byte of the response of the last redirect.
 

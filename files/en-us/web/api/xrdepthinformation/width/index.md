@@ -1,5 +1,6 @@
 ---
-title: XRDepthInformation.width
+title: "XRDepthInformation: width property"
+short-title: width
 slug: Web/API/XRDepthInformation/width
 page-type: web-api-instance-property
 status:
@@ -7,7 +8,7 @@ status:
 browser-compat: api.XRDepthInformation.width
 ---
 
-{{APIRef("WebXR Device API")}}{{SeeCompatTable}}
+{{APIRef("WebXR Device API")}}{{SeeCompatTable}}{{SecureContext_Header}}
 
 The _read-only_ **`width`** property of the {{DOMxRef("XRDepthInformation")}} interface contains the width of the depth buffer (number of columns).
 

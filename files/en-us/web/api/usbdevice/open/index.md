@@ -1,5 +1,6 @@
 ---
-title: USBDevice.open()
+title: "USBDevice: open() method"
+short-title: open()
 slug: Web/API/USBDevice/open
 page-type: web-api-instance-method
 status:
@@ -7,7 +8,7 @@ status:
 browser-compat: api.USBDevice.open
 ---
 
-{{APIRef("WebUSB API")}}{{SeeCompatTable}}
+{{APIRef("WebUSB API")}}{{SeeCompatTable}}{{SecureContext_Header}}{{AvailableInWorkers}}
 
 The **`open()`** method of the {{domxref("USBDevice")}}
 interface returns a {{jsxref("promise")}} that resolves when a device session has

@@ -5,7 +5,7 @@ page-type: web-api-interface
 browser-compat: api.PushSubscriptionOptions
 ---
 
-{{DefaultAPISidebar("Push API")}}
+{{APIRef("Push API")}}{{SecureContext_Header}}{{AvailableInWorkers}}
 
 The **`PushSubscriptionOptions`** interface of the {{domxref('Push API','','',' ')}} represents the options associated with a push subscription.
 
@@ -29,7 +29,7 @@ navigator.serviceWorker.ready.then((reg) => {
   reg.pushManager.getSubscription().then((subscription) => {
     const options = subscription.options;
     console.log(options); // a PushSubscriptionOptions object
-  })
+  });
 });
 ```
 

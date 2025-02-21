@@ -1,5 +1,6 @@
 ---
-title: AudioNode.disconnect()
+title: "AudioNode: disconnect() method"
+short-title: disconnect()
 slug: Web/API/AudioNode/disconnect
 page-type: web-api-instance-method
 browser-compat: api.AudioNode.disconnect
@@ -40,8 +41,6 @@ None ({{jsxref("undefined")}}).
 ## Examples
 
 ```js
-const AudioContext = window.AudioContext || window.webkitAudioContext;
-
 const audioCtx = new AudioContext();
 
 const oscillator = audioCtx.createOscillator();

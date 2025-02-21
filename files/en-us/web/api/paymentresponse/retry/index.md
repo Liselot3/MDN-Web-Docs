@@ -1,5 +1,6 @@
 ---
-title: PaymentResponse.retry()
+title: "PaymentResponse: retry() method"
+short-title: retry()
 slug: Web/API/PaymentResponse/retry
 page-type: web-api-instance-method
 browser-compat: api.PaymentResponse.retry
@@ -53,8 +54,7 @@ concept, in outline form, is:
    describes the requested payment and the options chosen by the user. Continue with the following steps:
 
    1. Validate the returned response; if there are any fields whose values are not
-      acceptable, call the response's {{domxref("PaymentResponse.complete",
-      "complete()")}} method with a value of `"fail"` to indicate failure.
+      acceptable, call the response's {{domxref("PaymentResponse.complete", "complete()")}} method with a value of `"fail"` to indicate failure.
    2. If the response's data is valid and acceptable, call
       `complete("success")` to finalize the payment and process it.
 
@@ -102,7 +102,11 @@ async function recursiveValidate(request, response) {
   }
   if (errors.shippingAddress) {
     // "shippingaddresschange" fired at request object
-    const promise = fixField(request, "shippingaddresschange", shippingValidator);
+    const promise = fixField(
+      request,
+      "shippingaddresschange",
+      shippingValidator,
+    );
     promisesToFixThings.push(promise);
   }
   if (errors.payer) {
@@ -121,7 +125,8 @@ function fixField(requestOrResponse, event, validator) {
       const promiseToValidate = validator(requestOrResponse);
       ev.updateWith(promiseToValidate);
       const errors = await promiseToValidate;
-      if (!errors) { // yay! fixed!
+      if (!errors) {
+        // yay! fixed!
         event.removeEventListener(event, listener);
         resolve();
       }

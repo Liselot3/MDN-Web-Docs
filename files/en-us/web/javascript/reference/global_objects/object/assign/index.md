@@ -13,12 +13,28 @@ copies all {{jsxref("Object/propertyIsEnumerable", "enumerable", "", 1)}}
 _source objects_ to a _target object_. It returns the modified target
 object.
 
-{{EmbedInteractiveExample("pages/js/object-assign.html")}}
+{{InteractiveExample("JavaScript Demo: Object.assign()")}}
+
+```js interactive-example
+const target = { a: 1, b: 2 };
+const source = { b: 4, c: 5 };
+
+const returnedTarget = Object.assign(target, source);
+
+console.log(target);
+// Expected output: Object { a: 1, b: 4, c: 5 }
+
+console.log(returnedTarget === target);
+// Expected output: true
+```
 
 ## Syntax
 
 ```js-nolint
-Object.assign(target, ...sources)
+Object.assign(target)
+Object.assign(target, source1)
+Object.assign(target, source1, source2)
+Object.assign(target, source1, source2, /* …, */ sourceN)
 ```
 
 ### Parameters
@@ -26,7 +42,7 @@ Object.assign(target, ...sources)
 - `target`
   - : The target object — what to apply the sources' properties to, which is returned
     after it is modified.
-- `sources`
+- `source1`, …, `sourceN`
   - : The source object(s) — objects containing the properties you want to apply.
 
 ### Return value
@@ -72,7 +88,7 @@ console.log(copy); // { a: 1 }
 
 ### Warning for Deep Clone
 
-For [deep cloning](/en-US/docs/Glossary/Deep_copy), we need to use alternatives, because `Object.assign()`
+For [deep cloning](/en-US/docs/Glossary/Deep_copy), we need to use alternatives like {{DOMxRef("Window.structuredClone", "structuredClone()")}}, because `Object.assign()`
 copies property values.
 
 If the source value is a reference to an object, it only copies the reference value.
@@ -96,7 +112,7 @@ console.log(obj2); // { a: 2, b: { c: 3 } }
 
 // Deep Clone
 const obj3 = { a: 0, b: { c: 0 } };
-const obj4 = JSON.parse(JSON.stringify(obj3));
+const obj4 = structuredClone(obj3);
 obj3.a = 4;
 obj3.b.c = 4;
 console.log(obj4); // { a: 0, b: { c: 0 } }

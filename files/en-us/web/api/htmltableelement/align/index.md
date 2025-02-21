@@ -1,5 +1,6 @@
 ---
-title: HTMLTableElement.align
+title: "HTMLTableElement: align property"
+short-title: align
 slug: Web/API/HTMLTableElement/align
 page-type: web-api-instance-property
 status:
@@ -24,13 +25,13 @@ One of the following string values:
 
 ```js
 // Set the alignment of a table
-const t = document.getElementById('TableA');
-t.align = 'center';
+const t = document.getElementById("TableA");
+t.align = "center";
 ```
 
 ## Specifications
 
-- W3C DOM 2 HTML Specification [_HTMLTableElement.align_](https://www.w3.org/TR/DOM-Level-2-HTML/html.html#ID-23180977).
+{{Specifications}}
 
 ## Browser compatibility
 

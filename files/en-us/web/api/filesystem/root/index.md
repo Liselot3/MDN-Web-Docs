@@ -1,5 +1,6 @@
 ---
-title: FileSystem.root
+title: "FileSystem: root property"
+short-title: root
 slug: Web/API/FileSystem/root
 page-type: web-api-instance-property
 browser-compat: api.FileSystem.root
@@ -33,5 +34,4 @@ directory.
 ## See also
 
 - [File and Directory Entries API](/en-US/docs/Web/API/File_and_Directory_Entries_API)
-- [Introduction to the File and Directory Entries API](/en-US/docs/Web/API/File_and_Directory_Entries_API/Introduction)
 - {{domxref("FileSystem")}}

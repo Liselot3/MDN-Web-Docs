@@ -1,5 +1,6 @@
 ---
-title: Navigator.vibrate()
+title: "Navigator: vibrate() method"
+short-title: vibrate()
 slug: Web/API/Navigator/vibrate
 page-type: web-api-instance-method
 browser-compat: api.Navigator.vibrate
@@ -7,7 +8,7 @@ browser-compat: api.Navigator.vibrate
 
 {{APIRef("Vibration API")}}
 
-The **`Navigator.vibrate()`** method pulses the vibration
+The **`vibrate()`** method of the {{domxref("Navigator")}} interface pulses the vibration
 hardware on the device, if such hardware exists. If the device doesn't support
 vibration, this method has no effect. If a vibration pattern is already in progress when
 this method is called, the previous pattern is halted and the new one begins instead.
@@ -45,7 +46,9 @@ A boolean.
 
 ```js
 navigator.vibrate(200); // vibrate for 200ms
-navigator.vibrate([100,30,100,30,100,30,200,30,200,30,200,30,100,30,100,30,100]); // Vibrate 'SOS' in Morse.
+navigator.vibrate([
+  100, 30, 100, 30, 100, 30, 200, 30, 200, 30, 200, 30, 100, 30, 100, 30, 100,
+]); // Vibrate 'SOS' in Morse.
 ```
 
 ## Specifications

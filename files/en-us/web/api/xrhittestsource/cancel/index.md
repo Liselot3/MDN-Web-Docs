@@ -1,5 +1,6 @@
 ---
-title: XRHitTestSource.cancel()
+title: "XRHitTestSource: cancel() method"
+short-title: cancel()
 slug: Web/API/XRHitTestSource/cancel
 page-type: web-api-instance-method
 status:
@@ -7,7 +8,7 @@ status:
 browser-compat: api.XRHitTestSource.cancel
 ---
 
-{{APIRef("WebXR Device API")}}{{SeeCompatTable}}
+{{APIRef("WebXR Device API")}}{{SeeCompatTable}}{{SecureContext_Header}}
 
 The **`cancel()`** method of the {{domxref("XRHitTestSource")}} interface unsubscribes a hit test.
 

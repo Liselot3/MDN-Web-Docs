@@ -1,5 +1,6 @@
 ---
-title: CSSStyleSheet.addRule()
+title: "CSSStyleSheet: addRule() method"
+short-title: addRule()
 slug: Web/API/CSSStyleSheet/addRule
 page-type: web-api-instance-method
 status:
@@ -39,8 +40,7 @@ addRule(selector, styleBlock, index)
 Always returns -1.
 
 Note that due to somewhat esoteric rules about where you can legally insert rules,
-it's possible that an exception may be thrown. See {{domxref("CSSStyleSheet.insertRule",
-  "insertRule()")}} for more information.
+it's possible that an exception may be thrown. See {{domxref("CSSStyleSheet.insertRule", "insertRule()")}} for more information.
 
 ## Usage notes
 

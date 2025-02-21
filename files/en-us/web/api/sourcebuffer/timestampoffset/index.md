@@ -1,11 +1,12 @@
 ---
-title: SourceBuffer.timestampOffset
+title: "SourceBuffer: timestampOffset property"
+short-title: timestampOffset
 slug: Web/API/SourceBuffer/timestampOffset
 page-type: web-api-instance-property
 browser-compat: api.SourceBuffer.timestampOffset
 ---
 
-{{APIRef("Media Source Extensions")}}
+{{APIRef("Media Source Extensions")}}{{AvailableInWorkers("window_and_dedicated")}}
 
 The **`timestampOffset`** property of the
 {{domxref("SourceBuffer")}} interface controls the offset applied to timestamps inside

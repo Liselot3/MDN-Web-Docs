@@ -1,5 +1,6 @@
 ---
-title: PaymentRequestUpdateEvent()
+title: "PaymentRequestUpdateEvent: PaymentRequestUpdateEvent() constructor"
+short-title: PaymentRequestUpdateEvent()
 slug: Web/API/PaymentRequestUpdateEvent/PaymentRequestUpdateEvent
 page-type: web-api-constructor
 browser-compat: api.PaymentRequestUpdateEvent.PaymentRequestUpdateEvent
@@ -25,7 +26,7 @@ None.
 
 ### Return value
 
-A new `PaymentRequestUpdateEvent`
+A new `PaymentRequestUpdateEvent`.
 
 ## Specifications
 

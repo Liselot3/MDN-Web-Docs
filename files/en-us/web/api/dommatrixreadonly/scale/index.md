@@ -1,11 +1,12 @@
 ---
-title: DOMMatrixReadOnly.scale()
+title: "DOMMatrixReadOnly: scale() method"
+short-title: scale()
 slug: Web/API/DOMMatrixReadOnly/scale
 page-type: web-api-instance-method
 browser-compat: api.DOMMatrixReadOnly.scale
 ---
 
-{{APIRef("Geometry Interfaces")}}
+{{APIRef("Geometry Interfaces")}}{{AvailableInWorkers}}
 
 The **`scale()`** method of the
 {{domxref("DOMMatrixReadOnly")}} interface creates a new matrix being the result of the
@@ -13,15 +14,13 @@ original matrix with a scale transform applied.
 
 ## Syntax
 
-The `scale()` method is specified with either one or six values.
-
-```js
-DOMMatrixReadOnly.scale(scaleX);
-DOMMatrixReadOnly.scale(scaleX, scaleY);
-DOMMatrixReadOnly.scale(scaleX, scaleY, scaleZ);
-DOMMatrixReadOnly.scale(scaleX, scaleY, scaleZ, originX);
-DOMMatrixReadOnly.scale(scaleX, scaleY, scaleZ, originX, originY);
-DOMMatrixReadOnly.scale(scaleX, scaleY, scaleZ, originX, originY, originZ);
+```js-nolint
+scale(scaleX)
+scale(scaleX, scaleY)
+scale(scaleX, scaleY, scaleZ)
+scale(scaleX, scaleY, scaleZ, originX)
+scale(scaleX, scaleY, scaleZ, originX, originY)
+scale(scaleX, scaleY, scaleZ, originX, originY, originZ)
 ```
 
 ### Parameters
@@ -101,9 +100,7 @@ document
   .setAttribute("transform", scaledMatrixWithOrigin.toString());
 ```
 
-{{ EmbedLiveSample('Examples', '250', '250',
-  'screen_shot_2019-02-18_at_13.23.31.png',
-  'Web/API/DOMMatrixReadOnly/scale') }}
+{{EmbedLiveSample('Examples', '250', '250')}}
 
 ## Specifications
 

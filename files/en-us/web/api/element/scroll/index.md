@@ -1,5 +1,6 @@
 ---
-title: Element.scroll()
+title: "Element: scroll() method"
+short-title: scroll()
 slug: Web/API/Element/scroll
 page-type: web-api-instance-method
 browser-compat: api.Element.scroll
@@ -14,29 +15,29 @@ element.
 ## Syntax
 
 ```js-nolint
-scroll(x-coord, y-coord)
+scroll(xCoord, yCoord)
 scroll(options)
 ```
 
 ### Parameters
 
-- `x-coord`
+- `xCoord`
   - : The pixel along the horizontal axis of the element that you want displayed in the
     upper left.
-- `y-coord`
+- `yCoord`
   - : The pixel along the vertical axis of the element that you want displayed in the
     upper left.
-
-\- or -
-
 - `options`
-  - : A dictionary containing the following parameters:
+  - : An object containing the following properties:
     - `top`
       - : Specifies the number of pixels along the Y axis to scroll the window or element.
     - `left`
       - : Specifies the number of pixels along the X axis to scroll the window or element.
     - `behavior`
-      - : Specifies whether the scrolling should animate smoothly (`smooth`) or happen instantly in a single jump (`auto`, default).
+      - : Determines whether scrolling is instant or animates smoothly. This option is a string which must take one of the following values:
+        - `smooth`: scrolling should animate smoothly
+        - `instant`: scrolling should happen instantly in a single jump
+        - `auto`: scroll behavior is determined by the computed value of {{cssxref("scroll-behavior")}}
 
 ### Return value
 
@@ -55,7 +56,7 @@ Using `options`:
 element.scroll({
   top: 100,
   left: 100,
-  behavior: 'smooth'
+  behavior: "smooth",
 });
 ```
 

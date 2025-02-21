@@ -1,6 +1,7 @@
 ---
-title: IDBTransaction.objectStoreNames
-slug: Web/API/IDBTransaction/ObjectStoreNames
+title: "IDBTransaction: objectStoreNames property"
+short-title: objectStoreNames
+slug: Web/API/IDBTransaction/objectStoreNames
 page-type: web-api-instance-property
 browser-compat: api.IDBTransaction.objectStoreNames
 ---

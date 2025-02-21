@@ -1,5 +1,6 @@
 ---
-title: ConstantSourceNode()
+title: "ConstantSourceNode: ConstantSourceNode() constructor"
+short-title: ConstantSourceNode()
 slug: Web/API/ConstantSourceNode/ConstantSourceNode
 page-type: web-api-constructor
 browser-compat: api.ConstantSourceNode.ConstantSourceNode
@@ -44,7 +45,8 @@ let audioContext = new AudioContext();
 let myConstantSource = new ConstantSourceNode(audioContext, { offset: 0.5 });
 ```
 
-> **Note:** The new `ConstantSourceNode` created by the
+> [!NOTE]
+> The new `ConstantSourceNode` created by the
 > constructor has a
 > [`channelCount`](/en-US/docs/Web/API/AudioNode/channelCount) of
 > 2\.

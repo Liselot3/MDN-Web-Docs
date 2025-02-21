@@ -1,5 +1,6 @@
 ---
-title: FileSystem.name
+title: "FileSystem: name property"
+short-title: name
 slug: Web/API/FileSystem/name
 page-type: web-api-instance-property
 browser-compat: api.FileSystem.name
@@ -32,5 +33,4 @@ A string representing the file system's name.
 ## See also
 
 - [File and Directory Entries API](/en-US/docs/Web/API/File_and_Directory_Entries_API)
-- [Introduction to the File and Directory Entries API](/en-US/docs/Web/API/File_and_Directory_Entries_API/Introduction)
 - {{domxref("FileSystem")}}

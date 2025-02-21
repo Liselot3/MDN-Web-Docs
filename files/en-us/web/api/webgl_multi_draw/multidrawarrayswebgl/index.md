@@ -1,5 +1,6 @@
 ---
-title: WEBGL_multi_draw.multiDrawArraysWEBGL()
+title: "WEBGL_multi_draw: multiDrawArraysWEBGL() method"
+short-title: multiDrawArraysWEBGL()
 slug: Web/API/WEBGL_multi_draw/multiDrawArraysWEBGL
 page-type: webgl-extension-method
 browser-compat: api.WEBGL_multi_draw.multiDrawArraysWEBGL
@@ -20,7 +21,7 @@ method.
 multiDrawArraysWEBGL(mode,
     firstsList, firstsOffset,
     countsList, countsOffset,
-    drawCount);
+    drawCount)
 ```
 
 ### Parameters

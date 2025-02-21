@@ -1,5 +1,6 @@
 ---
-title: Window.releaseEvents()
+title: "Window: releaseEvents() method"
+short-title: releaseEvents()
 slug: Web/API/Window/releaseEvents
 page-type: web-api-instance-method
 status:
@@ -38,7 +39,7 @@ None ({{jsxref("undefined")}}).
 ## Examples
 
 ```js
-window.releaseEvents(Event.KEYPRESS)
+window.releaseEvents(Event.KEYPRESS);
 ```
 
 ## Notes
@@ -51,7 +52,7 @@ See also [`window.captureEvents`](/en-US/docs/Web/API/Window/captureEvents)
 
 ## Specifications
 
-This is not part of any specification.
+{{Specifications}}
 
 ## Browser compatibility
 

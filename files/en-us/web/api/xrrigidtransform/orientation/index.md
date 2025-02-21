@@ -1,11 +1,12 @@
 ---
-title: XRRigidTransform.orientation
+title: "XRRigidTransform: orientation property"
+short-title: orientation
 slug: Web/API/XRRigidTransform/orientation
 page-type: web-api-instance-property
 browser-compat: api.XRRigidTransform.orientation
 ---
 
-{{APIRef("WebXR Device API")}}
+{{APIRef("WebXR Device API")}}{{SecureContext_Header}}
 
 The read-only {{domxref("XRRigidTransform")}} property
 **`orientation`** is a {{domxref("DOMPointReadOnly")}}
@@ -28,7 +29,7 @@ off of ground level:
 
 ```js
 xrReferenceSpace = refSpace.getOffsetReferenceSpace(
-  new XRRigidTransform({y: -2}, {x: 0.0, y: 1.0, z: 0.0, w: 1.0})
+  new XRRigidTransform({ y: -2 }, { x: 0.0, y: 1.0, z: 0.0, w: 1.0 }),
 );
 ```
 

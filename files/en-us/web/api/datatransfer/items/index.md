@@ -1,5 +1,6 @@
 ---
-title: DataTransfer.items
+title: "DataTransfer: items property"
+short-title: items
 slug: Web/API/DataTransfer/items
 page-type: web-api-instance-property
 browser-compat: api.DataTransfer.items
@@ -7,10 +8,8 @@ browser-compat: api.DataTransfer.items
 
 {{APIRef("HTML Drag and Drop API")}}
 
-The read-only {{domxref("DataTransfer")}} property `items` property is a
-{{domxref("DataTransferItemList","list")}} of the {{domxref("DataTransferItem","data
-  transfer items", "", "nocode")}} in a drag operation. The list includes one item for each item in the
-operation and if the operation had no items, the list is empty.
+The read-only `items` property of the {{domxref("DataTransfer")}} interface is a
+{{domxref("DataTransferItemList","list")}} of the {{domxref("DataTransferItem","data transfer items", "", "nocode")}} in a drag operation. The list includes one item for each item in the operation and if the operation had no items, the list is empty.
 
 ## Value
 

@@ -1,11 +1,12 @@
 ---
-title: WebGL2RenderingContext.vertexAttribIPointer()
+title: "WebGL2RenderingContext: vertexAttribIPointer() method"
+short-title: vertexAttribIPointer()
 slug: Web/API/WebGL2RenderingContext/vertexAttribIPointer
 page-type: web-api-instance-method
 browser-compat: api.WebGL2RenderingContext.vertexAttribIPointer
 ---
 
-{{APIRef("WebGL")}}
+{{APIRef("WebGL")}}{{AvailableInWorkers}}
 
 The **`WebGL2RenderingContext.vertexAttribIPointer()`** method
 of the [WebGL 2 API](/en-US/docs/Web/API/WebGL_API) specifies integer data

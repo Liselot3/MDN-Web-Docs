@@ -5,11 +5,25 @@ page-type: javascript-operator
 browser-compat: javascript.operators.typeof
 ---
 
-{{JSSidebar("Operators")}}
+{{jsSidebar("Operators")}}
 
 The **`typeof`** operator returns a string indicating the type of the operand's value.
 
-{{EmbedInteractiveExample("pages/js/expressions-typeof.html")}}
+{{InteractiveExample("JavaScript Demo: Expressions - typeof")}}
+
+```js interactive-example
+console.log(typeof 42);
+// Expected output: "number"
+
+console.log(typeof "blubber");
+// Expected output: "string"
+
+console.log(typeof true);
+// Expected output: "boolean"
+
+console.log(typeof undeclaredVariable);
+// Expected output: "undefined"
+```
 
 ## Syntax
 
@@ -38,7 +52,7 @@ The following table summarizes the possible return values of `typeof`. For more 
 | [Function](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function) (implements [[Call]] in ECMA-262 terms; [classes](/en-US/docs/Web/JavaScript/Reference/Statements/class) are functions as well) | `"function"`                        |
 | Any other object                                                                                                                                                                                         | `"object"`                          |
 
-This list of values is exhaustive. No spec-compliant engines are reported to produce (or had historically produced) values other than those listed. The old Internet Explorer was the only browser known to [implement additional return values](https://github.com/tc39/ecma262/issues/1440#issuecomment-461963872), before the spec removed the behavior of `typeof` returning implementation-defined strings for non-callable non-standard exotic objects.
+This list of values is exhaustive. No spec-compliant engines are reported to produce (or had historically produced) values other than those listed.
 
 ## Examples
 
@@ -131,7 +145,7 @@ typeof func; // "function"
 
 ### Need for parentheses in syntax
 
-The `typeof` operator has higher [precedence](/en-US/docs/Web/JavaScript/Reference/Operators/Operator_Precedence) than binary operators like addition (`+`). Therefore, parentheses are needed to evaluate the type of an addition result.
+The `typeof` operator has higher [precedence](/en-US/docs/Web/JavaScript/Reference/Operators/Operator_precedence) than binary operators like addition (`+`). Therefore, parentheses are needed to evaluate the type of an addition result.
 
 ```js
 // Parentheses can be used for determining the data type of expressions.
@@ -149,7 +163,7 @@ typeof (someData + " Wisen"); // "string"
 typeof undeclaredVariable; // "undefined"
 ```
 
-However, using `typeof` on lexical declarations ({{JSxRef("Statements/let", "let")}} {{JSxRef("Statements/const", "const")}}, and [`class`](/en-US/docs/Web/JavaScript/Reference/Statements/class)) in the same block before the line of declaration will throw a {{JSxRef("ReferenceError")}}. Block scoped variables are in a _[temporal dead zone](/en-US/docs/Web/JavaScript/Reference/Statements/let#temporal_dead_zone_tdz)_ from the start of the block until the initialization is processed, during which it will throw an error if accessed.
+However, using `typeof` on lexical declarations ({{jsxref("Statements/let", "let")}} {{jsxref("Statements/const", "const")}}, and [`class`](/en-US/docs/Web/JavaScript/Reference/Statements/class)) in the same block before the place of declaration will throw a {{jsxref("ReferenceError")}}. Block scoped variables are in a _[temporal dead zone](/en-US/docs/Web/JavaScript/Reference/Statements/let#temporal_dead_zone_tdz)_ from the start of the block until the initialization is processed, during which it will throw an error if accessed.
 
 ```js example-bad
 typeof newLetVariable; // ReferenceError
@@ -216,7 +230,7 @@ function type(value) {
 }
 ```
 
-For checking potentially non-existent variables that would otherwise throw a {{JSxRef("ReferenceError")}}, use `typeof nonExistentVar === "undefined"` because this behavior cannot be mimicked with custom code.
+For checking potentially non-existent variables that would otherwise throw a {{jsxref("ReferenceError")}}, use `typeof nonExistentVar === "undefined"` because this behavior cannot be mimicked with custom code.
 
 ## Specifications
 
@@ -228,5 +242,5 @@ For checking potentially non-existent variables that would otherwise throw a {{J
 
 ## See also
 
-- {{JSxRef("Operators/instanceof", "instanceof")}}
+- {{jsxref("Operators/instanceof", "instanceof")}}
 - [`document.all` willful violation of the standard](https://github.com/tc39/ecma262/issues/668)

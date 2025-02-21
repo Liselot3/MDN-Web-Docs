@@ -1,5 +1,6 @@
 ---
-title: 'Element: afterscriptexecute event'
+title: "Element: afterscriptexecute event"
+short-title: afterscriptexecute
 slug: Web/API/Element/afterscriptexecute_event
 page-type: web-api-event
 status:
@@ -9,7 +10,8 @@ browser-compat: api.Element.afterscriptexecute_event
 
 {{APIRef}}{{Non-standard_header}}
 
-> **Warning:** This event was a proposal in an early version of the specification. Do not rely on it.
+> [!WARNING]
+> This event was a proposal in an early version of the specification. Do not rely on it.
 
 The **`afterscriptexecute`** event is fired after a script has been executed.
 
@@ -22,9 +24,9 @@ This event is not cancelable.
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
 ```js
-addEventListener('afterscriptexecute', (event) => {});
+addEventListener("afterscriptexecute", (event) => {});
 
-onafterscriptexecute = (event) => { };
+onafterscriptexecute = (event) => {};
 ```
 
 ## Event type

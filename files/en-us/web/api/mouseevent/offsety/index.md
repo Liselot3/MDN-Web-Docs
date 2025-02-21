@@ -1,5 +1,6 @@
 ---
-title: MouseEvent.offsetY
+title: "MouseEvent: offsetY property"
+short-title: offsetY
 slug: Web/API/MouseEvent/offsetY
 page-type: web-api-instance-property
 browser-compat: api.MouseEvent.offsetY
@@ -11,7 +12,7 @@ The **`offsetY`** read-only property of the {{domxref("MouseEvent")}} interface 
 
 ## Value
 
-A `double` floating point value.
+A `double` floating point value in pixels.
 
 Early versions of the spec defined this as an integer.
 
@@ -26,3 +27,4 @@ Early versions of the spec defined this as an integer.
 ## See also
 
 - {{ domxref("MouseEvent") }}
+- [Coordinate systems](/en-US/docs/Web/CSS/CSSOM_view/Coordinate_systems)

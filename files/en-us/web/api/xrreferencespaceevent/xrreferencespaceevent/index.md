@@ -1,11 +1,12 @@
 ---
-title: XRReferenceSpaceEvent()
+title: "XRReferenceSpaceEvent: XRReferenceSpaceEvent() constructor"
+short-title: XRReferenceSpaceEvent()
 slug: Web/API/XRReferenceSpaceEvent/XRReferenceSpaceEvent
 page-type: web-api-constructor
 browser-compat: api.XRReferenceSpaceEvent.XRReferenceSpaceEvent
 ---
 
-{{APIRef("WebXR Device API")}}
+{{APIRef("WebXR Device API")}}{{SecureContext_Header}}
 
 The **`XRReferenceSpaceEvent()`**
 constructor is used to create a new {{domxref("XRReferenceSpaceEvent")}} object, which
@@ -41,7 +42,7 @@ This simple snippet calls the constructor to create a new reference space event 
 ```js
 let refSpaceEvent = new XRReferenceSpaceEvent("reset", {
   referenceSpace: myRefSpace,
-  transform: myTransform
+  transform: myTransform,
 });
 ```
 

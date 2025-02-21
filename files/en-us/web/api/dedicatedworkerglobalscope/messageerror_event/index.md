@@ -1,11 +1,12 @@
 ---
 title: "DedicatedWorkerGlobalScope: messageerror event"
+short-title: messageerror
 slug: Web/API/DedicatedWorkerGlobalScope/messageerror_event
 page-type: web-api-event
 browser-compat: api.DedicatedWorkerGlobalScope.messageerror_event
 ---
 
-{{APIRef}}
+{{APIRef("Web Workers API")}}{{AvailableInWorkers("dedicated")}}
 
 The `messageerror` event is fired on a {{domxref('DedicatedWorkerGlobalScope')}} object when it receives a message that can't be deserialized.
 

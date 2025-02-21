@@ -1,11 +1,12 @@
 ---
-title: DOMPointReadOnly.w
+title: "DOMPointReadOnly: w property"
+short-title: w
 slug: Web/API/DOMPointReadOnly/w
 page-type: web-api-instance-property
 browser-compat: api.DOMPointReadOnly.w
 ---
 
-{{APIRef("DOM")}}
+{{APIRef("Geometry Interfaces")}}{{AvailableInWorkers}}
 
 The **`DOMPointReadOnly`** interface's
 **`w`** property holds the point's perspective value,

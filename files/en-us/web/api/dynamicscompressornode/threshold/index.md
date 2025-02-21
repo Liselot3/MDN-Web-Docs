@@ -1,5 +1,6 @@
 ---
-title: DynamicsCompressorNode.threshold
+title: "DynamicsCompressorNode: threshold property"
+short-title: threshold
 slug: Web/API/DynamicsCompressorNode/threshold
 page-type: web-api-instance-property
 browser-compat: api.DynamicsCompressorNode.threshold
@@ -17,7 +18,8 @@ The `threshold` property's default value is `-24` and it can be set between `-10
 
 An {{domxref("AudioParam")}}.
 
-> **Note:** Though the {{domxref("AudioParam")}} returned is read-only, the value it represents is not.
+> [!NOTE]
+> Though the {{domxref("AudioParam")}} returned is read-only, the value it represents is not.
 
 ## Examples
 
@@ -27,7 +29,7 @@ const compressor = audioCtx.createDynamicsCompressor();
 compressor.threshold.value = -50;
 ```
 
-See [`BaseAudioContext.createDynamicsCompressor()`](/en-US/docs/Web/API/BaseAudioContext/createDynamicsCompressor#example) for more complete example code.
+See [`BaseAudioContext.createDynamicsCompressor()`](/en-US/docs/Web/API/BaseAudioContext/createDynamicsCompressor#examples) for more complete example code.
 
 ## Specifications
 

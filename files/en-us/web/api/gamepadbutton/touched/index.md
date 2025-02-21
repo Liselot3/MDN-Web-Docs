@@ -1,11 +1,12 @@
 ---
-title: GamepadButton.touched
+title: "GamepadButton: touched property"
+short-title: touched
 slug: Web/API/GamepadButton/touched
 page-type: web-api-instance-property
 browser-compat: api.GamepadButton.touched
 ---
 
-{{APIRef("Gamepad API")}}
+{{APIRef("Gamepad API")}}{{SecureContext_Header}}
 
 The **`touched`** property of the
 {{domxref("GamepadButton")}} interface returns a `boolean` indicating whether

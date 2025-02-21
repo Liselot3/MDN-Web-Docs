@@ -1,5 +1,6 @@
 ---
-title: Document.linkColor
+title: "Document: linkColor property"
+short-title: linkColor
 slug: Web/API/Document/linkColor
 page-type: web-api-instance-property
 status:
@@ -21,6 +22,8 @@ This property is deprecated. As an alternative, you can set the CSS
 
 A string representing the color as a word (e.g., `red`) or hexadecimal value (e.g., `#ff0000`).
 
+When set to the `null` value, that `null` value is converted to the empty string (`""`), so `document.linkColor = null` is equivalent to `document.linkColor = ""`.
+
 ## Examples
 
 ```js
@@ -29,9 +32,7 @@ document.linkColor = "blue";
 
 ## Specifications
 
-HTML5
-
-`Document.linkColor` is [deprecated in DOM Level 2 HTML](https://www.w3.org/TR/DOM-Level-2-HTML/html.html#ID-26809268).
+{{Specifications}}
 
 ## Browser compatibility
 

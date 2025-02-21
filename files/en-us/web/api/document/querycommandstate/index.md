@@ -1,5 +1,6 @@
 ---
-title: Document.queryCommandState()
+title: "Document: queryCommandState() method"
+short-title: queryCommandState()
 slug: Web/API/Document/queryCommandState
 page-type: web-api-instance-method
 status:
@@ -20,7 +21,8 @@ queryCommandState(command)
 
 ### Parameters
 
-`command` is a command from {{domxref("Document.execCommand()")}}
+- `command`
+  - : A command from {{domxref("Document.execCommand()")}}
 
 ### Return value
 

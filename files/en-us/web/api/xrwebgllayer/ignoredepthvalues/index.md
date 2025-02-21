@@ -1,5 +1,6 @@
 ---
-title: XRWebGLLayer.ignoreDepthValues
+title: "XRWebGLLayer: ignoreDepthValues property"
+short-title: ignoreDepthValues
 slug: Web/API/XRWebGLLayer/ignoreDepthValues
 page-type: web-api-instance-property
 status:
@@ -7,7 +8,7 @@ status:
 browser-compat: api.XRWebGLLayer.ignoreDepthValues
 ---
 
-{{APIRef("WebXR Device API")}}{{SeeCompatTable}}
+{{APIRef("WebXR Device API")}}{{SeeCompatTable}}{{SecureContext_Header}}
 
 The read-only {{domxref("XRWebGLLayer")}} property
 **`ignoreDepthValues`** is a Boolean value which is
@@ -56,7 +57,7 @@ code below:
 
 ```js
 const glLayerOptions = {
-  ignoreDepthValues: true
+  ignoreDepthValues: true,
 };
 
 let glLayer = new XRWebGLLayer(xrSession, gl, glLayerOptions);
@@ -73,5 +74,4 @@ let glLayer = new XRWebGLLayer(xrSession, gl, glLayerOptions);
 ## See also
 
 - [WebXR Device API](/en-US/docs/Web/API/WebXR_Device_API)
-- WebGL depth buffer related methods: {{domxref("WebGLRenderingContext.depthFunc",
-    "depthFunc()")}}, {{domxref("WebGLRenderingContext.clearDepth", "clearDepth()")}}
+- WebGL depth buffer related methods: {{domxref("WebGLRenderingContext.depthFunc", "depthFunc()")}}, {{domxref("WebGLRenderingContext.clearDepth", "clearDepth()")}}

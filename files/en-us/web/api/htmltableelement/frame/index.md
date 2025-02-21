@@ -1,5 +1,6 @@
 ---
-title: HTMLTableElement.frame
+title: "HTMLTableElement: frame property"
+short-title: frame
 slug: Web/API/HTMLTableElement/frame
 page-type: web-api-instance-property
 status:
@@ -40,14 +41,14 @@ One of the following:
 
 ```js
 // Set the frame of TableA to 'border'
-const t = document.getElementById('TableA');
-t.frame  = "border";
+const t = document.getElementById("TableA");
+t.frame = "border";
 t.border = "2px";
 ```
 
 ## Specifications
 
-- W3C DOM 2 HTML Specification
+{{Specifications}}
 
 ## Browser compatibility
 

@@ -1,15 +1,9 @@
 ---
 title: Nearest
 slug: WebAssembly/Reference/Numeric/Nearest
-tags:
-  - WebAssembly
-  - wasm
-  - Reference
-  - Numeric
-  - Something
+page-type: webassembly-instruction
+sidebar: webassemblysidebar
 ---
-
-{{WebAssemblySidebar}}
 
 The **`nearest`** instructions, are used for getting the value of a number rounded to the nearest integer.
 

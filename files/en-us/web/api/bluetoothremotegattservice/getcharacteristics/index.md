@@ -1,5 +1,6 @@
 ---
-title: BluetoothRemoteGATTService.getCharacteristics()
+title: "BluetoothRemoteGATTService: getCharacteristics() method"
+short-title: getCharacteristics()
 slug: Web/API/BluetoothRemoteGATTService/getCharacteristics
 page-type: web-api-instance-method
 status:
@@ -7,7 +8,7 @@ status:
 browser-compat: api.BluetoothRemoteGATTService.getCharacteristics
 ---
 
-{{APIRef("Bluetooth API")}}{{SeeCompatTable}}
+{{APIRef("Bluetooth API")}}{{SeeCompatTable}}{{SecureContext_Header}}
 
 The **`BluetoothGATTService.getCharacteristics()`** method
 returns a {{jsxref("Promise")}} to a list of {{domxref("BluetoothRemoteGATTCharacteristic")}}
@@ -38,5 +39,3 @@ A {{jsxref("Promise")}} to an
 ## Browser compatibility
 
 {{Compat}}
-
-{{APIRef("Web Bluetooth")}}

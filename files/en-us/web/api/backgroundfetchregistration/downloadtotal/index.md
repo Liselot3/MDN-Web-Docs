@@ -1,5 +1,6 @@
 ---
-title: BackgroundFetchRegistration.downloadTotal
+title: "BackgroundFetchRegistration: downloadTotal property"
+short-title: downloadTotal
 slug: Web/API/BackgroundFetchRegistration/downloadTotal
 page-type: web-api-instance-property
 status:
@@ -7,7 +8,7 @@ status:
 browser-compat: api.BackgroundFetchRegistration.downloadTotal
 ---
 
-{{APIRef("Background Fetch API")}}{{SeeCompatTable}}
+{{APIRef("Background Fetch API")}}{{SeeCompatTable}}{{AvailableInWorkers}}
 
 The **`downloadTotal`** read-only property of the {{domxref("BackgroundFetchRegistration")}} interface returns the total size in bytes of this download. This is set when the background fetch was registered, or `0` if not set.
 

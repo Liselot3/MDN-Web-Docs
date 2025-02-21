@@ -1,5 +1,6 @@
 ---
-title: USBDevice.forget()
+title: "USBDevice: forget() method"
+short-title: forget()
 slug: Web/API/USBDevice/forget
 page-type: web-api-instance-method
 status:
@@ -7,7 +8,7 @@ status:
 browser-compat: api.USBDevice.forget
 ---
 
-{{APIRef("WebUSB API")}}{{SeeCompatTable}}
+{{APIRef("WebUSB API")}}{{SeeCompatTable}}{{SecureContext_Header}}{{AvailableInWorkers}}
 
 The **`forget()`** method of the {{domxref("USBDevice")}} interface returns a {{jsxref("Promise")}} that resolves when all pending operations are aborted, all open interfaces are released, the device session has ended, and the permission is reset.
 

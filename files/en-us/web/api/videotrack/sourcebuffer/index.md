@@ -1,11 +1,12 @@
 ---
-title: VideoTrack.sourceBuffer
+title: "VideoTrack: sourceBuffer property"
+short-title: sourceBuffer
 slug: Web/API/VideoTrack/sourceBuffer
 page-type: web-api-instance-property
 browser-compat: api.VideoTrack.sourceBuffer
 ---
 
-{{APIRef("HTML DOM")}}
+{{APIRef("Media Source Extensions")}}
 
 The read-only **{{domxref("VideoTrack")}}**
 property **`sourceBuffer`** returns the

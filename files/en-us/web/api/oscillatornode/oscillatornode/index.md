@@ -1,5 +1,6 @@
 ---
-title: OscillatorNode()
+title: "OscillatorNode: OscillatorNode() constructor"
+short-title: OscillatorNode()
 slug: Web/API/OscillatorNode/OscillatorNode
 page-type: web-api-constructor
 browser-compat: api.OscillatorNode.OscillatorNode
@@ -34,9 +35,9 @@ new OscillatorNode(context, options)
 
     - `type`
       - : The shape of the wave produced by the node. Valid values are
-        '`sine`', '`square`', '`sawtooth`',
-        '`triangle`' and '`custom`'. The default is
-        '`sine`'.
+        `"sine"`, `"square"`, `"sawtooth"`,
+        `"triangle"` and `"custom"`. The default is
+        `"sine"`.
     - `detune`
       - : A detuning value (in cents) which will offset
         the `frequency` by the given amount. Its default is 0.

@@ -1,5 +1,6 @@
 ---
-title: HTMLElement.focus()
+title: "HTMLElement: focus() method"
+short-title: focus()
 slug: Web/API/HTMLElement/focus
 page-type: web-api-instance-method
 browser-compat: api.HTMLElement.focus
@@ -32,8 +33,8 @@ focus(options)
         A value of `false` for `preventScroll` (the default) means that the browser will scroll the element into view after focusing it.
         If `preventScroll` is set to `true`, no scrolling will occur.
     - `focusVisible` {{optional_inline}} {{experimental_inline}}
-      - : A boolean value that should be set to `true` to force visible indication that the element is focused.
-        By default, or if the property is not `true`, a browser may still provide visible indication if it determines that this would improve accessibility for users.
+      - : A boolean value that should be set to `true` to force, or `false` to prevent visible indication that the element is focused.
+        If the property is not specified, a browser will provide visible indication if it determines that this would improve accessibility for users.
 
 ### Return value
 
@@ -77,7 +78,7 @@ This example demonstrates how you can set the focus on a button element.
 
 First we define three buttons.
 Both the middle and right button will set focus on the left-most button.
-The right right-most button will also specify `focusVisible`.
+The right-most button will also specify `focusVisible`.
 
 ```html
 <button id="myButton">Button</button>
@@ -96,9 +97,11 @@ document.getElementById("focusButton").addEventListener("click", () => {
   document.getElementById("myButton").focus();
 });
 
-document.getElementById("focusButtonVisibleIndication").addEventListener("click", () => {
-  document.getElementById("myButton").focus({focusVisible: true});
-});
+document
+  .getElementById("focusButtonVisibleIndication")
+  .addEventListener("click", () => {
+    document.getElementById("myButton").focus({ focusVisible: true });
+  });
 ```
 
 #### Result
@@ -136,12 +139,11 @@ Note that the first handler doesn't specify the `preventScroll` option so scroll
 
 ```js
 document.getElementById("focus_scroll").addEventListener("click", () => {
-  document.getElementById("myButton").focus();  // default: {preventScroll:false}
+  document.getElementById("myButton").focus(); // default: {preventScroll:false}
 });
 
-
 document.getElementById("focus_no_scroll").addEventListener("click", () => {
-  document.getElementById("myButton").focus({preventScroll:true});
+  document.getElementById("myButton").focus({ preventScroll: true });
 });
 ```
 

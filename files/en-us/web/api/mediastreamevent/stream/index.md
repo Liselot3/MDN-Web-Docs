@@ -1,5 +1,6 @@
 ---
-title: MediaStreamEvent.stream
+title: "MediaStreamEvent: stream property"
+short-title: stream
 slug: Web/API/MediaStreamEvent/stream
 page-type: web-api-instance-property
 status:
@@ -12,12 +13,6 @@ browser-compat: api.MediaStreamEvent.stream
 
 The read-only property **`MediaStreamEvent.stream`** returns
 the {{domxref("MediaStream")}} associated with the event.
-
-## Syntax
-
-```js-nolint
-event.stream
-```
 
 ## Example
 

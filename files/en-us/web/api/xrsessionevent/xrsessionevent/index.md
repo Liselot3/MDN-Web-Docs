@@ -1,11 +1,12 @@
 ---
-title: XRSessionEvent()
+title: "XRSessionEvent: XRSessionEvent() constructor"
+short-title: XRSessionEvent()
 slug: Web/API/XRSessionEvent/XRSessionEvent
 page-type: web-api-constructor
 browser-compat: api.XRSessionEvent.XRSessionEvent
 ---
 
-{{APIRef("WebXR Device API")}}
+{{APIRef("WebXR Device API")}}{{SecureContext_Header}}
 
 The WebXR Device API's
 **`XRSessionEvent()`** constructor creates and returns a new

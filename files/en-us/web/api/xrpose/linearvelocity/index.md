@@ -1,11 +1,12 @@
 ---
-title: XRPose.linearVelocity
+title: "XRPose: linearVelocity property"
+short-title: linearVelocity
 slug: Web/API/XRPose/linearVelocity
 page-type: web-api-instance-property
 browser-compat: api.XRPose.linearVelocity
 ---
 
-{{APIRef}}
+{{APIRef}}{{SecureContext_Header}}
 
 The `linearVelocity` read-only property of the
 {{DOMxRef("XRPose")}} interface is a {{DOMxRef("DOMPointReadOnly")}} describing
@@ -28,4 +29,4 @@ if the user agent can't populate this value.
 
 ## See also
 
-- {{domxref("XRPose.linearVelocity")}}
+- {{domxref("XRPose.angularVelocity")}}

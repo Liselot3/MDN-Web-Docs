@@ -1,8 +1,9 @@
 ---
-title: MediaTrackSettings.width
+title: "MediaTrackSettings: width property"
+short-title: width
 slug: Web/API/MediaTrackSettings/width
 page-type: web-api-instance-property
-browser-compat: api.MediaTrackSettings.width
+browser-compat: api.MediaStreamTrack.applyConstraints.width_constraint
 ---
 
 {{APIRef("Media Capture and Streams")}}

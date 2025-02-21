@@ -1,15 +1,17 @@
 ---
-title: AnimationEffect.getComputedTiming()
+title: "AnimationEffect: getComputedTiming() method"
+short-title: getComputedTiming()
 slug: Web/API/AnimationEffect/getComputedTiming
 page-type: web-api-instance-method
 browser-compat: api.AnimationEffect.getComputedTiming
 ---
 
-{{ APIRef("Web Animations API") }}
+{{ APIRef("Web Animations") }}
 
 The `getComputedTiming()` method of the {{domxref("AnimationEffect")}} interface returns the calculated timing properties for this animation effect.
 
-> **Note:** These values are comparable to the computed styles of an Element returned using `window.getComputedStyle(elem)`.
+> [!NOTE]
+> These values are comparable to the computed styles of an Element returned using `window.getComputedStyle(elem)`.
 
 ## Syntax
 

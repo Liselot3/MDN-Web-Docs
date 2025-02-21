@@ -1,5 +1,6 @@
 ---
-title: CanvasRenderingContext2D.imageSmoothingEnabled
+title: "CanvasRenderingContext2D: imageSmoothingEnabled property"
+short-title: imageSmoothingEnabled
 slug: Web/API/CanvasRenderingContext2D/imageSmoothingEnabled
 page-type: web-api-instance-property
 browser-compat: api.CanvasRenderingContext2D.imageSmoothingEnabled
@@ -16,7 +17,8 @@ This property is useful for games and other apps that use pixel art. When enlarg
 images, the default resizing algorithm will blur the pixels. Set this property to
 `false` to retain the pixels' sharpness.
 
-> **Note:** You can adjust the smoothing quality with the
+> [!NOTE]
+> You can adjust the smoothing quality with the
 > {{domxref("CanvasRenderingContext2D.imageSmoothingQuality", "imageSmoothingQuality")}}
 > property.
 

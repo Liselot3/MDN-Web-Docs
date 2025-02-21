@@ -1,5 +1,6 @@
 ---
-title: USB.requestDevice()
+title: "USB: requestDevice() method"
+short-title: requestDevice()
 slug: Web/API/USB/requestDevice
 page-type: web-api-instance-method
 status:
@@ -7,7 +8,7 @@ status:
 browser-compat: api.USB.requestDevice
 ---
 
-{{APIRef("WebUSB API")}}{{SeeCompatTable}}{{securecontext_header}}
+{{APIRef("WebUSB API")}}{{SeeCompatTable}}{{SecureContext_Header}}{{AvailableInWorkers}}
 
 The **`requestDevice()`** method of the {{domxref("USB")}}
 interface returns a {{jsxref("Promise")}} that resolves with an instance of
@@ -60,7 +61,8 @@ const filters = [
   { vendorId: 0x1209, productId: 0xa800 },
   { vendorId: 0x1209, productId: 0xa850 },
 ];
-navigator.usb.requestDevice({ filters })
+navigator.usb
+  .requestDevice({ filters })
   .then((usbDevice) => {
     console.log(`Product name: ${usbDevice.productName}`);
   })

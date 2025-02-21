@@ -1,5 +1,6 @@
 ---
-title: XRWebGLLayer.antialias
+title: "XRWebGLLayer: antialias property"
+short-title: antialias
 slug: Web/API/XRWebGLLayer/antialias
 page-type: web-api-instance-property
 status:
@@ -7,7 +8,7 @@ status:
 browser-compat: api.XRWebGLLayer.antialias
 ---
 
-{{APIRef("WebXR Device API")}}{{SeeCompatTable}}
+{{APIRef("WebXR Device API")}}{{SeeCompatTable}}{{SecureContext_Header}}
 
 The read-only {{domxref("XRWebGLLayer")}} property
 **`antialias`** is a Boolean value which is `true`

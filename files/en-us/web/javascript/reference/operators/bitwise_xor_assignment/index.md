@@ -7,17 +7,27 @@ browser-compat: javascript.operators.bitwise_xor_assignment
 
 {{jsSidebar("Operators")}}
 
-The **bitwise XOR assignment (`^=`)** operator uses the binary representation of
-both operands, does a bitwise XOR operation on them and assigns the result to the
-variable.
+The **bitwise XOR assignment (`^=`)** operator performs [bitwise XOR](/en-US/docs/Web/JavaScript/Reference/Operators/Bitwise_XOR) on the two operands and assigns the result to the left operand.
 
-{{EmbedInteractiveExample("pages/js/expressions-bitwise-xor-assignment.html", "shorter")}}
+{{InteractiveExample("JavaScript Demo: Expressions - Bitwise XOR assignment", "shorter")}}
+
+```js interactive-example
+let a = 5; // 00000000000000000000000000000101
+a ^= 3; // 00000000000000000000000000000011
+
+console.log(a); // 00000000000000000000000000000110
+// Expected output: 6
+```
 
 ## Syntax
 
 ```js-nolint
-x ^= y // x = x ^ y
+x ^= y
 ```
+
+## Description
+
+`x ^= y` is equivalent to `x = x ^ y`, except that the expression `x` is only evaluated once.
 
 ## Examples
 
@@ -33,6 +43,10 @@ let b = 5; // (00000000000000000000000000000101)
 b ^= 0; // (00000000000000000000000000000000)
 
 console.log(b); // 5 (00000000000000000000000000000101)
+
+let c = 5n;
+c ^= 3n;
+console.log(c); // 6n
 ```
 
 ## Specifications
@@ -45,5 +59,5 @@ console.log(b); // 5 (00000000000000000000000000000101)
 
 ## See also
 
-- [Assignment operators in the JS guide](/en-US/docs/Web/JavaScript/Guide/Expressions_and_Operators#assignment_operators)
-- [Bitwise XOR operator](/en-US/docs/Web/JavaScript/Reference/Operators/Bitwise_XOR)
+- [Assignment operators in the JS guide](/en-US/docs/Web/JavaScript/Guide/Expressions_and_operators#assignment_operators)
+- [Bitwise XOR (`^`)](/en-US/docs/Web/JavaScript/Reference/Operators/Bitwise_XOR)

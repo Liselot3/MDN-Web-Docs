@@ -1,5 +1,6 @@
 ---
-title: StereoPannerNode.pan
+title: "StereoPannerNode: pan property"
+short-title: pan
 slug: Web/API/StereoPannerNode/pan
 page-type: web-api-instance-property
 browser-compat: api.StereoPannerNode.pan
@@ -13,11 +14,12 @@ The `pan` property of the {{ domxref("StereoPannerNode") }} interface is an [a-r
 
 An [a-rate](/en-US/docs/Web/API/AudioParam#a-rate) {{domxref("AudioParam")}} containing the panning to apply.
 
-> **Note:** Though the `AudioParam` returned is read-only, the value it represents is not.
+> [!NOTE]
+> Though the `AudioParam` returned is read-only, the value it represents is not.
 
 ## Examples
 
-See [`BaseAudioContext.createStereoPanner()`](/en-US/docs/Web/API/BaseAudioContext/createStereoPanner#example) for example code.
+See [`BaseAudioContext.createStereoPanner()`](/en-US/docs/Web/API/BaseAudioContext/createStereoPanner#examples) for example code.
 
 ## Specifications
 

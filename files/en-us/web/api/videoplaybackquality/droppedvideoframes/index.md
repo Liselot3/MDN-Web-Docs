@@ -1,5 +1,6 @@
 ---
-title: VideoPlaybackQuality.droppedVideoFrames
+title: "VideoPlaybackQuality: droppedVideoFrames property"
+short-title: droppedVideoFrames
 slug: Web/API/VideoPlaybackQuality/droppedVideoFrames
 page-type: web-api-instance-property
 browser-compat: api.VideoPlaybackQuality.droppedVideoFrames
@@ -24,8 +25,7 @@ that it will not be possible to draw them to the screen at the correct time.
 
 ## Examples
 
-This example calls {{domxref("HTMLVideoElement.getVideoPlaybackQuality",
-  "getVideoPlaybackQuality()")}} to obtain a {{domxref("VideoPlaybackQuality")}} object,
+This example calls {{domxref("HTMLVideoElement.getVideoPlaybackQuality", "getVideoPlaybackQuality()")}} to obtain a {{domxref("VideoPlaybackQuality")}} object,
 then determines what percentage of frames have been dropped. That value is then
 presented in an element for the user's reference.
 
@@ -34,7 +34,8 @@ const videoElem = document.getElementById("my_vid");
 const percentElem = document.getElementById("percent");
 const quality = videoElem.getVideoPlaybackQuality();
 
-const dropPercent = (quality.droppedVideoFrames/quality.totalVideoFrames)*100;
+const dropPercent =
+  (quality.droppedVideoFrames / quality.totalVideoFrames) * 100;
 percentElem.innerText = Math.trunc(dropPercent).toString(10);
 ```
 

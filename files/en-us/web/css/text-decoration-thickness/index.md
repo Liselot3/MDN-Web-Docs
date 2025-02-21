@@ -88,13 +88,14 @@ text-decoration-thickness: unset;
 
 #### Results
 
-{{ EmbedLiveSample('Varying_thickness', '', '', '') }}
+{{EmbedLiveSample('Varying_thickness')}}
 
 ## Specifications
 
 {{Specifications}}
 
-> **Note:** The property used to be called `text-decoration-width`, but was updated in 2019 to `text-decoration-thickness`.
+> [!NOTE]
+> The property used to be called `text-decoration-width`, but was updated in 2019 to `text-decoration-thickness`.
 
 ## Browser compatibility
 

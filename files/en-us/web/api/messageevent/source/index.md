@@ -1,11 +1,12 @@
 ---
-title: MessageEvent.source
+title: "MessageEvent: source property"
+short-title: source
 slug: Web/API/MessageEvent/source
 page-type: web-api-instance-property
 browser-compat: api.MessageEvent.source
 ---
 
-{{APIRef("HTML DOM")}}
+{{APIRef("HTML DOM")}}{{AvailableInWorkers}}
 
 The **`source`** read-only property of the
 {{domxref("MessageEvent")}} interface is a `MessageEventSource` (which can be
@@ -23,7 +24,7 @@ message emitter.
 ```js
 myWorker.onmessage = (e) => {
   result.textContent = e.data;
-  console.log('Message received from worker');
+  console.log("Message received from worker");
   console.log(e.source);
 };
 ```

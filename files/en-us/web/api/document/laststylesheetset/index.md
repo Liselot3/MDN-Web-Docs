@@ -1,5 +1,6 @@
 ---
-title: Document.lastStyleSheetSet
+title: "Document: lastStyleSheetSet property"
+short-title: lastStyleSheetSet
 slug: Web/API/Document/lastStyleSheetSet
 page-type: web-api-instance-property
 status:
@@ -18,7 +19,8 @@ changed.
 
 The style sheet set that was most recently set. If the current style sheet set has not been changed by setting {{domxref("document.selectedStyleSheetSet")}}, the returned value is `null`.
 
-> **Note:** This value doesn't change when
+> [!NOTE]
+> This value doesn't change when
 > {{domxref("document.enableStyleSheetsForSet()")}} is called.
 
 ## Examples

@@ -1,5 +1,6 @@
 ---
-title: Event.returnValue
+title: "Event: returnValue property"
+short-title: returnValue
 slug: Web/API/Event/returnValue
 page-type: web-api-instance-property
 status:
@@ -7,7 +8,7 @@ status:
 browser-compat: api.Event.returnValue
 ---
 
-{{APIRef("DOM")}}{{Deprecated_Header}}
+{{APIRef("DOM")}}{{Deprecated_Header}}{{AvailableInWorkers}}
 
 The {{domxref("Event")}} property
 **`returnValue`** indicates whether the default action for
@@ -17,7 +18,8 @@ It is set to `true` by
 default, allowing the default action to occur. Setting this property to
 `false` prevents the default action.
 
-> **Note:** While `returnValue` has been adopted into the DOM
+> [!NOTE]
+> While `returnValue` has been adopted into the DOM
 > standard, it is present primarily to support existing code. Use
 > {{DOMxRef("Event.preventDefault", "preventDefault()")}}, and
 > {{domxref("Event.defaultPrevented", "defaultPrevented")}} instead of this historical

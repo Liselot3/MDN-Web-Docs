@@ -1,5 +1,6 @@
 ---
-title: USBDevice.manufacturerName
+title: "USBDevice: manufacturerName property"
+short-title: manufacturerName
 slug: Web/API/USBDevice/manufacturerName
 page-type: web-api-instance-property
 status:
@@ -7,7 +8,7 @@ status:
 browser-compat: api.USBDevice.manufacturerName
 ---
 
-{{SeeCompatTable}}{{APIRef("WebUSB API")}}
+{{APIRef("WebUSB API")}}{{SeeCompatTable}}{{SecureContext_Header}}{{AvailableInWorkers}}
 
 The **`manufacturerName`** read only property of the
 {{domxref("USBDevice")}} interface the of the organization that manufactured the USB

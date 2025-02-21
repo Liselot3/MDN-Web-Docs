@@ -1,5 +1,6 @@
 ---
-title: HIDInputReportEvent.data
+title: "HIDInputReportEvent: data property"
+short-title: data
 slug: Web/API/HIDInputReportEvent/data
 page-type: web-api-instance-property
 status:
@@ -7,7 +8,7 @@ status:
 browser-compat: api.HIDInputReportEvent.data
 ---
 
-{{securecontext_header}}{{APIRef("WebHID API")}}{{SeeCompatTable}}
+{{securecontext_header}}{{APIRef("WebHID API")}}{{SeeCompatTable}}{{AvailableInWorkers("window_and_worker_except_shared")}}
 
 The **`data`** property of the {{domxref("HIDInputReportEvent")}} interface returns a {{jsxref("DataView")}} containing the data from the input report, excluding the `reportId` if the HID interface uses report IDs.
 

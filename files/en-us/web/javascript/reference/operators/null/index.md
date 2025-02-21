@@ -11,7 +11,20 @@ The **`null`** value represents the intentional absence of any object value. It
 is one of JavaScript's [primitive values](/en-US/docs/Glossary/Primitive) and
 is treated as [falsy](/en-US/docs/Glossary/Falsy) for boolean operations.
 
-{{EmbedInteractiveExample("pages/js/globalprops-null.html")}}
+{{InteractiveExample("JavaScript Demo: Standard built-in objects - Null")}}
+
+```js interactive-example
+function getVowels(str) {
+  const m = str.match(/[aeiou]/gi);
+  if (m === null) {
+    return 0;
+  }
+  return m.length;
+}
+
+console.log(getVowels("sky"));
+// Expected output: 0
+```
 
 ## Syntax
 
@@ -23,7 +36,7 @@ null
 
 The value `null` is written with a literal: `null`.
 `null` is not an identifier for a property of the global object, like
-{{jsxref("Global_Objects/undefined","undefined")}} can be. Instead,
+{{jsxref("undefined")}} can be. Instead,
 `null` expresses a lack of identification, indicating that a variable points
 to no object. In APIs, `null` is often retrieved in a place where an object
 can be expected but no object is relevant.

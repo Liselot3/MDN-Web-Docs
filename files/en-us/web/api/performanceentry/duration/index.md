@@ -1,11 +1,12 @@
 ---
-title: PerformanceEntry.duration
+title: "PerformanceEntry: duration property"
+short-title: duration
 slug: Web/API/PerformanceEntry/duration
 page-type: web-api-instance-property
 browser-compat: api.PerformanceEntry.duration
 ---
 
-{{APIRef("Performance API")}}
+{{APIRef("Performance API")}}{{AvailableInWorkers}}
 
 The read-only **`duration`** property returns a {{domxref("DOMHighResTimeStamp","timestamp", "", "no-code")}} that is the duration of the {{domxref("PerformanceEntry","performance entry", "", "no-code")}}. The meaning of this property depends on the value of this entry's {{domxref("PerformanceEntry.entryType", "entryType")}}.
 
@@ -32,9 +33,11 @@ For the following entry types, `duration` is not applicable, and in this case th
 
 - `element`
 - `largest-contentful-paint`
+- `layout-shift`
 - `mark`
 - `paint`
 - `taskattribution`
+- `visibility-state`
 
 ## Examples
 
@@ -44,10 +47,10 @@ The following example logs all observed performance entries with a `duration` la
 
 ```js
 function perfObserver(list, observer) {
-  list.getEntries().forEach((entry) =>  {
+  list.getEntries().forEach((entry) => {
     if (entry.duration > 0) {
       console.log(`${entry.name}'s duration: ${entry.duration}`);
-    };
+    }
   });
 }
 const observer = new PerformanceObserver(perfObserver);

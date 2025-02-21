@@ -1,11 +1,12 @@
 ---
-title: WebGL2RenderingContext.getActiveUniformBlockName()
+title: "WebGL2RenderingContext: getActiveUniformBlockName() method"
+short-title: getActiveUniformBlockName()
 slug: Web/API/WebGL2RenderingContext/getActiveUniformBlockName
 page-type: web-api-instance-method
 browser-compat: api.WebGL2RenderingContext.getActiveUniformBlockName
 ---
 
-{{APIRef("WebGL")}}
+{{APIRef("WebGL")}}{{AvailableInWorkers}}
 
 The **`WebGL2RenderingContext.getActiveUniformBlockName()`**
 method of the [WebGL 2 API](/en-US/docs/Web/API/WebGL_API) retrieves the name

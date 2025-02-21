@@ -1,11 +1,12 @@
 ---
-title: CustomElementRegistry.get()
+title: "CustomElementRegistry: get() method"
+short-title: get()
 slug: Web/API/CustomElementRegistry/get
 page-type: web-api-instance-method
 browser-compat: api.CustomElementRegistry.get
 ---
 
-{{APIRef("CustomElementRegistry")}}
+{{APIRef("Web Components")}}
 
 The **`get()`** method of the
 {{domxref("CustomElementRegistry")}} interface returns the constructor for a
@@ -33,12 +34,12 @@ customElements.define(
   "my-paragraph",
   class extends HTMLElement {
     constructor() {
-      let templateContent = document.getElementById("my-paragraph").content;
+      let templateContent = document.getElementById("custom-paragraph").content;
       super() // returns element this scope
         .attachShadow({ mode: "open" }) // sets AND returns this.shadowRoot
         .append(templateContent.cloneNode(true));
     }
-  }
+  },
 );
 
 // Return a reference to the my-paragraph constructor

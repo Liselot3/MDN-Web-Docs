@@ -1,5 +1,6 @@
 ---
-title: FocusEvent()
+title: "FocusEvent: FocusEvent() constructor"
+short-title: FocusEvent()
 slug: Web/API/FocusEvent/FocusEvent
 page-type: web-api-constructor
 browser-compat: api.FocusEvent.FocusEvent
@@ -22,8 +23,7 @@ new FocusEvent(type, options)
 ### Parameters
 
 _The `FocusEvent()` constructor also inherits arguments from
-{{domxref("UIEvent.UIEvent", "UIEvent()")}} and from {{domxref("Event.Event",
-    "Event()")}}._
+{{domxref("UIEvent.UIEvent", "UIEvent()")}} and from {{domxref("Event.Event", "Event()")}}._
 
 - `type`
   - : A string with the name of the event.

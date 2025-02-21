@@ -1,5 +1,6 @@
 ---
-title: TouchEvent.metaKey
+title: "TouchEvent: metaKey property"
+short-title: metaKey
 slug: Web/API/TouchEvent/metaKey
 page-type: web-api-instance-property
 browser-compat: api.TouchEvent.metaKey
@@ -11,7 +12,8 @@ The read-only **`metaKey`** property of the {{domxref("TouchEvent")}} interface 
 
 This property is {{ReadOnlyInline}}.
 
-> **Note:** On Macintosh keyboards, this is the <kbd>⌘ Command</kbd> key. On Windows keyboards, this is the Windows key (<kbd>⊞</kbd>).
+> [!NOTE]
+> On Macintosh keyboards, this is the <kbd>⌘ Command</kbd> key. On Windows keyboards, this is the Windows key (<kbd>⊞</kbd>).
 
 ## Value
 
@@ -19,7 +21,7 @@ A boolean value that is `true` if the <kbd>Meta</kbd> key is enabled for this ev
 
 ## Examples
 
-The [TouchEvent.altKey example](/en-US/docs/Web/API/TouchEvent/altKey#example) includes an example of this property's usage.
+The [TouchEvent.altKey example](/en-US/docs/Web/API/TouchEvent/altKey#examples) includes an example of this property's usage.
 
 ## Specifications
 

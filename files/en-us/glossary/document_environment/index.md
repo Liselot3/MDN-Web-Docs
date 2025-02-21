@@ -4,7 +4,9 @@ slug: Glossary/Document_environment
 page-type: glossary-definition
 ---
 
-When the JavaScript global environment is a window or an iframe, it is called a _document environment_. A global environment is an environment that doesn't have an outer environment.
+{{GlossarySidebar}}
+
+When the JavaScript global environment is a window or an iframe, it is called a **document environment**. A global environment is an environment that doesn't have an outer environment.
 
 ## See also
 

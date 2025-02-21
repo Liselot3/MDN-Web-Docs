@@ -1,6 +1,7 @@
 ---
-title: CSSPropertyRule.initialValue
-slug: Web/API/CSSPropertyRule/initialvalue
+title: "CSSPropertyRule: initialValue property"
+short-title: initialValue
+slug: Web/API/CSSPropertyRule/initialValue
 page-type: web-api-instance-property
 browser-compat: api.CSSPropertyRule.initialValue
 ---

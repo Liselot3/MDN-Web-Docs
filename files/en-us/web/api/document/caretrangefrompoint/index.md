@@ -1,5 +1,6 @@
 ---
-title: Document.caretRangeFromPoint()
+title: "Document: caretRangeFromPoint() method"
+short-title: caretRangeFromPoint()
 slug: Web/API/Document/caretRangeFromPoint
 page-type: web-api-instance-method
 status:
@@ -39,6 +40,10 @@ One of the following:
 ## Examples
 
 Visit the {{domxref("Document.caretPositionFromPoint#Examples", "Document.caretPositionFromPoint")}} page to view a live sample of this method.
+
+## Specifications
+
+Not part of any specification.
 
 ## Browser compatibility
 

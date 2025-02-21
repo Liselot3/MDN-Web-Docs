@@ -1,5 +1,6 @@
 ---
-title: TimeRanges.end()
+title: "TimeRanges: end() method"
+short-title: end()
 slug: Web/API/TimeRanges/end
 page-type: web-api-instance-method
 browser-compat: api.TimeRanges.end
@@ -7,7 +8,7 @@ browser-compat: api.TimeRanges.end
 
 {{APIRef("DOM")}}
 
-The **`end()`** method of the {{domxref("TimeRanges")}} interface returns the time offset at which a specified time range ends.
+The **`end()`** method of the {{domxref("TimeRanges")}} interface returns the time offset (in seconds) at which a specified time range ends.
 
 ## Syntax
 

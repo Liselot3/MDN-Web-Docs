@@ -1,11 +1,12 @@
 ---
-title: MediaTrackSettings.volume
+title: "MediaTrackSettings: volume property"
+short-title: volume
 slug: Web/API/MediaTrackSettings/volume
 page-type: web-api-instance-property
 status:
   - deprecated
   - non-standard
-browser-compat: api.MediaTrackSettings.volume
+browser-compat: api.MediaStreamTrack.applyConstraints.volume_constraint
 ---
 
 {{APIRef("Media Capture and Streams")}}{{Deprecated_Header}}{{Non-standard_Header}}

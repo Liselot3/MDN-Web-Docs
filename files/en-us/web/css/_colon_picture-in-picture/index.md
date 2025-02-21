@@ -1,5 +1,5 @@
 ---
-title: ":picture-in-picture"
+title: :picture-in-picture
 slug: Web/CSS/:picture-in-picture
 page-type: css-pseudo-class
 browser-compat: css.selectors.picture-in-picture
@@ -64,7 +64,6 @@ The magic happens in the CSS.
 
 - [Picture-in-picture API](/en-US/docs/Web/API/Picture-in-Picture_API)
 - {{DOMxRef("HTMLVideoElement.requestPictureInPicture()")}}
-- {{DOMxRef("HTMLVideoElement.autoPictureInPicture")}}
 - {{DOMxRef("HTMLVideoElement.disablePictureInPicture")}}
 - {{DOMxRef("Document.pictureInPictureEnabled")}}
 - {{DOMxRef("Document.exitPictureInPicture()")}}

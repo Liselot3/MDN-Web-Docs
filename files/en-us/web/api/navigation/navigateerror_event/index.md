@@ -1,5 +1,6 @@
 ---
 title: "Navigation: navigateerror event"
+short-title: navigateerror
 slug: Web/API/Navigation/navigateerror_event
 page-type: web-api-event
 status:
@@ -11,7 +12,7 @@ browser-compat: api.Navigation.navigateerror_event
 
 The **`navigateerror`** event of the {{domxref("Navigation")}} interface is fired when a navigation fails.
 
-For example, if the network is down, any {{domxref("fetch()")}} method invoked to handle a navigation will fail, and the error will be routed to `navigateerror`.
+For example, if the network is down, any {{domxref("Window/fetch", "fetch()")}} method invoked to handle a navigation will fail, and the error will be routed to `navigateerror`.
 
 ## Syntax
 
@@ -34,7 +35,7 @@ An {{domxref("ErrorEvent")}}. Inherits from {{domxref("Event")}}.
 You might deal with a successful navigation by hiding a previously displayed progress indicator, like this:
 
 ```js
-navigation.addEventListener('navigatesuccess', (event) => {
+navigation.addEventListener("navigatesuccess", (event) => {
   loadingIndicator.hidden = true;
 });
 ```
@@ -42,7 +43,7 @@ navigation.addEventListener('navigatesuccess', (event) => {
 Or you might show an error message on failure:
 
 ```js
-navigation.addEventListener('navigateerror', (event) => {
+navigation.addEventListener("navigateerror", (event) => {
   loadingIndicator.hidden = true; // also hide indicator
   showMessage(`Failed to load page: ${event.message}`);
 });

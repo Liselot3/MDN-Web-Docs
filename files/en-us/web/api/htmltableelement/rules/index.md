@@ -1,5 +1,6 @@
 ---
-title: HTMLTableElement.rules
+title: "HTMLTableElement: rules property"
+short-title: rules
 slug: Web/API/HTMLTableElement/rules
 page-type: web-api-instance-property
 status:
@@ -37,7 +38,7 @@ t.rules = "all";
 
 ## Specifications
 
-- W3C DOM 2 HTML Specification
+{{Specifications}}
 
 ## Browser compatibility
 

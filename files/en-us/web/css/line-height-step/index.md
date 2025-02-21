@@ -9,7 +9,9 @@ browser-compat: css.properties.line-height-step
 
 {{CSSRef}}{{SeeCompatTable}}
 
-The **`line-height-step`** CSS property sets the step unit for line box heights. When the property is set, line box heights are rounded up to the closest multiple of the unit.
+The **`line-height-step`** [CSS](/en-US/docs/Web/CSS) property sets the step unit for line box heights. When the property is set, line box heights are rounded up to the closest multiple of the unit.
+
+## Syntax
 
 ```css
 /* Point values */
@@ -22,8 +24,6 @@ line-height-step: revert;
 line-height-step: revert-layer;
 line-height-step: unset;
 ```
-
-## Syntax
 
 The `line-height-step` property is specified as any one of the following:
 

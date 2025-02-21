@@ -5,11 +5,31 @@ page-type: javascript-language-feature
 browser-compat: javascript.operators.object_initializer
 ---
 
-{{JsSidebar("Operators")}}
+{{jsSidebar("Operators")}}
 
-An **object initializer** is a comma-delimited list of zero or more pairs of property names and associated values of an object, enclosed in curly braces (`{}`). Objects can also be initialized using [`new Object()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/Object) or [`Object.create()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/create).
+An **object initializer** is a comma-delimited list of zero or more pairs of property names and associated values of an object, enclosed in curly braces (`{}`). Objects can also be initialized using [`Object.create()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/create) or [by invoking a constructor function](/en-US/docs/Web/JavaScript/Guide/Working_with_objects#using_a_constructor_function) with the [`new`](/en-US/docs/Web/JavaScript/Reference/Operators/new) operator.
 
-{{EmbedInteractiveExample("pages/js/expressions-objectinitializer.html", "taller")}}
+{{InteractiveExample("JavaScript Demo: Expressions - Object initializer", "taller")}}
+
+```js interactive-example
+const object1 = { a: "foo", b: 42, c: {} };
+
+console.log(object1.a);
+// Expected output: "foo"
+
+const a = "foo";
+const b = 42;
+const c = {};
+const object2 = { a: a, b: b, c: c };
+
+console.log(object2.b);
+// Expected output: 42
+
+const object3 = { a, b, c };
+
+console.log(object3.a);
+// Expected output: "foo"
+```
 
 ## Syntax
 
@@ -47,7 +67,7 @@ An object initializer is an expression that describes the initialization of an {
 The object literal syntax is not the same as the **J**ava**S**cript **O**bject **N**otation ([JSON](/en-US/docs/Glossary/JSON)). Although they look similar, there are differences between them:
 
 - JSON _only_ permits property definition using the `"property": value` syntax. The property name must be double-quoted, and the definition cannot be a shorthand. Computed property names are not allowed either.
-- JSON object property values can only be strings, numbers, `true`, `false`, `null`, arrays, or another JSON object. This means JSON cannot express methods or non-plain objects like [`Date`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date) or [`RegExp`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp).
+- JSON object property values can only be strings, numbers, `true`, `false`, `null`, arrays, or another JSON object. This means JSON cannot express methods or non-plain objects like [`Map`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Map) or [`RegExp`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp).
 - In JSON, `"__proto__"` is a normal property key. In an object literal, it [sets the object's prototype](#prototype_setter).
 
 JSON is a _strict subset_ of the object literal syntax, meaning that every valid JSON text can be parsed as an object literal, and would likely not cause syntax errors. The only exception is that the object literal syntax prohibits duplicate `__proto__` keys, which does not apply to [`JSON.parse()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON/parse). The latter treats `__proto__` like a normal property and takes the last occurrence as the property's value. The only time when the object value they represent (a.k.a. their semantic) differ is also when the source contains the `__proto__` key — for object literals, it sets the object's prototype; for JSON, it's a normal property.
@@ -84,7 +104,7 @@ const object = {
 
 ### Accessing properties
 
-Once you have created an object, you might want to read or change them. Object properties can be accessed by using the dot notation or the bracket notation. (See [property accessors](/en-US/docs/Web/JavaScript/Reference/Operators/Property_Accessors) for detailed information.)
+Once you have created an object, you might want to read or change them. Object properties can be accessed by using the dot notation or the bracket notation. (See [property accessors](/en-US/docs/Web/JavaScript/Reference/Operators/Property_accessors) for detailed information.)
 
 ```js
 object.foo; // "bar"
@@ -132,7 +152,7 @@ const a = { x: 1, x: 2 };
 console.log(a); // {x: 2}
 ```
 
-After ES2015, duplicate property names are allowed everywhere, including [strict mode](/en-US/docs/Web/JavaScript/Reference/Strict_mode#duplicate_property_names). You can also have duplicate property names in [classes](/en-US/docs/Web/JavaScript/Reference/Classes). The only exception is [private properties](/en-US/docs/Web/JavaScript/Reference/Classes/Private_class_fields), which must be unique in the class body.
+After ES2015, duplicate property names are allowed everywhere, including [strict mode](/en-US/docs/Web/JavaScript/Reference/Strict_mode#duplicate_property_names). You can also have duplicate property names in [classes](/en-US/docs/Web/JavaScript/Reference/Classes). The only exception is [private properties](/en-US/docs/Web/JavaScript/Reference/Classes/Private_properties), which must be unique in the class body.
 
 ### Method definitions
 
@@ -179,7 +199,7 @@ For more information and examples about methods, see [method definitions](/en-US
 
 ### Computed property names
 
-The object initializer syntax also supports computed property names. That allows you to put an expression in brackets `[]`, that will be computed and used as the property name. This is reminiscent of the bracket notation of the [property accessor](/en-US/docs/Web/JavaScript/Reference/Operators/Property_Accessors) syntax, which you may have used to read and set properties already.
+The object initializer syntax also supports computed property names. That allows you to put an expression in square brackets `[]`, that will be computed and used as the property name. This is reminiscent of the bracket notation of the [property accessor](/en-US/docs/Web/JavaScript/Reference/Operators/Property_accessors) syntax, which you may have used to read and set properties already.
 
 Now you can use a similar syntax in object literals, too:
 
@@ -229,7 +249,8 @@ const mergedObj = { ...obj1, ...obj2 };
 // { foo: "baz", x: 42, y: 13 }
 ```
 
-> **Warning:** Note that {{jsxref("Object.assign()")}} triggers [setters](/en-US/docs/Web/JavaScript/Reference/Functions/set), whereas the spread syntax doesn't!
+> [!WARNING]
+> Note that {{jsxref("Object.assign()")}} triggers [setters](/en-US/docs/Web/JavaScript/Reference/Functions/set), whereas the spread syntax doesn't!
 
 ### Prototype setter
 
@@ -237,7 +258,7 @@ A property definition of the form `__proto__: value` or `"__proto__": value` doe
 
 Note that the `__proto__` key is standardized syntax, in contrast to the non-standard and non-performant [`Object.prototype.__proto__`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/proto) accessors. It sets the `[[Prototype]]` during object creation, similar to {{jsxref("Object.create")}} — instead of mutating the prototype chain.
 
-```js
+```js-nolint
 const obj1 = {};
 console.log(Object.getPrototypeOf(obj1) === Object.prototype); // true
 
@@ -300,7 +321,8 @@ const obj7 =  {
 
 ## See also
 
-- [Property accessors](/en-US/docs/Web/JavaScript/Reference/Operators/Property_Accessors)
-- [`get`](/en-US/docs/Web/JavaScript/Reference/Functions/get) / [`set`](/en-US/docs/Web/JavaScript/Reference/Functions/set)
+- [Property accessors](/en-US/docs/Web/JavaScript/Reference/Operators/Property_accessors)
+- [`get`](/en-US/docs/Web/JavaScript/Reference/Functions/get)
+- [`set`](/en-US/docs/Web/JavaScript/Reference/Functions/set)
 - [Method definitions](/en-US/docs/Web/JavaScript/Reference/Functions/Method_definitions)
 - [Lexical grammar](/en-US/docs/Web/JavaScript/Reference/Lexical_grammar)

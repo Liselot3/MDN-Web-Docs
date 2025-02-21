@@ -1,5 +1,6 @@
 ---
-title: HID.getDevices()
+title: "HID: getDevices() method"
+short-title: getDevices()
 slug: Web/API/HID/getDevices
 page-type: web-api-instance-method
 status:
@@ -7,9 +8,9 @@ status:
 browser-compat: api.HID.getDevices
 ---
 
-{{securecontext_header}}{{APIRef("WebHID API")}}{{SeeCompatTable}}
+{{securecontext_header}}{{APIRef("WebHID API")}}{{SeeCompatTable}}{{AvailableInWorkers("window_and_worker_except_shared")}}
 
-The **`getDevices()`** method of the {{domxref("HID")}} interface gets a list of the connected HID devices that the user has previously been granted access to in response to a {{domxref("HID.requestDevice","requestDevice()")}} call.
+The **`getDevices()`** method of the {{domxref("HID")}} interface gets a list of connected HID devices that the user has previously been granted access to in response to a {{domxref("HID.requestDevice","requestDevice()")}} call.
 
 ## Syntax
 
@@ -30,7 +31,7 @@ A {{jsxref("Promise")}} that resolves with a list of {{domxref("HIDDevice")}} ob
 The following example gets a list of devices and logs the device names to the console.
 
 ```js
-document.addEventListener('DOMContentLoaded', async () => {
+document.addEventListener("DOMContentLoaded", async () => {
   let devices = await navigator.hid.getDevices();
   devices.forEach((device) => {
     console.log(`HID: ${device.productName}`);

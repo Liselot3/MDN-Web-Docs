@@ -1,11 +1,12 @@
 ---
-title: FontFaceSet.add()
+title: "FontFaceSet: add() method"
+short-title: add()
 slug: Web/API/FontFaceSet/add
 page-type: web-api-instance-method
 browser-compat: api.FontFaceSet.add
 ---
 
-{{APIRef("CSS Font Loading API")}}
+{{APIRef("CSS Font Loading API")}}{{AvailableInWorkers}}
 
 The **`add()`** method of the {{domxref("FontFaceSet")}} interface adds a new font to the set.
 

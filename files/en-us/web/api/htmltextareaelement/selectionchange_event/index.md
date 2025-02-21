@@ -1,5 +1,6 @@
 ---
 title: "HTMLTextAreaElement: selectionchange event"
+short-title: selectionchange
 slug: Web/API/HTMLTextAreaElement/selectionchange_event
 page-type: web-api-event
 status:
@@ -23,9 +24,9 @@ It is also possible to add a listener on the global `onselectionchange` event ha
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
 ```js
-addEventListener('selectionchange', (event) => {});
+addEventListener("selectionchange", (event) => {});
 
-onselectionchange = (event) => { };
+onselectionchange = (event) => {};
 ```
 
 ## Event type
@@ -41,7 +42,7 @@ The example below shows how to get the text selected in an {{HTMLElement("textar
 ```html
 <div>
   Enter and select text here:<br /><textarea
-    id="mytext"
+    id="my-text"
     rows="2"
     cols="20"></textarea>
 </div>
@@ -53,12 +54,12 @@ The example below shows how to get the text selected in an {{HTMLElement("textar
 ### JavaScript
 
 ```js
-const myinput = document.getElementById("mytext");
+const myInput = document.getElementById("my-text");
 
-myinput.addEventListener("selectionchange", () => {
-  document.getElementById("start").textContent = myinput.selectionStart;
-  document.getElementById("end").textContent = myinput.selectionEnd;
-  document.getElementById("direction").textContent = myinput.selectionDirection;
+myInput.addEventListener("selectionchange", () => {
+  document.getElementById("start").textContent = myInput.selectionStart;
+  document.getElementById("end").textContent = myInput.selectionEnd;
+  document.getElementById("direction").textContent = myInput.selectionDirection;
 });
 ```
 

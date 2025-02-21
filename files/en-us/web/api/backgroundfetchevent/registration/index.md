@@ -1,5 +1,6 @@
 ---
-title: BackgroundFetchEvent.registration
+title: "BackgroundFetchEvent: registration property"
+short-title: registration
 slug: Web/API/BackgroundFetchEvent/registration
 page-type: web-api-instance-property
 status:
@@ -7,7 +8,7 @@ status:
 browser-compat: api.BackgroundFetchEvent.registration
 ---
 
-{{APIRef("Background Fetch API")}}{{SeeCompatTable}}
+{{APIRef("Background Fetch API")}}{{SeeCompatTable}}{{AvailableInWorkers("service")}}
 
 The **`registration`** read-only property of the {{domxref("BackgroundFetchEvent")}} interface returns a {{domxref("BackgroundFetchRegistration")}} object.
 
@@ -17,7 +18,7 @@ A {{domxref("BackgroundFetchRegistration")}}.
 
 ## Examples
 
-In this example, if the user clicks on the user interface displaying the download progress, this fires the `onbackgroundfetchclick` event. The current {{domxref("BackgroundFetchRegistration")}} is returned by calling `event.registration`.
+In this example, if the user clicks on the user interface displaying the download progress, this fires the {{domxref("ServiceWorkerGlobalScope/backgroundfetchclick_event", "backgroundfetchclick")}} event. The current {{domxref("BackgroundFetchRegistration")}} is returned by calling `event.registration`.
 
 ```js
 addEventListener("backgroundfetchclick", (event) => {

@@ -1,5 +1,6 @@
 ---
-title: Screen.orientation
+title: "Screen: orientation property"
+short-title: orientation
 slug: Web/API/Screen/orientation
 page-type: web-api-instance-property
 browser-compat: api.Screen.orientation
@@ -26,11 +27,11 @@ switch (screen.orientation.type) {
     console.log("That looks good.");
     break;
   case "landscape-secondary":
-    console.log("Mmmh… the screen is upside down!");
+    console.log("Mmm… the screen is upside down!");
     break;
   case "portrait-secondary":
   case "portrait-primary":
-    console.log("Mmmh… you should rotate your device to landscape");
+    console.log("Mmm… you should rotate your device to landscape");
     break;
   default:
     console.log("The orientation API isn't supported in this browser :(");

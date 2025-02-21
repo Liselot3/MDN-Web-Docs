@@ -7,22 +7,33 @@ browser-compat: javascript.builtins.Array.unshift
 
 {{JSRef}}
 
-The **`unshift()`** method adds one or more elements to the
+The **`unshift()`** method of {{jsxref("Array")}} instances adds the specified elements to the
 beginning of an array and returns the new length of the array.
 
-{{EmbedInteractiveExample("pages/js/array-unshift.html")}}
+{{InteractiveExample("JavaScript Demo: Array.unshift()")}}
+
+```js interactive-example
+const array1 = [1, 2, 3];
+
+console.log(array1.unshift(4, 5));
+// Expected output: 5
+
+console.log(array1);
+// Expected output: Array [4, 5, 1, 2, 3]
+```
 
 ## Syntax
 
 ```js-nolint
-unshift(element0)
-unshift(element0, element1)
-unshift(element0, element1, /* … ,*/ elementN)
+unshift()
+unshift(element1)
+unshift(element1, element2)
+unshift(element1, element2, /* …, */ elementN)
 ```
 
 ### Parameters
 
-- `elementN`
+- `element1`, …, `elementN`
   - : The elements to add to the front of the `arr`.
 
 ### Return value
@@ -86,7 +97,7 @@ arr.unshift([-7, -6], [-5]); // the new array length is 8
 
 ### Calling unshift() on non-array objects
 
-The `unshift()` method reads the `length` property of `this`. It then shifts all properties in the range `0` to `length - 1` right by the number of arguments and sets each index starting at `0` with the arguments passed to `unshift()`. Finally, it sets the `length` to the previous length plus the number of prepended elements.
+The `unshift()` method reads the `length` property of `this`. It shifts all indices in the range `0` to `length - 1` right by the number of arguments (incrementing their values by this number). Then, it sets each index starting at `0` with the arguments passed to `unshift()`. Finally, it sets the `length` to the previous length plus the number of prepended elements.
 
 ```js
 const arrayLike = {
@@ -116,7 +127,10 @@ console.log(plainObj);
 ## See also
 
 - [Polyfill of `Array.prototype.unshift` in `core-js` with fixes of this method](https://github.com/zloirock/core-js#ecmascript-array)
+- [Indexed collections](/en-US/docs/Web/JavaScript/Guide/Indexed_collections) guide
+- {{jsxref("Array")}}
 - {{jsxref("Array.prototype.push()")}}
 - {{jsxref("Array.prototype.pop()")}}
 - {{jsxref("Array.prototype.shift()")}}
 - {{jsxref("Array.prototype.concat()")}}
+- {{jsxref("Array.prototype.splice()")}}

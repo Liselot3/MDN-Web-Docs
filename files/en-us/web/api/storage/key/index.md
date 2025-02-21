@@ -1,5 +1,6 @@
 ---
-title: Storage.key()
+title: "Storage: key() method"
+short-title: key()
 slug: Web/API/Storage/key
 page-type: web-api-instance-method
 browser-compat: api.Storage.key
@@ -49,7 +50,8 @@ for (let i = 0; i < localStorage.length; i++) {
 }
 ```
 
-> **Note:** For a real-world example, see our [Web Storage Demo](https://mdn.github.io/dom-examples/web-storage/).
+> [!NOTE]
+> For a real-world example, see our [Web Storage Demo](https://mdn.github.io/dom-examples/web-storage/).
 
 ## Specifications
 

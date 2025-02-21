@@ -1,11 +1,12 @@
 ---
-title: PromiseRejectionEvent.promise
+title: "PromiseRejectionEvent: promise property"
+short-title: promise
 slug: Web/API/PromiseRejectionEvent/promise
 page-type: web-api-instance-property
 browser-compat: api.PromiseRejectionEvent.promise
 ---
 
-{{APIRef("HTML DOM") }}
+{{APIRef("HTML DOM")}}{{AvailableInWorkers}}
 
 The {{domxref("PromiseRejectionEvent")}} interface's
 **`promise`** read-only property indicates the JavaScript
@@ -32,12 +33,11 @@ been handled.
 window.onunhandledrejection = (event) => {
   if (event.reason?.code === "Module not ready") {
     requestIdleCallback((deadline) => {
-      loadModule(event.reason.moduleName)
-        .then(performStartup);
+      loadModule(event.reason.moduleName).then(performStartup);
     });
     event.preventDefault();
   }
-}
+};
 ```
 
 ## Specifications

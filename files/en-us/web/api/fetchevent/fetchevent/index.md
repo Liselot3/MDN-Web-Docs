@@ -1,11 +1,12 @@
 ---
-title: FetchEvent()
+title: "FetchEvent: FetchEvent() constructor"
+short-title: FetchEvent()
 slug: Web/API/FetchEvent/FetchEvent
 page-type: web-api-constructor
 browser-compat: api.FetchEvent.FetchEvent
 ---
 
-{{APIRef("Service Workers API")}}
+{{APIRef("Service Workers API")}}{{AvailableInWorkers("service")}}
 
 The **`FetchEvent()`** constructor creates a new {{domxref("FetchEvent")}} object.
 
@@ -41,7 +42,7 @@ new FetchEvent(type, options)
     - `handled`
       - : A _pending_ promise that will be fulfilled once the event has been handled.
 
-## Return value
+### Return value
 
 A new {{domxref("FetchEvent")}} object.
 

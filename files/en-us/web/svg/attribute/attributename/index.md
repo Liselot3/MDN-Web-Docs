@@ -2,10 +2,6 @@
 title: attributeName
 slug: Web/SVG/Attribute/attributeName
 page-type: svg-attribute
-tags:
-  - NeedsCompatTable
-  - SVG
-  - SVG Attribute
 spec-urls: https://svgwg.org/specs/animations/#AttributeNameAttribute
 ---
 
@@ -16,7 +12,6 @@ The **`attributeName`** attribute indicates the name of the CSS property or attr
 You can use this attribute with the following SVG elements:
 
 - {{SVGElement("animate")}}
-- {{SVGElement("animateColor")}}
 - {{SVGElement("animateTransform")}}
 - {{SVGElement("set")}}
 
@@ -74,4 +69,4 @@ svg {
 
 ## See also
 
-- [SMIL Animation specification](https://www.w3.org/TR/2001/REC-smil-animation-20010904/#AccumulateAttribute)
+- [SVG animation with SMIL](/en-US/docs/Web/SVG/SVG_animation_with_SMIL)

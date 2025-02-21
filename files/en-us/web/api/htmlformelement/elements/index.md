@@ -1,5 +1,6 @@
 ---
-title: HTMLFormElement.elements
+title: "HTMLFormElement: elements property"
+short-title: elements
 slug: Web/API/HTMLFormElement/elements
 page-type: web-api-instance-property
 browser-compat: api.HTMLFormElement.elements
@@ -22,7 +23,8 @@ index or the element's `name` or `id` attributes.
 Prior to HTML 5, the returned object was an {{domxref("HTMLCollection")}}, on which
 `HTMLFormControlsCollection` is based.
 
-> **Note:** Similarly, you can get a list of all of the forms contained within a given document using the document's {{domxref("Document.forms", "forms")}} property.
+> [!NOTE]
+> Similarly, you can get a list of all of the forms contained within a given document using the document's {{domxref("Document.forms", "forms")}} property.
 
 ## Value
 
@@ -36,11 +38,12 @@ Only the following elements are returned:
 
 - {{HTMLElement("button")}}
 - {{HTMLElement("fieldset")}}
-- {{HTMLElement("input")}} (with the exception that any whose {{htmlattrxref("type", "input")}} is `"image"` are omitted for historical reasons)
+- {{HTMLElement("input")}} (with the exception that any whose [`type`](/en-US/docs/Web/HTML/Element/input#type) is `"image"` are omitted for historical reasons)
 - {{HTMLElement("object")}}
 - {{HTMLElement("output")}}
 - {{HTMLElement("select")}}
 - {{HTMLElement("textarea")}}
+- [form-associated custom elements](https://html.spec.whatwg.org/multipage/custom-elements.html#form-associated-custom-element)
 
 ## Examples
 
@@ -50,13 +53,16 @@ In this example, we see how to obtain the list of form controls as well as how t
 
 ```html
 <form id="my-form">
-  <label>Username:
+  <label>
+    Username:
     <input type="text" name="username" />
   </label>
-  <label>Full name:
+  <label>
+    Full name:
     <input type="text" name="full-name" />
   </label>
-  <label>Password:
+  <label>
+    Password:
     <input type="password" name="password" />
   </label>
 </form>

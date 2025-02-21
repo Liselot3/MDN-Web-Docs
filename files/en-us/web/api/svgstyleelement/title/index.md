@@ -1,5 +1,6 @@
 ---
-title: SVGStyleElement.title
+title: "SVGStyleElement: title property"
+short-title: title
 slug: Web/API/SVGStyleElement/title
 page-type: web-api-instance-property
 browser-compat: api.SVGStyleElement.title
@@ -8,7 +9,7 @@ browser-compat: api.SVGStyleElement.title
 {{APIRef("SVG")}}
 
 The **`SVGStyleElement.title`** property is a string corresponding to the [`title`](/en-US/docs/Web/SVG/Element/style#title) attribute of the given SVG style element.
-It may be used to select between [alternate style sheets](/en-US/docs/Web/CSS/Alternative_style_sheets).
+It may be used to select between [alternate style sheets](/en-US/docs/Web/HTML/Attributes/rel/alternate_stylesheet).
 
 ## Value
 
@@ -44,7 +45,7 @@ We also define a text area for logging the current title.
 The code below gets the `style` element (an `SVGStyleElement`) using its tag name, logs the title, then changes and logs the title again.
 
 ```js
-const log = document.getElementById("log")
+const log = document.getElementById("log");
 
 const svg = document.querySelector("svg");
 const style = svg.querySelector("style");

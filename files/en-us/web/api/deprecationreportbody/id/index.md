@@ -1,5 +1,6 @@
 ---
-title: DeprecationReportBody.id
+title: "DeprecationReportBody: id property"
+short-title: id
 slug: Web/API/DeprecationReportBody/id
 page-type: web-api-instance-property
 status:
@@ -7,7 +8,7 @@ status:
 browser-compat: api.DeprecationReportBody.id
 ---
 
-{{APIRef("Reporting API")}}{{SeeCompatTable}}
+{{APIRef("Reporting API")}}{{AvailableInWorkers}}{{SeeCompatTable}}
 
 The **`id`** read-only property of the {{domxref("DeprecationReportBody")}} interface returns a string representing the feature or API that is deprecated. This can be used to group or count related reports.
 

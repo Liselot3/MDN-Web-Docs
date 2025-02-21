@@ -1,5 +1,6 @@
 ---
-title: Document.selectedStyleSheetSet
+title: "Document: selectedStyleSheetSet property"
+short-title: selectedStyleSheetSet
 slug: Web/API/Document/selectedStyleSheetSet
 page-type: web-api-instance-property
 status:
@@ -21,7 +22,8 @@ Setting the value of this property is equivalent to calling
 `currentStyleSheetSet`, then setting the value of
 `lastStyleSheetSet` to that value as well.
 
-> **Note:** This attribute's value is live; directly changing
+> [!NOTE]
+> This attribute's value is live; directly changing
 > the `disabled` attribute on style sheets will affect the value of this
 > attribute.
 

@@ -1,11 +1,12 @@
 ---
-title: SourceBuffer.mode
+title: "SourceBuffer: mode property"
+short-title: mode
 slug: Web/API/SourceBuffer/mode
 page-type: web-api-instance-property
 browser-compat: api.SourceBuffer.mode
 ---
 
-{{APIRef("Media Source Extensions")}}
+{{APIRef("Media Source Extensions")}}{{AvailableInWorkers("window_and_dedicated")}}
 
 The **`mode`** property of the {{domxref("SourceBuffer")}}
 interface controls whether media segments can be appended to the
@@ -62,8 +63,8 @@ in which media segments are appended.
 
 ```js
 const curMode = sourceBuffer.mode;
-if (curMode === 'segments') {
-  sourceBuffer.mode = 'sequence';
+if (curMode === "segments") {
+  sourceBuffer.mode = "sequence";
 }
 ```
 

@@ -1,5 +1,6 @@
 ---
-title: BaseAudioContext.sampleRate
+title: "BaseAudioContext: sampleRate property"
+short-title: sampleRate
 slug: Web/API/BaseAudioContext/sampleRate
 page-type: web-api-instance-property
 browser-compat: api.BaseAudioContext.sampleRate
@@ -7,10 +8,8 @@ browser-compat: api.BaseAudioContext.sampleRate
 
 {{ APIRef("Web Audio API") }}
 
-The `sampleRate` property of the {{
-    domxref("BaseAudioContext") }} interface returns a floating point number representing
-the sample rate, in samples per second, used by all nodes in this audio
-context. This limitation means that sample-rate converters are not supported.
+The `sampleRate` property of the {{domxref("BaseAudioContext")}} interface returns a floating point number representing the sample rate, in samples per second, used by all nodes in this audio context.
+This limitation means that sample-rate converters are not supported.
 
 ## Value
 
@@ -19,7 +18,8 @@ second.
 
 ## Examples
 
-> **Note:** for a full Web Audio example implementation, see one of our
+> [!NOTE]
+> For a full Web Audio example implementation, see one of our
 > Web Audio Demos on the [MDN GitHub repo](https://github.com/mdn/webaudio-examples). Try entering
 > `audioCtx.sampleRate` into your browser console.
 

@@ -1,13 +1,14 @@
 ---
-title: MediaKeyStatusMap.values()
+title: "MediaKeyStatusMap: values() method"
+short-title: values()
 slug: Web/API/MediaKeyStatusMap/values
 page-type: web-api-instance-method
 browser-compat: api.MediaKeyStatusMap.values
 ---
 
-{{APIRef("EncryptedMediaExtensions API")}}
+{{APIRef("Encrypted Media Extensions")}}
 
-The **`values`** property of the
+The **`values()`** method of the
 {{domxref("MediaKeyStatusMap")}} interface returns a new Iterator object, containing
 values for each element in the status map, in insertion order.
 

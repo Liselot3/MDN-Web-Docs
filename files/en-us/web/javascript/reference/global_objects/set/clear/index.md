@@ -7,10 +7,23 @@ browser-compat: javascript.builtins.Set.clear
 
 {{JSRef}}
 
-The **`clear()`** method removes all elements from a
-`Set` object.
+The **`clear()`** method of {{jsxref("Set")}} instances removes all elements from this set.
 
-{{EmbedInteractiveExample("pages/js/set-prototype-clear.html")}}
+{{InteractiveExample("JavaScript Demo: Set.prototype.clear()")}}
+
+```js interactive-example
+const set1 = new Set();
+set1.add(1);
+set1.add("foo");
+
+console.log(set1.size);
+// Expected output: 2
+
+set1.clear();
+
+console.log(set1.size);
+// Expected output: 0
+```
 
 ## Syntax
 
@@ -18,9 +31,13 @@ The **`clear()`** method removes all elements from a
 clear()
 ```
 
+### Parameters
+
+None.
+
 ### Return value
 
-{{jsxref("undefined")}}.
+None ({{jsxref("undefined")}}).
 
 ## Examples
 
@@ -37,7 +54,7 @@ console.log(mySet.has("foo")); // true
 mySet.clear();
 
 console.log(mySet.size); // 0
-console.log(mySet.has("bar")); // false
+console.log(mySet.has("foo")); // false
 ```
 
 ## Specifications

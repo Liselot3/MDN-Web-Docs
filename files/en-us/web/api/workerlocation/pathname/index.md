@@ -1,11 +1,12 @@
 ---
-title: WorkerLocation.pathname
+title: "WorkerLocation: pathname property"
+short-title: pathname
 slug: Web/API/WorkerLocation/pathname
 page-type: web-api-instance-property
 browser-compat: api.WorkerLocation.pathname
 ---
 
-{{ApiRef("WorkerLocation")}}
+{{ApiRef("WorkerLocation")}}{{AvailableInWorkers("worker")}}
 
 The **`pathname`** property of a {{domxref("WorkerLocation")}} object returns the {{domxref("URL.pathname", "pathname")}} part of the worker's location.
 

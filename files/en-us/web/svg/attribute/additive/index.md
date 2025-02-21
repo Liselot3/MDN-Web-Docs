@@ -2,11 +2,6 @@
 title: additive
 slug: Web/SVG/Attribute/additive
 page-type: svg-attribute
-tags:
-  - NeedsCompatTable
-  - NeedsExample
-  - SVG
-  - SVG Attribute
 spec-urls: https://svgwg.org/specs/animations/#AdditiveAttribute
 ---
 
@@ -19,7 +14,6 @@ It is frequently useful to define animation as an offset or delta to an attribut
 You can use this attribute with the following SVG elements:
 
 - {{SVGElement("animate")}}
-- {{SVGElement("animateColor")}}
 - {{SVGElement("animateMotion")}}
 - {{SVGElement("animateTransform")}}
 
@@ -45,7 +39,7 @@ You can use this attribute with the following SVG elements:
 - sum
   - : Specifies that the animation will add to the underlying value of the attribute and other lower priority animations.
 - replace
-  - : Specifies that the animation will override the underlying value of the attribute and other lower priority animations. This is the default, however the behavior is also affected by the animation value attributes {{SVGAttr("by")}} and {{SVGAttr("to")}}, as described in [SMIL Animation: How from, to and by attributes affect additive behavior](https://www.w3.org/TR/2001/REC-smil-animation-20010904/#FromToByAndAdditive).
+  - : Specifies that the animation will override the underlying value of the attribute and other lower priority animations. This is the default, however the behavior is also affected by the animation value attributes {{SVGAttr("by")}} and {{SVGAttr("to")}}, as described in [SMIL Animation: How from, to and by attributes affect additive behavior](https://www.w3.org/TR/smil-animation/#FromToByAndAdditive).
 
 ## Specifications
 
@@ -53,4 +47,4 @@ You can use this attribute with the following SVG elements:
 
 ## See also
 
-- [SMIL Animation specification](https://www.w3.org/TR/2001/REC-smil-animation-20010904/#AdditiveAttribute)
+- [SVG animation with SMIL](/en-US/docs/Web/SVG/SVG_animation_with_SMIL)

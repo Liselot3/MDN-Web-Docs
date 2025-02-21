@@ -1,11 +1,12 @@
 ---
-title: ReadableStreamBYOBReader.releaseLock()
+title: "ReadableStreamBYOBReader: releaseLock() method"
+short-title: releaseLock()
 slug: Web/API/ReadableStreamBYOBReader/releaseLock
 page-type: web-api-instance-method
 browser-compat: api.ReadableStreamBYOBReader.releaseLock
 ---
 
-{{APIRef("Streams")}}
+{{APIRef("Streams")}}{{AvailableInWorkers}}
 
 The **`releaseLock()`** method of the {{domxref("ReadableStreamBYOBReader")}} interface releases the reader's lock on the stream.
 After the lock is released, the reader is no longer active.
@@ -40,7 +41,7 @@ A trivial examples is shown below.
 A lock is created as soon as the reader is created on the stream.
 
 ```js
-const reader = stream.getReader({mode: "byob"});
+const reader = stream.getReader({ mode: "byob" });
 reader.releaseLock();
 ```
 
@@ -54,4 +55,5 @@ reader.releaseLock();
 
 ## See also
 
+- {{domxref("ReadableStreamBYOBReader.ReadableStreamBYOBReader", "ReadableStreamBYOBReader()")}} constructor
 - [Using readable byte stream](/en-US/docs/Web/API/Streams_API/Using_readable_byte_streams)

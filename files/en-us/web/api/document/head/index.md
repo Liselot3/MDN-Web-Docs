@@ -1,5 +1,6 @@
 ---
-title: Document.head
+title: "Document: head property"
+short-title: head
 slug: Web/API/Document/head
 page-type: web-api-instance-property
 browser-compat: api.Document.head
@@ -18,7 +19,7 @@ An {{domxref("HTMLHeadElement")}}.
 ## Examples
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <head id="my-document-head">
   <title>Example: using document.head</title>
 </head>
@@ -35,7 +36,7 @@ An {{domxref("HTMLHeadElement")}}.
 ## Notes
 
 `document.head` is read-only. Trying to assign a value to this property will
-fail silently or, in [Strict Mode](/en-US/docs/Web/JavaScript/Reference/Strict_mode), throws a {{jsxref("TypeError")}} .
+fail silently or, in [Strict Mode](/en-US/docs/Web/JavaScript/Reference/Strict_mode), throws a {{jsxref("TypeError")}}.
 
 ## Specifications
 

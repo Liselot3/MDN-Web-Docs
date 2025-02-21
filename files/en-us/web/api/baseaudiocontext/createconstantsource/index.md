@@ -1,5 +1,6 @@
 ---
-title: BaseAudioContext.createConstantSource()
+title: "BaseAudioContext: createConstantSource() method"
+short-title: createConstantSource()
 slug: Web/API/BaseAudioContext/createConstantSource
 page-type: web-api-instance-method
 browser-compat: api.BaseAudioContext.createConstantSource
@@ -13,7 +14,8 @@ property of the {{domxref("BaseAudioContext")}} interface creates a
 outputs a monaural (one-channel) sound signal whose samples all have the same
 value.
 
-> **Note:** The {{domxref("ConstantSourceNode.ConstantSourceNode", "ConstantSourceNode()")}}
+> [!NOTE]
+> The {{domxref("ConstantSourceNode.ConstantSourceNode", "ConstantSourceNode()")}}
 > constructor is the recommended way to create a {{domxref("ConstantSourceNode")}}; see
 > [Creating an AudioNode](/en-US/docs/Web/API/AudioNode#creating_an_audionode).
 

@@ -1,11 +1,12 @@
 ---
-title: XRInputSourceEvent()
+title: "XRInputSourceEvent: XRInputSourceEvent() constructor"
+short-title: XRInputSourceEvent()
 slug: Web/API/XRInputSourceEvent/XRInputSourceEvent
 page-type: web-api-constructor
 browser-compat: api.XRInputSourceEvent.XRInputSourceEvent
 ---
 
-{{APIRef("WebXR Device API")}}
+{{APIRef("WebXR Device API")}}{{SecureContext_Header}}
 
 The **`XRInputSourceEvent()`**
 constructor creates and returns a new {{domxref("XRInputSourceEvent")}} object
@@ -44,7 +45,7 @@ sends it to the {{domxref("XRSession")}}.
 ```js
 let event = new XRInputSourceEvent("select", {
   frame: eventFrame,
-  inputSource: source
+  inputSource: source,
 });
 if (event) {
   xrSession.dispatchEvent(event);

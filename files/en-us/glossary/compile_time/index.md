@@ -4,7 +4,9 @@ slug: Glossary/Compile_time
 page-type: glossary-definition
 ---
 
-The _compile time_ is the time from when the program is first loaded until the program is {{Glossary("parse","parsed")}}.
+{{GlossarySidebar}}
+
+**Compile time** is the time from when the program is first loaded until the program is {{Glossary("parse","parsed")}}.
 
 ## See also
 

@@ -1,5 +1,6 @@
 ---
-title: Document.body
+title: "Document: body property"
+short-title: body
 slug: Web/API/Document/body
 page-type: web-api-instance-property
 browser-compat: api.Document.body
@@ -15,8 +16,8 @@ The **`Document.body`** property represents the
 
 One of the following:
 
-- {{HTMLElement("body")}}
-- {{HTMLElement("frameset")}}
+- {{domxref("HTMLBodyElement")}}
+- {{domxref("HTMLFrameSetElement")}}
 - `null`
 
 ## Examples

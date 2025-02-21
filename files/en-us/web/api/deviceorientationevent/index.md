@@ -5,8 +5,9 @@ page-type: web-api-interface
 browser-compat: api.DeviceOrientationEvent
 ---
 
-{{apiref("Device Orientation Events")}}
-The **`DeviceOrientationEvent`** object provides web developers with information from the physical orientation of the device running the web page.
+{{apiref("Device Orientation Events")}}{{securecontext_header}}
+
+The **`DeviceOrientationEvent`** interface of the {{domxref("Device Orientation Events", "", "", "nocode")}} provides web developers with information from the physical orientation of the device running the web page.
 
 {{InheritanceDiagram}}
 
@@ -48,8 +49,9 @@ window.addEventListener("deviceorientation", (event) => {
 
 ## See also
 
-- {{domxref("Window.deviceorientation_event", "deviceorientation")}}
-- {{ domxref("DeviceMotionEvent") }}
-- {{domxref("Window.devicemotion_event", "devicemotion")}}
-- [Detecting device orientation](/en-US/docs/Web/API/Device_orientation_events/Detecting_device_orientation)
-- [Orientation and motion data explained](/en-US/docs/Web/API/Device_orientation_events/Orientation_and_motion_data_explained)
+- {{domxref("Device orientation events/Detecting device orientation", "Detecting device orientation", "", "nocode")}}
+- {{domxref("Device orientation events/Orientation and motion data explained", "Orientation and motion data explained", "", "nocode")}}
+- {{domxref("DeviceMotionEvent")}}
+- {{domxref("Window.devicemotion_event", "devicemotion")}} event
+- {{domxref("Window.deviceorientation_event", "deviceorientation")}} event
+- {{domxref("Window.deviceorientationabsolute_event", "deviceorientationabsolute")}} event

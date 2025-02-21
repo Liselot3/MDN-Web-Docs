@@ -1,5 +1,6 @@
 ---
-title: CanvasRenderingContext2D.beginPath()
+title: "CanvasRenderingContext2D: beginPath() method"
+short-title: beginPath()
 slug: Web/API/CanvasRenderingContext2D/beginPath
 page-type: web-api-instance-method
 browser-compat: api.CanvasRenderingContext2D.beginPath
@@ -12,7 +13,8 @@ The
 method of the Canvas 2D API starts a new path by emptying the list of sub-paths. Call
 this method when you want to create a new path.
 
-> **Note:** To create a new sub-path, i.e., one matching the current
+> [!NOTE]
+> To create a new sub-path, i.e., one matching the current
 > canvas state, you can use {{domxref("CanvasRenderingContext2D.moveTo()")}}.
 
 ## Syntax

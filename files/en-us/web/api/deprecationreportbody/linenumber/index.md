@@ -1,5 +1,6 @@
 ---
-title: DeprecationReportBody.lineNumber
+title: "DeprecationReportBody: lineNumber property"
+short-title: lineNumber
 slug: Web/API/DeprecationReportBody/lineNumber
 page-type: web-api-instance-property
 status:
@@ -7,11 +8,12 @@ status:
 browser-compat: api.DeprecationReportBody.lineNumber
 ---
 
-{{APIRef("Reporting API")}}{{SeeCompatTable}}
+{{APIRef("Reporting API")}}{{AvailableInWorkers}}{{SeeCompatTable}}
 
 The **`lineNumber`** read-only property of the {{domxref("DeprecationReportBody")}} interface returns the line in the source file in which the deprecated feature was used.
 
-> **Note:** This property is most useful alongside {{domxref("DeprecationReportBody.sourceFile")}} as it enables the location of the line in that file where the error occurred.
+> [!NOTE]
+> This property is most useful alongside {{domxref("DeprecationReportBody.sourceFile")}} as it enables the location of the line in that file where the error occurred.
 
 ## Value
 

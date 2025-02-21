@@ -1,5 +1,6 @@
 ---
-title: TimeRanges.start()
+title: "TimeRanges: start() method"
+short-title: start()
 slug: Web/API/TimeRanges/start
 page-type: web-api-instance-method
 browser-compat: api.TimeRanges.start
@@ -7,7 +8,7 @@ browser-compat: api.TimeRanges.start
 
 {{APIRef("DOM")}}
 
-The **`start()`** method of the {{domxref("TimeRanges")}} interface returns the time offset at which a specified time range begins.
+The **`start()`** method of the {{domxref("TimeRanges")}} interface returns the time offset (in seconds) at which a specified time range begins.
 
 ## Syntax
 

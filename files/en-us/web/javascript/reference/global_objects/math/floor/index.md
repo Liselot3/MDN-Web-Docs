@@ -9,7 +9,21 @@ browser-compat: javascript.builtins.Math.floor
 
 The **`Math.floor()`** static method always rounds down and returns the largest integer less than or equal to a given number.
 
-{{EmbedInteractiveExample("pages/js/math-floor.html")}}
+{{InteractiveExample("JavaScript Demo: Math.floor()")}}
+
+```js interactive-example
+console.log(Math.floor(5.95));
+// Expected output: 5
+
+console.log(Math.floor(5.05));
+// Expected output: 5
+
+console.log(Math.floor(5));
+// Expected output: 5
+
+console.log(Math.floor(-5.05));
+// Expected output: -6
+```
 
 ## Syntax
 
@@ -65,7 +79,7 @@ function decimalAdjust(type, value, exp) {
   type = String(type);
   if (!["round", "floor", "ceil"].includes(type)) {
     throw new TypeError(
-      "The type of decimal adjustment must be one of 'round', 'floor', or 'ceil'."
+      "The type of decimal adjustment must be one of 'round', 'floor', or 'ceil'.",
     );
   }
   exp = Number(exp);

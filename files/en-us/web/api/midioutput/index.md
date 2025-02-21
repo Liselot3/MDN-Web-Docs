@@ -19,7 +19,7 @@ _This interface doesn't implement any specific properties, but inherits properti
 
 _This interface also inherits methods from {{domxref("MIDIPort")}}._
 
-- {{domxref("MIDIoutput.send()")}}
+- {{domxref("MIDIOutput.send()")}}
   - : Queues a message to be sent to the MIDI port.
 - {{domxref("MIDIOutput.clear()")}}
   - : Clears any pending send data from the queue.
@@ -30,7 +30,7 @@ The following example sends a middle C immediately on MIDI channel 1.
 
 ```js
 function sendMiddleC(midiAccess, portID) {
-  const noteOnMessage = [0x90, 60, 0x7f];    // note on, middle C, full velocity
+  const noteOnMessage = [0x90, 60, 0x7f]; // note on, middle C, full velocity
   const output = midiAccess.outputs.get(portID);
   output.send(noteOnMessage); // sends the message.
 }

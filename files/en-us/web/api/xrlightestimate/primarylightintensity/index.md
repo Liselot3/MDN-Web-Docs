@@ -1,5 +1,6 @@
 ---
-title: XRLightEstimate.primaryLightIntensity
+title: "XRLightEstimate: primaryLightIntensity property"
+short-title: primaryLightIntensity
 slug: Web/API/XRLightEstimate/primaryLightIntensity
 page-type: web-api-instance-property
 status:
@@ -7,7 +8,7 @@ status:
 browser-compat: api.XRLightEstimate.primaryLightIntensity
 ---
 
-{{APIRef("WebXR Device API")}}{{SeeCompatTable}}
+{{APIRef("WebXR Device API")}}{{SeeCompatTable}}{{SecureContext_Header}}
 
 The _read-only_ **`primaryLightIntensity`** property of the {{DOMxRef("XRLightEstimate")}} interface returns a {{domxref("DOMPointReadOnly")}} representing the intensity of the primary light source from the `probeSpace` of an {{domxref("XRLightProbe")}}.
 

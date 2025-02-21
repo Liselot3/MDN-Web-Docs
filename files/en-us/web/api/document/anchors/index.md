@@ -1,5 +1,6 @@
 ---
-title: Document.anchors
+title: "Document: anchors property"
+short-title: anchors
 slug: Web/API/Document/anchors
 page-type: web-api-instance-property
 status:
@@ -20,7 +21,7 @@ An {{domxref("HTMLCollection")}}.
 
 ```js
 if (document.anchors.length >= 5) {
-  dump("found too many anchors");
+  console.log("found too many anchors");
 }
 ```
 
@@ -28,7 +29,7 @@ The following is an example that auto populates a Table of Contents with every a
 on the page:
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />

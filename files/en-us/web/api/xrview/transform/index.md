@@ -1,5 +1,6 @@
 ---
-title: XRView.transform
+title: "XRView: transform property"
+short-title: transform
 slug: Web/API/XRView/transform
 page-type: web-api-instance-property
 status:
@@ -7,7 +8,7 @@ status:
 browser-compat: api.XRView.transform
 ---
 
-{{APIRef("WebXR Device API")}}{{SeeCompatTable}}
+{{APIRef("WebXR Device API")}}{{SeeCompatTable}}{{SecureContext_Header}}
 
 The read-only **`transform`** property of the
 {{domxref("XRView")}} interface is an {{domxref("XRRigidTransform")}} object which
@@ -88,7 +89,8 @@ Finally, we call the object's `render()` routine, passing along the
 `modelViewMatrix` and `normalMatrix` so the renderer can place and
 light the object properly.
 
-> **Note:** This example is derived from a larger example…
+> [!NOTE]
+> This example is derived from a larger example…
 > **<<<--- finish and add link --->>>**
 
 ## Specifications

@@ -1,5 +1,6 @@
 ---
-title: HTMLImageElement.vspace
+title: "HTMLImageElement: vspace property"
+short-title: vspace
 slug: Web/API/HTMLImageElement/vspace
 page-type: web-api-instance-property
 status:
@@ -25,7 +26,8 @@ The value specified for `vspace` is mapped to the {{cssxref("margin-top")}}
 and {{cssxref("margin-bottom")}} properties to specify the height of those margins in
 pixels.
 
-> **Warning:** This property is obsolete. You should instead use the CSS
+> [!WARNING]
+> This property is obsolete. You should instead use the CSS
 > {{cssxref("margin")}} property and its longhand forms to establish margins around
 > an `<img>`.
 

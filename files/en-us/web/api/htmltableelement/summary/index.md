@@ -1,5 +1,6 @@
 ---
-title: HTMLTableElement.summary
+title: "HTMLTableElement: summary property"
+short-title: summary
 slug: Web/API/HTMLTableElement/summary
 page-type: web-api-instance-property
 status:
@@ -24,7 +25,7 @@ HTMLTableElement.summary = "Usage statistics";
 
 ## Specifications
 
-- W3C DOM 2 HTML Specification
+{{Specifications}}
 
 ## Browser compatibility
 

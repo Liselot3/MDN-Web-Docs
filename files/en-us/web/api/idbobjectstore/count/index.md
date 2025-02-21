@@ -1,19 +1,18 @@
 ---
-title: IDBObjectStore.count()
+title: "IDBObjectStore: count() method"
+short-title: count()
 slug: Web/API/IDBObjectStore/count
 page-type: web-api-instance-method
 browser-compat: api.IDBObjectStore.count
 ---
 
-{{ APIRef("IndexedDB") }}
+{{ APIRef("IndexedDB") }} {{AvailableInWorkers}}
 
 The **`count()`** method of the {{domxref("IDBObjectStore")}}
 interface returns an {{domxref("IDBRequest")}} object, and, in a separate thread,
 returns the total number of records that match the provided key or
 {{domxref("IDBKeyRange")}}. If no arguments are provided, it returns the total number
 of records in the store.
-
-{{AvailableInWorkers}}
 
 ## Syntax
 

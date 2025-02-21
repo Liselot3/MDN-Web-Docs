@@ -1,11 +1,12 @@
 ---
-title: FontFaceSetLoadEvent.fontfaces
+title: "FontFaceSetLoadEvent: fontfaces property"
+short-title: fontfaces
 slug: Web/API/FontFaceSetLoadEvent/fontfaces
 page-type: web-api-instance-property
 browser-compat: api.FontFaceSetLoadEvent.fontfaces
 ---
 
-{{APIRef("CSS Font Loading API")}}
+{{APIRef("CSS Font Loading API")}}{{AvailableInWorkers}}
 
 The **`fontfaces`** read-only property of the
 {{domxref("FontFaceSetLoadEvent")}} interface returns an array of

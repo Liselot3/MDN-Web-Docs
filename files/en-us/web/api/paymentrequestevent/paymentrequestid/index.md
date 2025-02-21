@@ -1,5 +1,6 @@
 ---
-title: PaymentRequestEvent.paymentRequestId
+title: "PaymentRequestEvent: paymentRequestId property"
+short-title: paymentRequestId
 slug: Web/API/PaymentRequestEvent/paymentRequestId
 page-type: web-api-instance-property
 status:
@@ -7,7 +8,7 @@ status:
 browser-compat: api.PaymentRequestEvent.paymentRequestId
 ---
 
-{{SeeCompatTable}}{{APIRef("Payment Handler API")}}
+{{SeeCompatTable}}{{APIRef("Payment Handler API")}}{{AvailableInWorkers("service")}}
 
 The **`paymentRequestId`** read-only property of the
 {{domxref("PaymentRequestEvent")}} interface returns the ID of the
@@ -20,7 +21,7 @@ A string containing the ID.
 ## Examples
 
 ```js
-self.addEventListener('paymentrequest', e => {
+self.addEventListener("paymentrequest", (e) => {
   console.log(e.paymentRequestId);
 });
 ```
@@ -35,8 +36,8 @@ self.addEventListener('paymentrequest', e => {
 
 ## See also
 
-- [Web-based payment apps overview](https://web.dev/web-based-payment-apps-overview/)
-- [Setting up a payment method](https://web.dev/setting-up-a-payment-method/)
-- [Life of a payment transaction](https://web.dev/life-of-a-payment-transaction/)
+- [Web-based payment apps overview](https://web.dev/articles/web-based-payment-apps-overview)
+- [Setting up a payment method](https://web.dev/articles/setting-up-a-payment-method)
+- [Life of a payment transaction](https://web.dev/articles/life-of-a-payment-transaction)
 - [Using the Payment Request API](/en-US/docs/Web/API/Payment_Request_API/Using_the_Payment_Request_API)
 - [Payment processing concepts](/en-US/docs/Web/API/Payment_Request_API/Concepts)

@@ -1,5 +1,6 @@
 ---
-title: PresentationRequest()
+title: "PresentationRequest: PresentationRequest() constructor"
+short-title: PresentationRequest()
 slug: Web/API/PresentationRequest/PresentationRequest
 page-type: web-api-constructor
 status:
@@ -7,7 +8,7 @@ status:
 browser-compat: api.PresentationRequest.PresentationRequest
 ---
 
-{{APIRef("Presentation API")}}{{SeeCompatTable}}
+{{APIRef("Presentation API")}}{{SeeCompatTable}}{{SecureContext_Header}}
 
 The **`PresentationRequest()`**
 constructor creates a new {{domxref("PresentationRequest")}} object which creates a

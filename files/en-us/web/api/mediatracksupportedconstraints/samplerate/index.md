@@ -1,8 +1,9 @@
 ---
-title: MediaTrackSupportedConstraints.sampleRate
+title: "MediaTrackSupportedConstraints: sampleRate property"
+short-title: sampleRate
 slug: Web/API/MediaTrackSupportedConstraints/sampleRate
 page-type: web-api-instance-property
-browser-compat: api.MediaTrackSupportedConstraints.sampleRate
+browser-compat: api.MediaStreamTrack.applyConstraints.sampleRate_constraint
 ---
 
 {{APIRef("Media Capture and Streams")}}
@@ -33,7 +34,9 @@ get {{jsxref("undefined")}} if you try to look at its value.
 
 ```css hidden
 #result {
-  font: 14px "Arial", sans-serif;
+  font:
+    14px "Arial",
+    sans-serif;
 }
 ```
 

@@ -1,5 +1,6 @@
 ---
-title: FederatedCredential()
+title: "FederatedCredential: FederatedCredential() constructor"
+short-title: FederatedCredential()
 slug: Web/API/FederatedCredential/FederatedCredential
 page-type: web-api-constructor
 status:
@@ -7,12 +8,12 @@ status:
 browser-compat: api.FederatedCredential.FederatedCredential
 ---
 
-{{APIRef("Credential Management API")}}{{SeeCompatTable}}
+{{APIRef("Credential Management API")}}{{SeeCompatTable}}{{SecureContext_Header}}
 
 The **`FederatedCredential()`**
 constructor creates a new {{domxref("FederatedCredential")}} object. In
 supporting browsers, an instance of this class may be passed the `credential`
-received from the `init` object for global {{domxref('fetch()')}}.
+received from the `init` object for global {{domxref("Window/fetch", "fetch()")}}.
 
 ## Syntax
 

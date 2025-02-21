@@ -1,5 +1,6 @@
 ---
-title: PointerEvent.width
+title: "PointerEvent: width property"
+short-title: width
 slug: Web/API/PointerEvent/width
 page-type: web-api-instance-property
 browser-compat: api.PointerEvent.width
@@ -23,14 +24,18 @@ The width of the event's contact area (in CSS pixels).
 ## Examples
 
 This example illustrates using the {{domxref("PointerEvent")}} interface's
-{{domxref("PointerEvent.width","width")}} and
+`width` and
 {{domxref("PointerEvent.height","height")}} properties to calculate the contact area.
 
 ```js
-target.addEventListener("pointerdown", (ev) => {
-   // Calculate the contact area
-   const area = ev.width * ev.height;
- }, false);
+target.addEventListener(
+  "pointerdown",
+  (ev) => {
+    // Calculate the contact area
+    const area = ev.width * ev.height;
+  },
+  false,
+);
 ```
 
 ## Specifications

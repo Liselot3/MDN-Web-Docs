@@ -11,7 +11,15 @@ The **`Object.getPrototypeOf()`** static method returns the prototype
 (i.e. the value of the internal `[[Prototype]]` property) of the specified
 object.
 
-{{EmbedInteractiveExample("pages/js/object-getprototypeof.html", "shorter")}}
+{{InteractiveExample("JavaScript Demo: Object.getPrototypeOf()", "shorter")}}
+
+```js interactive-example
+const prototype1 = {};
+const object1 = Object.create(prototype1);
+
+console.log(Object.getPrototypeOf(object1) === prototype1);
+// Expected output: true
+```
 
 ## Syntax
 
@@ -65,5 +73,5 @@ Object.getPrototypeOf("foo");
 - {{jsxref("Object.prototype.isPrototypeOf()")}}
 - {{jsxref("Object.setPrototypeOf()")}}
 - [`Object.prototype.__proto__`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/proto)
-- John Resig's post on [getPrototypeOf](https://johnresig.com/blog/objectgetprototypeof/)
 - {{jsxref("Reflect.getPrototypeOf()")}}
+- [Object.getPrototypeOf](https://johnresig.com/blog/objectgetprototypeof/) by John Resig (2008)

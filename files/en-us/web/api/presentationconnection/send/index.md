@@ -1,5 +1,6 @@
 ---
-title: PresentationConnection.send()
+title: "PresentationConnection: send() method"
+short-title: send()
 slug: Web/API/PresentationConnection/send
 page-type: web-api-instance-method
 status:
@@ -7,7 +8,7 @@ status:
 browser-compat: api.PresentationConnection.send
 ---
 
-{{APIRef("Presentation")}}{{SeeCompatTable}}
+{{APIRef("Presentation")}}{{SeeCompatTable}}{{SecureContext_Header}}
 
 The **`send()`** method of the
 {{domxref("PresentationConnection")}} interface tells a controlling browsing context to

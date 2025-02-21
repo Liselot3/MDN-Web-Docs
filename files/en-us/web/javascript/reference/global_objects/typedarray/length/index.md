@@ -7,9 +7,18 @@ browser-compat: javascript.builtins.TypedArray.length
 
 {{JSRef}}
 
-The **`length`** accessor property represents the length (in elements) of a typed array.
+The **`length`** accessor property of {{jsxref("TypedArray")}} instances returns the length (in elements) of this typed array.
 
-{{EmbedInteractiveExample("pages/js/typedarray-length.html","shorter")}}
+{{InteractiveExample("JavaScript Demo: TypedArray.length", "shorter")}}
+
+```js interactive-example
+// Create an ArrayBuffer with a size in bytes
+const buffer = new ArrayBuffer(8);
+const uint8 = new Uint8Array(buffer, 2);
+
+console.log(uint8.length);
+// Expected output: 6
+```
 
 ## Description
 
@@ -42,5 +51,5 @@ uint8.length; // 6 (due to the offset of the constructed Uint8Array)
 
 ## See also
 
-- [JavaScript typed arrays](/en-US/docs/Web/JavaScript/Typed_arrays)
+- [JavaScript typed arrays](/en-US/docs/Web/JavaScript/Guide/Typed_arrays) guide
 - {{jsxref("TypedArray")}}

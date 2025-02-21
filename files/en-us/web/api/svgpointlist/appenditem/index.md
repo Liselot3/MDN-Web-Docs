@@ -1,5 +1,6 @@
 ---
-title: SVGPointList.appendItem()
+title: "SVGPointList: appendItem() method"
+short-title: appendItem()
 slug: Web/API/SVGPointList/appendItem
 page-type: web-api-instance-method
 browser-compat: api.SVGPointList.appendItem
@@ -45,10 +46,10 @@ The following example shows an SVG which contains a {{SVGElement("polyline")}} w
 
 ```js
 let example = document.getElementById("example");
-let svgpoint = document.getElementById("svg").createSVGPoint();
-svgpoint.y = 10;
-svgpoint.x = 10;
-console.log(example.points.appendItem(svgpoint));
+let svgPoint = document.getElementById("svg").createSVGPoint();
+svgPoint.y = 10;
+svgPoint.x = 10;
+console.log(example.points.appendItem(svgPoint));
 ```
 
 ## Specifications

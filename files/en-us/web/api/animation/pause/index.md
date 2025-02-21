@@ -1,5 +1,6 @@
 ---
-title: Animation.pause()
+title: "Animation: pause() method"
+short-title: pause()
 slug: Web/API/Animation/pause
 page-type: web-api-instance-method
 browser-compat: api.Animation.pause
@@ -12,7 +13,7 @@ The **`pause()`** method of the [Web Animations API](/en-US/docs/Web/API/Web_Ani
 ## Syntax
 
 ```js-nolint
-animation.pause();
+pause()
 ```
 
 ### Parameters
@@ -42,7 +43,7 @@ const nommingCake = document
       fill: "forwards",
       easing: "steps(4, end)",
       duration: aliceChange.effect.timing.duration / 2,
-    }
+    },
   );
 
 // doesn't actually need to be eaten until a click event, so pause it initially:
@@ -76,7 +77,6 @@ bottle.addEventListener("mouseup", stopPlayingAlice, false);
 
 - [Web Animations API](/en-US/docs/Web/API/Web_Animations_API)
 - {{domxref("Animation")}} for other methods and properties you can use to control web page animation.
-- {{domxref("Animation.pause()")}} to pause an animation.
 - {{domxref("Animation.reverse()")}} to play an animation backwards.
 - {{domxref("Animation.finish()")}} to finish an animation.
 - {{domxref("Animation.cancel()")}} to cancel an animation.

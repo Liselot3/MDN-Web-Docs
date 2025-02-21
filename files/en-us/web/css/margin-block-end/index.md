@@ -18,6 +18,8 @@ The **`margin-block-end`** [CSS](/en-US/docs/Web/CSS) property defines the logic
 margin-block-end: 10px; /* An absolute length */
 margin-block-end: 1em; /* relative to the text size */
 margin-block-end: 5%; /* relative to the nearest block container's width */
+margin-block-end: anchor-size(inline);
+margin-block-end: calc(anchor-size(--myAnchor block, 20px) / 4);
 
 /* Keyword values */
 margin-block-end: auto;
@@ -88,6 +90,6 @@ div {
 
 ## See also
 
-- [CSS Logical Properties and Values](/en-US/docs/Web/CSS/CSS_Logical_Properties)
+- [CSS Logical Properties and Values](/en-US/docs/Web/CSS/CSS_logical_properties_and_values)
 - The mapped physical properties: {{cssxref("margin-top")}}, {{cssxref("margin-right")}}, {{cssxref("margin-bottom")}}, and {{cssxref("margin-left")}}
 - {{cssxref("writing-mode")}}, {{cssxref("direction")}}, {{cssxref("text-orientation")}}

@@ -1,11 +1,12 @@
 ---
-title: Cache.addAll()
+title: "Cache: addAll() method"
+short-title: addAll()
 slug: Web/API/Cache/addAll
 page-type: web-api-instance-method
 browser-compat: api.Cache.addAll
 ---
 
-{{APIRef("Service Workers API")}}
+{{APIRef("Service Workers API")}}{{SecureContext_Header}}{{AvailableInWorkers}}
 
 The **`addAll()`** method of the {{domxref("Cache")}} interface takes an array of URLs, retrieves them, and adds the resulting response objects to the given cache. The request objects created during retrieval become keys to the stored response operations.
 
@@ -63,8 +64,8 @@ this.addEventListener("install", (event) => {
           "/gallery/bountyHunters.jpg",
           "/gallery/myLittleVader.jpg",
           "/gallery/snowTroopers.jpg",
-        ])
-      )
+        ]),
+      ),
   );
 });
 ```
@@ -81,4 +82,4 @@ this.addEventListener("install", (event) => {
 
 - [Using Service Workers](/en-US/docs/Web/API/Service_Worker_API/Using_Service_Workers)
 - {{domxref("Cache")}}
-- {{domxref("caches")}}
+- {{domxref("Window.caches")}} and {{domxref("WorkerGlobalScope.caches")}}

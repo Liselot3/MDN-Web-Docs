@@ -1,5 +1,6 @@
 ---
-title: USBDevice.deviceSubclass
+title: "USBDevice: deviceSubclass property"
+short-title: deviceSubclass
 slug: Web/API/USBDevice/deviceSubclass
 page-type: web-api-instance-property
 status:
@@ -7,7 +8,7 @@ status:
 browser-compat: api.USBDevice.deviceSubclass
 ---
 
-{{SeeCompatTable}}{{APIRef("WebUSB API")}}
+{{APIRef("WebUSB API")}}{{SeeCompatTable}}{{SecureContext_Header}}{{AvailableInWorkers}}
 
 The **`deviceSubclass`** read only property of the
 {{domxref("USBDevice")}} interface one of three properties that identify USB devices for

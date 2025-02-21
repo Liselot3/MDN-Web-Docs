@@ -1,5 +1,6 @@
 ---
-title: DOMImplementation.hasFeature()
+title: "DOMImplementation: hasFeature() method"
+short-title: hasFeature()
 slug: Web/API/DOMImplementation/hasFeature
 page-type: web-api-instance-method
 status:
@@ -34,7 +35,7 @@ hasFeature(feature, version)
 
 ### Return value
 
-None ({{jsxref("undefined")}}).
+A boolean value of `true`.
 
 ## Specifications
 

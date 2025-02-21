@@ -1,11 +1,12 @@
 ---
-title: Clients.get()
+title: "Clients: get() method"
+short-title: get()
 slug: Web/API/Clients/get
 page-type: web-api-instance-method
 browser-compat: api.Clients.get
 ---
 
-{{APIRef("Service Workers API")}}
+{{APIRef("Service Workers API")}}{{AvailableInWorkers("service")}}
 
 The **`get()`** method of the
 {{domxref("Clients")}} interface gets a service worker client matching a given

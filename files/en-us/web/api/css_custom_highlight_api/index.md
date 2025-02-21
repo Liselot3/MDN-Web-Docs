@@ -2,11 +2,11 @@
 title: CSS Custom Highlight API
 slug: Web/API/CSS_Custom_Highlight_API
 page-type: web-api-overview
-spec-urls: https://w3c.github.io/csswg-drafts/css-highlight-api-1/
 browser-compat:
   - api.Highlight
   - api.HighlightRegistry
   - css.selectors.highlight
+spec-urls: https://drafts.csswg.org/css-highlight-api-1/
 ---
 
 {{DefaultAPISidebar("CSS Custom Highlight API")}}
@@ -65,7 +65,7 @@ Each highlight can be styled differently.
 
 ### Register highlights
 
-Once highlights have been created, register them by using the {{domxref("HighlightRegistry")}} available as {{domxref("CSS.highlights")}}.
+Once highlights have been created, register them by using the {{domxref("HighlightRegistry")}} available as {{domxref("CSS/highlights_static", "CSS.highlights")}}.
 
 The registry is a {{jsxref("Map")}}-like object used to register highlights by names, as seen below:
 
@@ -102,7 +102,7 @@ The final step is to style the registered highlights. This is done by using the 
 - {{domxref("Highlight")}}
   - : This interface is used to represent a collection of ranges to be styled on a document.
 - {{domxref("HighlightRegistry")}}
-  - : Accessible via {{domxref("CSS.highlights")}}, this {{jsxref("Map")}}-like object is used to register highlights with custom identifiers.
+  - : Accessible via {{domxref("CSS/highlights_static", "CSS.highlights")}}, this {{jsxref("Map")}}-like object is used to register highlights with custom identifiers.
 
 ## Examples
 
@@ -237,3 +237,5 @@ The result is shown below. Type text within the search field to highlight matche
 ## See also
 
 - [CSS Custom Highlight API: The Future of Highlighting Text Ranges on the Web](https://css-tricks.com/css-custom-highlight-api-early-look/)
+- HTML [`contentEditable`](/en-US/docs/Web/HTML/Global_attributes/contenteditable) attribute
+- CSS {{cssxref("pseudo-elements")}}

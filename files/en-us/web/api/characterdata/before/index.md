@@ -1,5 +1,6 @@
 ---
-title: CharacterData.before()
+title: "CharacterData: before() method"
+short-title: before()
 slug: Web/API/CharacterData/before
 page-type: web-api-instance-method
 browser-compat: api.CharacterData.before
@@ -22,7 +23,7 @@ before(...nodes)
 ### Parameters
 
 - `nodes`
-  - : A set of {{domxref("Node")}} or strings to insert.
+  - : A set of {{domxref("Node")}} objects or strings to insert.
 
 ### Exceptions
 
@@ -61,6 +62,8 @@ h1TextNode.data;
 
 - {{domxref("CharacterData.appendData()")}}
 - {{domxref("CharacterData.after()")}}
+- {{domxref("DocumentType.before()")}}
+- {{domxref("Element.before()")}}
 - {{domxref("Element.append()")}}
 - {{domxref("Node.appendChild()")}}
 - {{domxref("Element.insertAdjacentElement()")}}

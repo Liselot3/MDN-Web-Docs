@@ -7,14 +7,28 @@ browser-compat: javascript.builtins.Object.hasOwnProperty
 
 {{JSRef}}
 
-The **`hasOwnProperty()`** method returns a boolean indicating whether the
+The **`hasOwnProperty()`** method of {{jsxref("Object")}} instances returns a boolean indicating whether this
 object has the specified property as its own property (as opposed to inheriting
 it).
 
-{{EmbedInteractiveExample("pages/js/object-prototype-hasownproperty.html")}}
-
 > **Note:** {{jsxref("Object.hasOwn()")}} is recommended over
 > `hasOwnProperty()`, in browsers where it is supported.
+
+{{InteractiveExample("JavaScript Demo: Object.prototype.hasOwnProperty()")}}
+
+```js interactive-example
+const object1 = {};
+object1.property1 = 42;
+
+console.log(object1.hasOwnProperty("property1"));
+// Expected output: true
+
+console.log(object1.hasOwnProperty("toString"));
+// Expected output: false
+
+console.log(object1.hasOwnProperty("hasOwnProperty"));
+// Expected output: false
+```
 
 ## Syntax
 
@@ -53,7 +67,7 @@ fruits.hasOwnProperty(4); // false - not defined
 ```
 
 The method will not be available in objects where it is reimplemented, or on
-objects created using `Object.create(null)` (as these don't inherit from
+[`null`-prototype objects](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object#null-prototype_objects) (as these don't inherit from
 `Object.prototype`). Examples for these cases are given below.
 
 ## Examples
@@ -117,8 +131,8 @@ for (const name in buz) {
 Note that the {{jsxref("Statements/for...in", "for...in")}} loop
 only iterates enumerable items: the absence of non-enumerable properties emitted
 from the loop does not imply that `hasOwnProperty` itself is confined strictly
-to enumerable items (as with
-{{jsxref("Object.getOwnPropertyNames()")}}).
+to enumerable items. You can iterate over non-enumerable properties with
+{{jsxref("Object.getOwnPropertyNames()")}}.
 
 ### Using hasOwnProperty as a property name
 
@@ -151,15 +165,14 @@ Object.prototype.hasOwnProperty.call(foo, "bar"); // true
 
 // Use another Object's hasOwnProperty
 // and call it with 'this' set to foo
-({}.hasOwnProperty.call(foo, "bar")); // true
+({}).hasOwnProperty.call(foo, "bar"); // true
 ```
 
 Note that in the first two cases there are no newly created objects.
 
 ### Objects created with Object.create(null)
 
-Objects created using
-{{jsxref("Object.create()","Object.create(null)")}} do not
+[`null`-prototype objects](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object#null-prototype_objects) do not
 inherit from `Object.prototype`, making `hasOwnProperty()` inaccessible.
 
 ```js
@@ -187,4 +200,4 @@ external object's `hasOwnProperty()`.
 - {{jsxref("Object.getOwnPropertyNames()")}}
 - {{jsxref("Statements/for...in", "for...in")}}
 - {{jsxref("Operators/in", "in")}}
-- [JavaScript Guide: Inheritance revisited](/en-US/docs/Web/JavaScript/Inheritance_and_the_prototype_chain)
+- [Inheritance and the prototype chain](/en-US/docs/Web/JavaScript/Inheritance_and_the_prototype_chain)

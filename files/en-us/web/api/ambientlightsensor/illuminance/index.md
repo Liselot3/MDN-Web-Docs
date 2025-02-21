@@ -1,5 +1,6 @@
 ---
-title: AmbientLightSensor.illuminance
+title: "AmbientLightSensor: illuminance property"
+short-title: illuminance
 slug: Web/API/AmbientLightSensor/illuminance
 page-type: web-api-instance-property
 status:
@@ -7,9 +8,9 @@ status:
 browser-compat: api.AmbientLightSensor.illuminance
 ---
 
-{{APIRef("Sensor API")}}{{SeeCompatTable}}
+{{securecontext_header}}{{APIRef("Sensor API")}}{{SeeCompatTable}}
 
-The **`illuminance`** property of the {{domxref("AmbientLightSensor")}} interface returns the current light level in [lux](https://en.wikipedia.org/wiki/Lux) of the ambient light level around the hosting device.
+The **`illuminance`** read-only property of the {{domxref("AmbientLightSensor")}} interface returns the current light level in [lux](https://en.wikipedia.org/wiki/Lux) of the ambient light level around the hosting device.
 
 ## Value
 

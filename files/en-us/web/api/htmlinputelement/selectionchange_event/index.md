@@ -1,5 +1,6 @@
 ---
 title: "HTMLInputElement: selectionchange event"
+short-title: selectionchange
 slug: Web/API/HTMLInputElement/selectionchange_event
 page-type: web-api-event
 status:
@@ -23,9 +24,9 @@ It is also possible to add a listener on the `onselectionchange` event handler, 
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
 ```js
-addEventListener('selectionchange', (event) => {});
+addEventListener("selectionchange", (event) => {});
 
-onselectionchange = (event) => { };
+onselectionchange = (event) => {};
 ```
 
 ## Event type
@@ -40,7 +41,7 @@ The example below shows how to get the text selected in an {{HTMLElement("input"
 
 ```html
 <div>
-  Enter and select text here:<br /><input id="mytext" rows="2" cols="20" />
+  Enter and select text here:<br /><input id="my-text" rows="2" cols="20" />
 </div>
 <div>selectionStart: <span id="start"></span></div>
 <div>selectionEnd: <span id="end"></span></div>
@@ -50,12 +51,12 @@ The example below shows how to get the text selected in an {{HTMLElement("input"
 ### JavaScript
 
 ```js
-const myinput = document.getElementById("mytext");
+const myInput = document.getElementById("my-text");
 
-myinput.addEventListener("selectionchange", () => {
-  document.getElementById("start").textContent = myinput.selectionStart;
-  document.getElementById("end").textContent = myinput.selectionEnd;
-  document.getElementById("direction").textContent = myinput.selectionDirection;
+myInput.addEventListener("selectionchange", () => {
+  document.getElementById("start").textContent = myInput.selectionStart;
+  document.getElementById("end").textContent = myInput.selectionEnd;
+  document.getElementById("direction").textContent = myInput.selectionDirection;
 });
 ```
 

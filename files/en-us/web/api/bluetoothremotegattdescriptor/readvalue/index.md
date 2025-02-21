@@ -1,5 +1,6 @@
 ---
-title: BluetoothRemoteGATTDescriptor.readValue()
+title: "BluetoothRemoteGATTDescriptor: readValue() method"
+short-title: readValue()
 slug: Web/API/BluetoothRemoteGATTDescriptor/readValue
 page-type: web-api-instance-method
 status:
@@ -7,7 +8,7 @@ status:
 browser-compat: api.BluetoothRemoteGATTDescriptor.readValue
 ---
 
-{{APIRef("Bluetooth API")}}{{SeeCompatTable}}
+{{APIRef("Bluetooth API")}}{{SeeCompatTable}}{{SecureContext_Header}}
 
 The
 **`BluetoothRemoteGATTDescriptor.readValue()`**

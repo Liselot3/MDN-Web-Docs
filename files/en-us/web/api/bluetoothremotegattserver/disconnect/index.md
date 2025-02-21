@@ -1,5 +1,6 @@
 ---
-title: BluetoothRemoteGATTServer.disconnect()
+title: "BluetoothRemoteGATTServer: disconnect() method"
+short-title: disconnect()
 slug: Web/API/BluetoothRemoteGATTServer/disconnect
 page-type: web-api-instance-method
 status:
@@ -7,7 +8,7 @@ status:
 browser-compat: api.BluetoothRemoteGATTServer.disconnect
 ---
 
-{{APIRef("Bluetooth API")}}{{SeeCompatTable}}
+{{APIRef("Bluetooth API")}}{{SeeCompatTable}}{{SecureContext_Header}}
 
 The **`BluetoothRemoteGATTServer.disconnect()`** method causes
 the script execution environment to disconnect from `this.device`.
@@ -33,5 +34,3 @@ None ({{jsxref("undefined")}}).
 ## Browser compatibility
 
 {{Compat}}
-
-{{APIRef("Web Bluetooth")}}

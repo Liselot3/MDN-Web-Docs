@@ -2,19 +2,10 @@
 title: omnibox.SuggestResult
 slug: Mozilla/Add-ons/WebExtensions/API/omnibox/SuggestResult
 page-type: webextension-api-type
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Reference
-  - SuggestResult
-  - Type
-  - WebExtensions
-  - omnibox
 browser-compat: webextensions.api.omnibox.SuggestResult
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 The **`omnibox.SuggestResult`** type defines a suggestion that the extension can add to the address bar's drop-down list.
 
@@ -35,4 +26,5 @@ Values of this type are objects. They have the following properties:
 
 {{Compat}}
 
-> **Note:** This API is based on Chromium's [`chrome.omnibox`](https://developer.chrome.com/docs/extensions/reference/omnibox/) API.
+> [!NOTE]
+> This API is based on Chromium's [`chrome.omnibox`](https://developer.chrome.com/docs/extensions/reference/api/omnibox) API.

@@ -1,5 +1,6 @@
 ---
-title: Selection.isCollapsed
+title: "Selection: isCollapsed property"
+short-title: isCollapsed
 slug: Web/API/Selection/isCollapsed
 page-type: web-api-instance-property
 browser-compat: api.Selection.isCollapsed
@@ -14,8 +15,8 @@ position in the content.
 
 Keep in mind that a collapsed selection may still have one (or more, in Gecko)
 {{domxref("Range")}}s, so {{domxref("Selection.rangeCount")}} may not be zero. In that
-scenario, calling a {{domxref("Selection")}} object's {{domxref("Selection.getRangeAt",
-  "getRangeAt()")}} method may return a `Range` object which is collapsed.
+scenario, calling a {{domxref("Selection")}} object's {{domxref("Selection.getRangeAt", "getRangeAt()")}}
+method may return a `Range` object which is collapsed.
 
 ## Value
 

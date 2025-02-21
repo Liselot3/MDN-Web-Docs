@@ -1,5 +1,6 @@
 ---
-title: CSSMediaRule.media
+title: "CSSMediaRule: media property"
+short-title: media
 slug: Web/API/CSSMediaRule/media
 page-type: web-api-instance-property
 browser-compat: api.CSSMediaRule.media
@@ -8,7 +9,7 @@ browser-compat: api.CSSMediaRule.media
 {{ APIRef("CSSOM") }}
 
 The read-only **`media`** property of the
-{{domxref("CSSMediaRule")}} interface {{domxref("MediaList")}} represents the intended
+{{domxref("CSSMediaRule")}} interface returns a {{domxref("MediaList")}} representing the intended
 destination medium for style information.
 
 ## Value

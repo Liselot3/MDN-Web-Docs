@@ -1,5 +1,6 @@
 ---
 title: "RTCDataChannel: closing event"
+short-title: closing
 slug: Web/API/RTCDataChannel/closing_event
 page-type: web-api-event
 browser-compat: api.RTCDataChannel.closing_event
@@ -18,7 +19,7 @@ Use the event name in methods like {{domxref("EventTarget.addEventListener", "ad
 ```js
 addEventListener("closing", (event) => {});
 
-onbufferedamountlow = (event) => {};
+onclosing = (event) => {};
 ```
 
 ## Event type
@@ -42,7 +43,7 @@ dataChannel.addEventListener("closing", (ev) => {
 });
 ```
 
-You can also set the {{domxref("RTCDataChannel.closing_event", "onclosing")}} event handler property directly:
+You can also set the `onclosing` event handler property directly:
 
 ```js
 pc.onclosing = (ev) => {

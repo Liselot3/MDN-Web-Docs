@@ -1,11 +1,12 @@
 ---
-title: XRPose.angularVelocity
+title: "XRPose: angularVelocity property"
+short-title: angularVelocity
 slug: Web/API/XRPose/angularVelocity
 page-type: web-api-instance-property
 browser-compat: api.XRPose.angularVelocity
 ---
 
-{{APIRef}}
+{{APIRef}}{{SecureContext_Header}}
 
 The `angularVelocity` read-only property of the
 {{DOMxRef("XRPose")}} interface is a {{DOMxRef("DOMPointReadOnly")}} describing

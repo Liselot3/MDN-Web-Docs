@@ -1,5 +1,6 @@
 ---
-title: CSSStyleSheet.insertRule()
+title: "CSSStyleSheet: insertRule() method"
+short-title: insertRule()
 slug: Web/API/CSSStyleSheet/insertRule
 page-type: web-api-instance-method
 browser-compat: api.CSSStyleSheet.insertRule
@@ -10,7 +11,8 @@ browser-compat: api.CSSStyleSheet.insertRule
 The **`CSSStyleSheet.insertRule()`**
 method inserts a new [CSS rule](/en-US/docs/Web/API/CSSRule) into the [current style sheet](/en-US/docs/Web/API/CSSStyleSheet).
 
-> **Note:** Although `insertRule()` is exclusively a method of
+> [!NOTE]
+> Although `insertRule()` is exclusively a method of
 > {{domxref("CSSStyleSheet")}}, it actually inserts the rule into
 > `{{domxref("CSSStyleSheet", "", "", "1")}}.cssRules` — its internal
 > {{domxref("CSSRuleList")}}.
@@ -29,10 +31,10 @@ insertRule(rule, index)
   - : A string containing the rule to be inserted. What the inserted
     rule must contain depends on its type:
 
-    - **For [rule-sets](/en-US/docs/Web/CSS/Syntax#css_statements)**, both
-      a [selector](/en-US/docs/Learn/CSS/Building_blocks/Selectors) and a
+    - **For [rule-sets](/en-US/docs/Web/CSS/CSS_syntax/Syntax#css_statements)**, both
+      a [selector](/en-US/docs/Learn_web_development/Core/Styling_basics/Basic_selectors) and a
       style declaration.
-    - **For [at-rules](/en-US/docs/Web/CSS/At-rule)**, both an
+    - **For [at-rules](/en-US/docs/Web/CSS/CSS_syntax/At-rule)**, both an
       at-identifier and the rule content.
 
 - `index` {{optional_inline}}
@@ -118,7 +120,7 @@ function addStylesheetRules(rules) {
     // Insert CSS Rule
     styleSheet.insertRule(
       `${selector}{${propStr}}`,
-      styleSheet.cssRules.length
+      styleSheet.cssRules.length,
     );
   }
 }
@@ -135,4 +137,4 @@ function addStylesheetRules(rules) {
 ## See also
 
 - {{domxref("CSSStyleSheet.deleteRule")}}
-- [Constructable Stylesheets](https://web.dev/constructable-stylesheets/) (web.dev)
+- [Constructable Stylesheets](https://web.dev/articles/constructable-stylesheets) (web.dev)

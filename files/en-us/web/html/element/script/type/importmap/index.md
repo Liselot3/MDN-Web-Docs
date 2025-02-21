@@ -1,16 +1,7 @@
 ---
-title: '<script type="importmap">'
+title: <script type="importmap">
 slug: Web/HTML/Element/script/type/importmap
 page-type: html-attribute-value
-tags:
-  - Reference
-  - Element
-  - JSON
-  - Reference
-  - Element
-  - Attribute
-  - Attribute value
-  - Script
 browser-compat: html.elements.script.type.importmap
 ---
 
@@ -22,7 +13,8 @@ An import map is a JSON object that allows developers to control how the browser
 It provides a mapping between the text used as the module specifier in an [`import` statement](/en-US/docs/Web/JavaScript/Reference/Statements/import) or [`import()` operator](/en-US/docs/Web/JavaScript/Reference/Operators/import), and the corresponding value that will replace the text when resolving the specifier.
 The JSON object must conform to the [Import map JSON representation format](#import_map_json_representation).
 
-Note that the import map applies only to module specifiers in the [`import` statement](/en-US/docs/Web/JavaScript/Reference/Statements/import) or [`import()` operator](/en-US/docs/Web/JavaScript/Reference/Operators/import); it does not apply to the path specified in the `src` attribute of a `<script>` element.
+An import map is used to resolve module specifiers in static and dynamic imports, and therefore must be declared and processed before any `<script>` elements that import modules using specifiers declared in the map.
+Note that the import map applies only to module specifiers in the [`import` statement](/en-US/docs/Web/JavaScript/Reference/Statements/import) or [`import()` operator](/en-US/docs/Web/JavaScript/Reference/Operators/import) for modules loaded into documents; it does not apply to the path specified in the `src` attribute of a `<script>` element or to modules loaded into workers or worklets.
 
 For more information, see the [Importing modules using import maps](/en-US/docs/Web/JavaScript/Guide/Modules#importing_modules_using_import_maps) section in the JavaScript modules guide.
 
@@ -35,9 +27,6 @@ For more information, see the [Importing modules using import maps](/en-US/docs/
 ```
 
 The `src`, `async`, `nomodule`, `defer`, `crossorigin`, `integrity`, and `referrerpolicy` attributes must not be specified.
-
-Only the first import map in the document with an inline definition is processed; any additional import maps and external import maps are ignored.
-An [`error` event](/en-US/docs/Web/API/Element/error_event) is fired at script elements with `type="importmap"` that are not processed (are ignored).
 
 ### Exceptions
 
@@ -68,7 +57,7 @@ The import map below defines an `imports` key that has a "module specifier map" 
 <script type="importmap">
   {
     "imports": {
-      "square": "./module/shapes/square.js",
+      "square": "./modules/shapes/square.js",
       "circle": "https://example.com/shapes/circle.js"
     }
   }
@@ -91,8 +80,8 @@ Note that in this case the property and mapped path must both have a trailing fo
 <script type="importmap">
   {
     "imports": {
-      "shapes/": "./module/shapes/",
-      "othershapes/": "https://example.com/modules/shapes/"
+      "shapes/": "./modules/shapes/",
+      "other-shapes/": "https://example.com/modules/shapes/"
     }
   }
 </script>
@@ -101,7 +90,7 @@ Note that in this case the property and mapped path must both have a trailing fo
 We could then import a circle module as shown.
 
 ```js
-import { name as squareName, draw } from "shapes/circle.js";
+import { name as circleName } from "shapes/circle.js";
 ```
 
 ### Paths in the module specifier map key
@@ -112,9 +101,9 @@ They can also contain or end with path separators, or be absolute URLs, or be re
 ```json
 {
   "imports": {
-    "modules/shapes/": "./module/src/shapes/",
-    "modules/square": "./module/src/other/shapes/square.js",
-    "https://example.com/modules/square.js": "./module/src/other/shapes/square.js",
+    "modules/shapes/": "./modules/src/shapes/",
+    "modules/square": "./modules/src/other/shapes/square.js",
+    "https://example.com/modules/square.js": "./modules/src/other/shapes/square.js",
     "../modules/shapes/": "/modules/shapes/"
   }
 }
@@ -131,16 +120,16 @@ You can use the `scopes` key to provide mappings that are only used if the scrip
 If the URL of the loading script matches the supplied path, the mapping associated with the scope will be used.
 This allows different versions of the module to be used depending on what code is doing the importing.
 
-For example, the map below will only use the scoped map if the loading module has a URL that includes the path: "/modules/customshapes/".
+For example, the map below will only use the scoped map if the loading module has a URL that includes the path: "/modules/custom-shapes/".
 
 ```html
 <script type="importmap">
   {
     "imports": {
-      "square": "./module/shapes/square.js"
+      "square": "./modules/shapes/square.js"
     },
     "scopes": {
-      "/modules/customshapes/": {
+      "/modules/custom-shapes/": {
         "square": "https://example.com/modules/shapes/square.js"
       }
     }
@@ -151,11 +140,156 @@ For example, the map below will only use the scoped map if the loading module ha
 If multiple scopes match the referrer URL, then the most specific scope path is used (the scope key name with the longest name).
 The browser falls back to the next most specific scoped path if there is no matching specifier, and so on, eventually falling back to the module specifier map in the `imports` key.
 
+### Integrity metadata map
+
+You can use the `integrity` key to provide mapping for module [integrity metadata](/en-US/docs/Web/Security/Subresource_Integrity#using_subresource_integrity).
+This enables you to ensure the integrity of dynamically or statically imported modules.
+`integrity` also enables you to provide a fallback for top-level or preloaded modules, in case they don't already include an `integrity` attribute.
+
+The map keys represent module URLs, which can be absolute or relative (starting with `/`, `./`, or `../`).
+The map values represent integrity metadata, identical to that used in [`integrity`](/en-US/docs/Web/HTML/Element/script#integrity) attribute values.
+
+For example, the map below defines integrity metadata for the `square.js` module (directly) and its bare specifier (transitively, via the `imports` key).
+
+```html
+<script type="importmap">
+  {
+    "imports": {
+      "square": "./modules/shapes/square.js"
+    },
+    "integrity": {
+      "./modules/shapes/square.js": "sha384-oqVuAfXRKap7fdgcCY5uykM6+R9GqQ8K/uxy9rx7HNQlGYl1kPzQho1wx4JwY8wC"
+    }
+  }
+</script>
+```
+
+### Merging multiple import maps
+
+Internally, browsers maintain a single global import map representation. When multiple import maps are included in a document, their contents are merged into the global import map when they are registered.
+
+For example, consider the following two import maps:
+
+```html
+<script type="importmap">
+  {
+    "imports": {
+      "/app/": "./original-app/"
+    }
+  }
+</script>
+```
+
+```html
+<script type="importmap">
+  {
+    "imports": {
+      "/app/helper": "./helper/index.mjs"
+    },
+    "scopes": {
+      "/js": {
+        "/app/": "./js-app/"
+      }
+    }
+  }
+</script>
+```
+
+These are equivalent to the following single import map:
+
+```html
+<script type="importmap">
+  {
+    "imports": {
+      "/app/": "./original-app/",
+      "/app/helper": "./helper/index.mjs"
+    },
+    "scopes": {
+      "/js": {
+        "/app/": "./js-app/"
+      }
+    }
+  }
+</script>
+```
+
+Module specifiers in each registered map that were already resolved beforehand are dropped. Subsequent resolutions of these specifiers will provide the same results as their previous resolutions.
+
+For example, if the module specifier `/app/helper.js` was already resolved, the following new import map:
+
+```html
+<script type="importmap">
+  {
+    "imports": {
+      "/app/helper.js": "./helper/index.mjs",
+      "lodash": "/node_modules/lodash-es/lodash.js"
+    }
+  }
+</script>
+```
+
+Would be equivalent to:
+
+```html
+<script type="importmap">
+  {
+    "imports": {
+      "lodash": "/node_modules/lodash-es/lodash.js"
+    }
+  }
+</script>
+```
+
+The `/app/helper.js` rule was ignored and not incorporated into the map.
+
+Similarly, module specifiers in a registered map that were already mapped to URLs in the global map are dropped; their previous mapping prevails.
+
+For example, the following two import maps:
+
+```html
+<script type="importmap">
+  {
+    "imports": {
+      "/app/helper": "./helper/index.mjs",
+      "lodash": "/node_modules/lodash-es/lodash.js"
+    }
+  }
+</script>
+```
+
+```html
+<script type="importmap">
+  {
+    "imports": {
+      "/app/helper": "./main/helper/index.mjs"
+    }
+  }
+</script>
+```
+
+Are equivalent to the following single import map:
+
+```html
+<script type="importmap">
+  {
+    "imports": {
+      "/app/helper": "./helper/index.mjs",
+      "lodash": "/node_modules/lodash-es/lodash.js"
+    }
+  }
+</script>
+```
+
+The `/app/helper/` rule was dropped from the second map.
+
+> [!NOTE]
+> In non-supporting browsers (check the [compatibility data](#browser_compatibility)), a [polyfill](https://github.com/guybedford/es-module-shims) can be used to avoid issues related to module resolution.
+
 ## Import map JSON representation
 
 The following is a "formal" definition of the import map JSON representation.
 
-The import map must be a valid JSON object that can define at most two optional keys: `imports` and `scopes`. Each key's value must be an object, which may be empty.
+The import map must be a valid JSON object that can define any of the optional keys `imports`, `scopes` and `integrity`. Each key's value must be an object, which may be empty.
 
 - `imports` {{optional_inline}}
 
@@ -167,13 +301,21 @@ The import map must be a valid JSON object that can define at most two optional 
 
       - : A "module specifier map" is a valid JSON object where the _keys_ are text that may be present in the module specifier when importing a module, and the corresponding _values_ are the URLs or paths that will replace this text when the module specifier is resolved to an address.
 
-        The modifier specifier map JSON object has the following requirements:
+        The module specifier map JSON object has the following requirements:
 
         - None of the keys may be empty.
         - All of the values must be strings, defining either a valid absolute URL or a valid URL string that starts with `/`, `./`, or `../`.
         - If a key ends with `/`, then the corresponding value must also end with `/`.
           A key with a trailing `/` can be used as a prefix for when mapping (or remapping) modules addresses.
         - The object properties' ordering is irrelevant: if multiple keys can match the module specifier, the most specific key is used (in other words, a specifier "olive/branch/" would match before "olive/").
+
+- `integrity` {{optional_inline}}
+
+  - : Defines a valid JSON object where the _keys_ are strings containing valid absolute or relative URLs (starting with `/`, `./`, or `../`),
+    and the corresponding _values_ are valid [integrity metadata](/en-US/docs/Web/Security/Subresource_Integrity#using_subresource_integrity).
+
+    If the URL of a script importing or preloading a module matches a key in the `integrity` object, the corresponding integrity metadata is applied to the script's fetch options,
+    unless they already have integrity metadata attached to them.
 
 - `scopes` {{optional_inline}}
 
@@ -182,7 +324,7 @@ The import map must be a valid JSON object that can define at most two optional 
     The scopes object is a valid JSON object where each property is a `<scope key>`, which is an URL path, with a corresponding value that is a `<module specifier map>`.
 
     If the URL of a script importing a module matches a `<scope key>` path, then the `<module specifier map>` value associated with the key is checked for matching specifiers first.
-    If there are multiple matching scope keys, then the value associated with the most specific/nested scope paths are checked for matching modifier specifiers first.
+    If there are multiple matching scope keys, then the value associated with the most specific/nested scope paths are checked for matching module specifiers first.
     The fallback module specifier map in `imports` is used if there are no matching module specifier keys in any of the matching scoped module specifier maps.
 
     Note that the scope does not change how an address is resolved; relative addresses are always resolved to the import map base URL.
@@ -198,6 +340,6 @@ The import map must be a valid JSON object that can define at most two optional 
 ## See also
 
 - [JavaScript modules > Importing modules using import maps](/en-US/docs/Web/JavaScript/Guide/Modules#importing_modules_using_import_maps)
-- [The `type` attribute of HTML `<script>` elements](/en-US/docs/Web/HTML/Element/script#attr-type)
+- [The `type` attribute of HTML `<script>` elements](/en-US/docs/Web/HTML/Element/script#type)
 - [`import` statement](/en-US/docs/Web/JavaScript/Reference/Statements/import)
 - [`import()` operator](/en-US/docs/Web/JavaScript/Reference/Operators/import)

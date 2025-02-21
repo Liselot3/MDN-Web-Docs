@@ -7,9 +7,24 @@ browser-compat: javascript.builtins.Map.clear
 
 {{JSRef}}
 
-The **`clear()`** method removes all elements from a `Map` object.
+The **`clear()`** method of {{jsxref("Map")}} instances removes all elements from this map.
 
-{{EmbedInteractiveExample("pages/js/map-prototype-clear.html")}}
+{{InteractiveExample("JavaScript Demo: Map.prototype.clear()")}}
+
+```js interactive-example
+const map1 = new Map();
+
+map1.set("bar", "baz");
+map1.set(1, "foo");
+
+console.log(map1.size);
+// Expected output: 2
+
+map1.clear();
+
+console.log(map1.size);
+// Expected output: 0
+```
 
 ## Syntax
 
@@ -17,9 +32,13 @@ The **`clear()`** method removes all elements from a `Map` object.
 clear()
 ```
 
+### Parameters
+
+None.
+
 ### Return value
 
-{{jsxref("undefined")}}.
+None ({{jsxref("undefined")}}).
 
 ## Examples
 
@@ -27,16 +46,16 @@ clear()
 
 ```js
 const myMap = new Map();
-myMap.set('bar', 'baz');
-myMap.set(1, 'foo');
+myMap.set("bar", "baz");
+myMap.set(1, "foo");
 
-console.log(myMap.size);  // 2
-console.log(myMap.has('bar')); // true
+console.log(myMap.size); // 2
+console.log(myMap.has("bar")); // true
 
 myMap.clear();
 
-console.log(myMap.size);  // 0
-console.log(myMap.has('bar')); // false
+console.log(myMap.size); // 0
+console.log(myMap.has("bar")); // false
 ```
 
 ## Specifications
